@@ -1,0 +1,49 @@
+/* Main index */
+
+#intro {
+	width: 100%;
+	height: 350px;
+}
+
+#intro img {
+	float: left;
+	width: 780px;
+	height: 350px;
+}
+
+#intro-text {
+	float: right;
+	width: 350px;
+	height: 310px;
+	background-color: #e9e4dd;
+	padding: 20px;
+}
+
+#tour {
+	width: 390px;
+	float: right;
+	background-color: #e9e4dd;
+}
+
+#tour h2, #tour p {
+	padding: 0px 20px;
+}
+
+#latest-content {
+	float: left;
+	width: 740px;
+	background-color: #e9e4dd;
+	padding: 0px 20px;
+}
+
+/* Footer */
+
+#footer {
+	padding-top: 20px;
+}
+
+#footer .container {
+	width: 1130px;
+	background-color: #e9e4dd;
+	padding: 20px;
+}

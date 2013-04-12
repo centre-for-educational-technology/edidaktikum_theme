@@ -1,5 +1,7 @@
 name = eDidaktikum theme
+description = Sub-theme of Tweme theme
 base theme = tweme
 core = 7.x
-description = Sub-theme of Tweme theme
+
 stylesheets[all][] = css/style.css
+
