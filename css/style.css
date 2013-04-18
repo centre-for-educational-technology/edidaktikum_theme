@@ -1,3 +1,9 @@
+/* Main navigation tabs */
+
+ul.nav.nav-tabs {
+	border-bottom: 1px solid #ddd;	
+}
+
 /* Main index */
 
 #intro {
@@ -33,6 +39,19 @@
 	float: left;
 	width: 740px;
 	background-color: #e9e4dd;
+	padding: 0px 20px;
+}
+
+/* Two column pages */
+
+div.panel-col-first {
+	width: 740px !important;
+	padding: 0px 20px;
+}
+
+div.panel-col-last {
+	background: #e9e4dd;
+	width: 350px !important;
 	padding: 0px 20px;
 }
 
