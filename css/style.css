@@ -104,10 +104,11 @@ div.panel-col-last {
 
 #footer {
 	padding-top: 20px;
+	width: 100%
 }
 
 #footer .container {
-	width: 1130px;
+/* 	width: 1130px; */
 	background-color: #e9e4dd;
 	padding: 20px;
 }
