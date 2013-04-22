@@ -94,10 +94,6 @@ div.panel-col-last {
 }
 
 .field-name-ed-field-content p {
-/*
-	margin-right: 50px;
-	margin-left: 50px;
-*/
 	font-size: 18px;
 	line-height: 26px;
 	color: #888888;
@@ -114,4 +110,36 @@ div.panel-col-last {
 	width: 1130px;
 	background-color: #e9e4dd;
 	padding: 20px;
+}
+
+/* Maintenance mode public view */
+
+body.maintenance-page {
+	font-family: Helvetica, Arial;
+	background: url(../images/maintenance_mode_bg.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body.maintenance-page #page {
+	margin-top: 25%;
+	padding: 20px;
+	background: #1f1f1f;
+	width: 700px ;
+	margin-left: auto ;
+	margin-right: auto ;
+	vertical-align:middle;
+	border: 10px solid #49a38d;
+	color: #b8b8b8;
+}
+
+body.maintenance-page h1#site-name a {
+	color: #dcdcdc;
+	text-decoration: none;
+}
+
+body.maintenance-page h1.title {
+	font-size: 2em;
 }
