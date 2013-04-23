@@ -16,6 +16,28 @@ h2 {
 	margin: 10px 0;
 }
 
+/* Navigation bar */
+
+#navbar .language-switcher-locale-url {
+    float: right;
+    list-style-type: none;
+    padding: 10px 15px 0 0;
+}
+
+#navbar .language-switcher-locale-url > li {
+    display: inline-block;
+    padding-right: 5px;
+}
+
+#navbar .language-switcher-locale-url a {
+    color: #999;
+}
+
+#navbar .language-switcher-locale-url a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
 /* Main navigation tabs */
 
 ul.nav.nav-tabs {
