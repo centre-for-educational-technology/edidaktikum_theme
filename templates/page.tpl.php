@@ -45,6 +45,7 @@
 <!-- Header -->
 <header id="header" class="container-wrapper">
   <div class="container">
+    <?php print render($page['header']) ?>
     <?php if ($title): ?>
     <?php print $breadcrumb ?>
     <?php print render($title_prefix) ?>

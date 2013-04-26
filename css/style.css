@@ -44,6 +44,13 @@ ul.nav.nav-tabs {
 	border-bottom: 1px solid #ddd;	
 }
 
+/* Dashboard menu */
+
+#block-menu-ed-dashboard-menu ul.menu > li {
+    display: inline-block;
+    list-style-type: none; 
+}
+
 /* Main index */
 
 #intro {
