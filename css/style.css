@@ -94,6 +94,21 @@ ul.nav.nav-tabs {
 	line-height: 20px;
 }
 
+/* Files page */
+.ed-file-icon {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+
+.ed-file-icon-folder {
+    background-image: url('../images/icons/folder.png');
+}
+
+.ed-file-icon-txt {
+    background-image: url('../images/icons/txt.png');
+}
+
 /* General styles for pages */
 
 .submitted {
