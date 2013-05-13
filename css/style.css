@@ -103,6 +103,11 @@ ul.nav.nav-tabs {
 	padding: 0px 20px;
 }
 
+#latest-content > div {
+    float: left;
+    width: 33%;
+}
+
 #latest-content .field-name-ed-field-excerpt {
 	font-size: 14px;
 	line-height: 20px;
