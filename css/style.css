@@ -99,13 +99,38 @@ ul.nav.nav-tabs {
 
 #latest-content {
 	float: left;
-	width: 740px;
-	padding: 0px 20px;
+	width: 780px;
 }
 
 #latest-content > div {
     float: left;
     width: 33%;
+}
+
+#latest-content > div:nth-child(odd) {
+    background-color: #fff;
+}
+
+#latest-content > div:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+#latest-content h1 {
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+}
+
+#latest-content > div:nth-child(odd) > h1 {
+    background-color: #d3a44a;
+}
+
+#latest-content > div:nth-child(even) > h1{
+    background-color: #85dcc3;
+}
+
+#latest-content > div > div.node {
+    padding: 10px;
 }
 
 #latest-content .field-name-ed-field-excerpt {
