@@ -15,5 +15,7 @@ function edidaktikum_theme_preprocess_page(&$vars) {
     $languages_block = module_invoke('locale', 'block_view', 'language');
     $vars['navbar_languages'] = $languages_block['content'];
   }
+  // Breadcrumbs are not displayed
+  $vars['breadcrumb'] = FALSE;
 }
 
