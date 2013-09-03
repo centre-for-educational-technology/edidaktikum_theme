@@ -10,9 +10,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 p, a {
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	font-size: 14px;
-font-style: normal;
-font-weight: normal;
-line-height: 22px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 22px;
 }
 
 h1 {
@@ -31,6 +31,10 @@ h2 {
 
 .breadcrumb {
 	margin: 10px 0;
+}
+
+.container h1 {
+	padding-top: 10px;
 }
 
 /* Navigation bar */
@@ -145,6 +149,7 @@ ul.nav.nav-tabs {
 }
 
 /* Files page */
+
 .ed-file-icon {
     display: inline-block;
     height: 16px;
@@ -168,14 +173,33 @@ ul.nav.nav-tabs {
 /* Two column pages */
 
 div.panel-col-first {
-
 	padding: 0px 20px;
 }
 
 div.panel-col-last {
-	background: #e9e4dd;
-	width: 350px !important;
+	background: #f5f5f5;
+	width: 300px !important;
 	padding: 0px 20px;
+	border: 1px solid #d8d8d8;
+	border-top: none;
+	float: right !important;
+}
+
+div.panel-col-last ul {
+	margin-left: 10px;
+}
+
+div.panel-col-last ul li {
+	list-style: none;
+}
+
+div.panel-col-last a {
+	color: #737373;
+	text-decoration: none;
+}
+
+div.panel-col-last a:hover {
+	color: #08C;
 }
 
 /* Events */
