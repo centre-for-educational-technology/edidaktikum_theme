@@ -22,7 +22,6 @@
         <?php print $site_name ?>
       </a>
       <?php if ($navbar_search): ?><?php print $navbar_search ?><?php endif ?>
-      <?php if ($navbar_languages): ?><?php print $navbar_languages ?><?php endif ?>
       <?php if ($navbar_menu): ?>
 			<nav class="nav-collapse collapse" role="navigation">
         <?php print $navbar_menu ?>
@@ -45,7 +44,6 @@
 <!-- Header -->
 <header id="header" class="container-wrapper">
   <div class="container">
-    <?php print render($page['header']) ?>
     <?php if ($title): ?>
     <?php print $breadcrumb ?>
     <?php print render($title_prefix) ?>
