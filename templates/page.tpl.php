@@ -6,23 +6,14 @@
  */
 
 ?>
-<?php if ($page['hidden']): ?><div class="hide"><?php print render($page['hidden']) ?></div><?php endif ?>
 
 <!-- Navbar -->
 <div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top">
 	<div class="navbar-inner">
 		<div class="container">
-			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="brand" href="<?php print $front_page ?>" title="<?php print $site_slogan ?>">
-        <?php if ($logo): ?><img src="<?php print $logo ?>" /><?php endif ?>
-        <?php print $site_name ?>
-      </a>
-      <?php if ($navbar_search): ?><?php print $navbar_search ?><?php endif ?>
-      <?php if ($navbar_languages): ?><?php print $navbar_languages ?><?php endif ?>
+      <?php print $navbar_toggler ?>
+			<?php print $navbar_brand ?>
+      <?php print $navbar_search ?>
       <?php if ($navbar_menu): ?>
 			<nav class="nav-collapse collapse" role="navigation">
         <?php print $navbar_menu ?>
@@ -32,7 +23,7 @@
 	</div>
 </div>
 
-<?php if ($is_front): ?>
+<?php if ($page['featured']): ?>
 <!-- Featured -->
 <div id="featured" class="container-wrapper hidden-phone">
   <div class="container">
@@ -41,21 +32,11 @@
 </div>
 <?php endif ?>
 
-<?php if ($has_header): ?>
+<?php if ($preface): ?>
 <!-- Header -->
 <header id="header" class="container-wrapper">
   <div class="container">
-  	<?php print render($page['header']) ?>
-    <?php if ($title): ?>
-    <?php print $breadcrumb ?>
-    <?php print render($title_prefix) ?>
-    <h1><?php print $title ?></h1>
-    <?php print render($title_suffix) ?>
-    <?php endif ?>
-    <?php print $messages ?>
-    <?php print render($page['help']) ?>
-    <?php if ($tabs): ?><?php print render($tabs) ?><?php endif ?>
-    <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links) ?></ul><?php endif ?>
+    <?php print $preface ?>
   </div>
 </header>
 <?php endif ?>
@@ -63,10 +44,11 @@
 <!-- Main -->
 <div id="main">
   <div class="container">
-    <div class="row-fluid">
+    <?php print $messages ?>
+    <div class="row row-toggle">
       <?php if ($has_sidebar_first): ?>
       <!-- Sidebar first -->
-      <aside id="sidebar_first" class="span3 hidden-phone">
+      <aside id="sidebar-first" class="sidebar span3 hidden-phone">
         <?php print render($page['sidebar_first']) ?>
         <?php print render($page['sidebar_first_affix']) ?>
       </aside>
@@ -77,7 +59,7 @@
       </section>
       <?php if ($has_sidebar_second): ?>
       <!-- Sidebar second -->
-      <aside id="sidebar_second" class="span3 hidden-phone">
+      <aside id="sidebar-second" class="sidebar span3 hidden-phone">
         <?php print render($page['sidebar_second']) ?>
         <?php print render($page['sidebar_second_affix']) ?>
       </aside>
@@ -98,6 +80,6 @@
       <a href="#"><?php print t('Back to top') ?> </a>
       <?php endif ?>
     </div>
-    <?php print date('Y') ?> © <?php print $site_name ?>
+    <?php print $copyright ?>
 	</div>
 </footer>
