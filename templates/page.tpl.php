@@ -14,6 +14,7 @@
       <?php print $navbar_toggler ?>
 			<?php print $navbar_brand ?>
       <?php print $navbar_search ?>
+      <?php if ($navbar_languages): ?><?php print $navbar_languages ?><?php endif ?>
       <?php if ($navbar_menu): ?>
 			<nav class="nav-collapse collapse" role="navigation">
         <?php print $navbar_menu ?>
@@ -44,6 +45,7 @@
 <!-- Main -->
 <div id="main">
   <div class="container">
+    <?php print render($page['header']) ?>
     <?php print $messages ?>
     <div class="row row-toggle">
       <?php if ($has_sidebar_first): ?>
