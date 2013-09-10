@@ -21,7 +21,7 @@ h1 {
 	font-weight: 300;
 }
 
-h2 {
+h2, h2 a {
 	font-size: 1.5em;
 	line-height: 1em;
 	font-weight: 300;
@@ -72,6 +72,15 @@ ul.nav.nav-tabs {
     list-style-type: none; 
 }
 
+#block-menu-ed-dashboard-menu ul.menu {
+	margin-left: 0px;
+}
+
+#block-menu-ed-dashboard-menu ul.menu li:first-child {
+	margin-left: 0px;
+}
+
+
 /* Main index */
 
 #intro {
@@ -90,8 +99,8 @@ ul.nav.nav-tabs {
 	float: right;
 	width: 350px;
 	height: 310px;
-	background-color: #d3a44a;
-	color: #fff;
+	background-color: #ededf0;
+	color: #454545;
 	padding: 20px;
 }
 
@@ -109,16 +118,20 @@ ul.nav.nav-tabs {
 
 #latest-content {
 	float: left;
-	width: 780px;
+	width: 940px;
 }
 
 #latest-content > div {
     float: left;
-    width: 33%;
+    width: 310px;
+}
+
+#latest-content > div:last-child {
+	width: 320px;
 }
 
 #latest-content > div:nth-child(odd) {
-    background-color: #fff;
+	    background-color: #fff;
 }
 
 #latest-content > div:nth-child(even) {
@@ -132,11 +145,15 @@ ul.nav.nav-tabs {
 }
 
 #latest-content > div:nth-child(odd) > h1 {
-    background-color: #d3a44a;
+    background-color: #ded20c;
 }
 
 #latest-content > div:nth-child(even) > h1{
-    background-color: #85dcc3;
+    background-color: #11bee8;
+}
+
+#latest-content > div:last-child > h1{
+    background-color: #56ae48;
 }
 
 #latest-content > div > div.node {
@@ -312,7 +329,7 @@ table ul.links li {
 
 #footer {
 	border-top: 1px solid #ddd;
-	background-color: #f0f0f0;
+	background-color: #1b1b1b;
 	padding-top: 20px;
 	width: 100%;
 	font-family: 'Open Sans', sans-serif;
@@ -325,7 +342,7 @@ table ul.links li {
 }
 
 #footer .container {
-	background-color: #f0f0f0;
+	background-color: #1b1b1b;
 	padding-bottom: 20px;
 }
 
@@ -360,6 +377,8 @@ body.maintenance-page h1#site-name a {
 body.maintenance-page h1.title {
 	font-size: 2em;
 }
+
+/* Responsive */
 
 @media (max-width: 1200px) {
 
