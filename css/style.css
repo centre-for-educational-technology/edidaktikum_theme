@@ -22,8 +22,12 @@ h1 {
 }
 
 h2, h2 a {
-	font-size: 1.5em;
-	line-height: 1em;
+	font-weight: 300;
+	font-size: 36px;
+}
+
+.submitted span, .submitted span a {
+	font-size: 12px;
 	font-weight: 300;
 }
 
@@ -233,16 +237,17 @@ div.panel-col-last a:hover {
 /* Events */
 
 .field-name-ed-field-excerpt {
-	font-size: 24px;
+	font-size: 14px;
 	font-style: normal;
-	line-height: 36px;
+	line-height: 22px;
+	font-weight: 600;
+	color: #555;
 	margin: 20px 0 30px 0;
 }
 
 .field-name-ed-field-content p {
-	font-size: 18px;
-	line-height: 26px;
-	color: #888888;
+	font-size: 14px;
+	color: #555;
 }
 
 /* Portfolio */
@@ -348,6 +353,15 @@ table ul.links li {
 
 .answer a {
 	color: #fff;
+}
+
+/* Profile page */
+
+.profile .user-picture img {
+	position: relative;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
 }
 
 /* Footer */
