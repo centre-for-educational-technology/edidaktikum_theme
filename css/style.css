@@ -345,13 +345,14 @@ table ul.links li {
 	position: relative;
 	text-decoration: none;
 	text-align: center;
+	width: 100px;
 }
 
 .answer:hover {
 	background: #457a1a;
 }
 
-.answer a {
+.answer .form-item.form-type-item a {
 	color: #fff;
 }
 
