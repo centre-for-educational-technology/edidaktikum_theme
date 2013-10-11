@@ -264,6 +264,39 @@ ul.entityreference-dragdrop li {
 	width: auto;
 }
 
+/* Group pages */
+
+.view-id-og_nodes .node-ed-news h2 {
+	background: #55ae48;
+	padding: 10px;
+}
+
+.view-id-og_nodes .node-ed-news h2 a {
+	color: #fff;
+}
+
+.view-id-og_nodes .node-ed-event h2 {
+	background: #10b4da;
+	padding: 10px;
+}
+
+.view-id-og_nodes .node-ed-event h2 a {
+	color: #fff;
+}
+
+.view-id-og_nodes .node-ed-learning-resource h2 {
+	background: #ded20d;
+	padding: 10px;
+}
+
+.view-id-og_nodes .node-ed-learning-resource h2 a {
+	color: #fff;
+}
+
+.view-id-og_nodes .submitted {
+	display: none;
+}
+
 /* Table Styles */
 
 table {
