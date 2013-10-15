@@ -464,14 +464,13 @@ body.maintenance-page h1.title {
 	#intro {
 		width: 100%;
 		height: 247px;
-		background: #d3a44a;
+		background: #fff;
 	}
 
 	#intro #img {
 		float: left;
 		width: 100%;
 		height: 247px;
-		
 	}
 	
 	#intro-text {
