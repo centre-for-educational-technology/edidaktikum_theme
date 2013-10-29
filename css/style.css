@@ -26,6 +26,11 @@ h2, h2 a {
 	font-size: 36px;
 }
 
+.content h2,
+.content h2 a {
+	font-size: 26px;
+}
+
 .submitted span, .submitted span a {
 	font-size: 12px;
 	font-weight: 300;
@@ -250,6 +255,16 @@ div.panel-col-last a:hover {
 	color: #555;
 }
 
+.node-ed-event .user-picture a {
+	display: none;
+}
+
+/* News */
+
+.node-ed-news .user-picture a {
+	display: none;
+}
+
 /* Portfolio */
 
 .field-name-ed-portfolio-field-items > ul {
@@ -264,6 +279,36 @@ ul.entityreference-dragdrop li {
 	width: auto;
 }
 
+/* Learning Resources */
+
+.rounded-corner .wrap-corner .l, 
+.rounded-corner .wrap-corner .r {
+	background: none;
+}
+
+.rounded-corner .t-edge, 
+.rounded-corner .l-edge,
+.rounded-corner .r-edge,
+.rounded-corner .b-edge {
+	background: none;
+}
+
+.rounded-corner .field-label {
+	font-weight: 300;
+	font-size: 26px;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	width: 245px;
+	padding-bottom: 20px;
+}
+
+/* Tasks */
+
+.field-name-ed-task-due-date {
+	background: #de7c70;
+	padding: 5px;
+	color: #fff;
+}
+
 /* Group pages */
 
 .view-id-og_nodes .node-ed-news h2 {
@@ -271,17 +316,9 @@ ul.entityreference-dragdrop li {
 	padding: 10px;
 }
 
-.view-id-og_nodes .node-ed-news h2 a {
-	color: #fff;
-}
-
 .view-id-og_nodes .node-ed-event h2 {
 	background: #10b4da;
 	padding: 10px;
-}
-
-.view-id-og_nodes .node-ed-event h2 a {
-	color: #fff;
 }
 
 .view-id-og_nodes .node-ed-learning-resource h2 {
@@ -289,7 +326,15 @@ ul.entityreference-dragdrop li {
 	padding: 10px;
 }
 
-.view-id-og_nodes .node-ed-learning-resource h2 a {
+.view-id-og_nodes .node-ed-task h2 {
+	background: #de7c70;
+	padding: 10px;
+}
+
+.view-id-og_nodes .node-ed-learning-resource h2 a,
+.view-id-og_nodes .node-ed-task h2 a,
+.view-id-og_nodes .node-ed-event h2 a,
+.view-id-og_nodes .node-ed-news h2 a {
 	color: #fff;
 }
 
