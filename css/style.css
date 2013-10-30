@@ -195,6 +195,10 @@ ul.nav.nav-tabs {
     background-image: url('../images/icons/txt.png');
 }
 
+.node-ed-file .user-picture {
+	display: none;
+}
+
 /* General styles for pages */
 
 .submitted {
