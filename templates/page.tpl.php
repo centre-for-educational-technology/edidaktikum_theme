@@ -79,8 +79,15 @@
 			<?php foreach ($secondary_menu as $item): ?>
 			<?php print l($item['title'], $item['href']) ?>
 			<?php endforeach ?>
+
       <a href="#"><?php print t('Back to top') ?> </a>
       <?php endif ?>
+      <?php
+        global $user;
+        if (!$user->uid) {
+          Print l(t('Log-in'), 'user');
+        }
+      ?>
     </div>
     <?php print $copyright ?>
 	</div>
