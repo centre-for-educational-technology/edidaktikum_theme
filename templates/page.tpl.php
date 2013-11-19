@@ -85,7 +85,7 @@
       <?php
         global $user;
         if (!$user->uid) {
-          Print l(t('Log-in'), 'user');
+          Print l(t('Sign in'), 'user');
         }
       ?>
     </div>
