@@ -259,13 +259,7 @@ div.panel-col-last a:hover {
 	color: #555;
 }
 
-.node-ed-event .user-picture a {
-	display: none;
-}
-
-/* News */
-
-.node-ed-news .user-picture a {
+.node-ed-event .user-picture {
 	display: none;
 }
 
