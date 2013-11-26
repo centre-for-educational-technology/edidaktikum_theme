@@ -450,20 +450,28 @@ table ul.links li {
 
 #footer {
 	border-top: 1px solid #ddd;
-	background-color: #1b1b1b;
+	background-color: #0a303e;
 	padding-top: 20px;
 	width: 100%;
 	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	color: #69858f;
+	font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
 }
 
 #footer .footer-links a {
-	color: #777;
+	color: #69858f;
 	padding-right: 10px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+	font-size: 13px;
+}
+
+#footer .footer-links a:hover {
+	color: #fff;
 }
 
 #footer .container {
-	background-color: #1b1b1b;
+	background-color: #0a303e;
 	padding-bottom: 20px;
 }
 
