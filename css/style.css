@@ -512,17 +512,17 @@ table ul.links li {
 
 #footer {
 	border-top: 1px solid #ddd;
-	background-color: #0a303e;
+	background-color: rgb(53, 57, 63);
 	padding-top: 20px;
 	width: 100%;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
-	color: #69858f;
+	color: rgba(181,181,181,1);
 	font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
 }
 
 #footer .footer-links a {
-	color: #69858f;
+	color: rgba(181,181,181,1);
 	padding-right: 10px;
 	font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
 	font-size: 13px;
@@ -530,10 +530,11 @@ table ul.links li {
 
 #footer .footer-links a:hover {
 	color: #fff;
+	text-decoration: none;
 }
 
 #footer .container {
-	background-color: #0a303e;
+	background-color: rgb(53, 57, 63);
 	padding-bottom: 20px;
 }
 
