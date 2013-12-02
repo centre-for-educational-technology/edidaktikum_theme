@@ -1,6 +1,14 @@
+/* CSS reset */
+
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+
 /* Fonts */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+#main {
+	font-family: 'Open Sans', Helvetica, sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -19,6 +27,7 @@ h1 {
 	font-size: 2.5em;
 	line-height: 1em;
 	font-weight: 300;
+	margin: 20px 0;
 }
 
 h2, h2 a {
@@ -48,6 +57,10 @@ h2, h2 a {
 
 /* Navigation bar */
 
+#navbar .nav-collapse ul li a {
+	font-size: 12px;
+}
+
 #navbar .language-switcher-locale-url {
     float: right;
     list-style-type: none;
@@ -61,6 +74,7 @@ h2, h2 a {
 
 #navbar .language-switcher-locale-url a {
     color: #999;
+    font-size: 12px;
 }
 
 #navbar .language-switcher-locale-url a:hover {
@@ -89,18 +103,51 @@ ul.nav.nav-tabs {
 	margin-left: 0px;
 }
 
+.sticky-enabled.tableheader-processed.sticky-table {
+	display: table;
+	font-size: 14px;
+	line-height: 20px;
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+.sticky-enabled.tableheader-processed.sticky-table thead tr th {
+	background: #fff;
+	border: 1px solid #ddd;
+	color: rgb(51, 51, 51);
+	display: table-cell;
+	line-height: 20px;
+	padding: 8px;
+
+}
+
+.sticky-enabled.tableheader-processed.sticky-table tr.odd {
+	background: #f9f9f9;
+	height: 36px;
+}
+
+.sticky-enabled.tableheader-processed.sticky-table tr.even {
+	background: #fff;
+	height: 36px;
+}
 
 /* Main index */
 
 #intro {
-	width: 100%;
-	height: 350px;
+	width:100%;
+	height:auto;
+	max-height: 300px;
+	margin: 0 auto;
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	z-index: -99;
 }
 
 #intro #img {
 	float: left;
-	width: 620px;
-	height: 350px;
+	width:100%;
+	height:340px;
 	background: url("../images/intro_bg.png") no-repeat -300px -200px fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -111,28 +158,28 @@ ul.nav.nav-tabs {
 #intro-text {
 	font-family: 'Open Sans', sans-serif;
 	float: right;
-	width: 280px;
-	height: 310px;
+	width: 600px;
 	background-color: #ededf0;
 	color: #454545;
 	padding: 20px;
+	position: relative;
+	top: -300px;
+	opacity:0.8;
+	font-size: 14px;
+	line-height: 20px;
+	z-index: 999;
 }
 
 #tour {
-	font-family: 'Open Sans', sans-serif;
-	width: 390px;
-	float: right;
-	background-color: #85dcc3;
-	color: #fff;
-}
-
-#tour h2, #tour p {
-	padding: 0px 20px;
+	position: absolute;
+	top: 250px;
+	right: 10px;
 }
 
 #latest-content {
 	float: left;
 	width: 940px;
+	padding-top: 250px;
 }
 
 #latest-content > div {
@@ -261,6 +308,11 @@ div.panel-col-last a:hover {
 
 .node-ed-event .user-picture {
 	display: none;
+}
+
+.eventCalendar-wrap {
+	box-shadow: none;
+	border-radius: 0;
 }
 
 /* Portfolio */
@@ -446,6 +498,16 @@ table ul.links li {
 	border-radius: 100%;
 }
 
+.profile .field {
+	padding-bottom: 20px;
+}
+
+.profile .field-label {
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 24px;
+}
+
 /* Footer */
 
 #footer {
@@ -515,6 +577,7 @@ body.maintenance-page h1.title {
 
 /* Responsive */
 
+/*
 @media (max-width: 1200px) {
 
 	#intro {
@@ -547,11 +610,30 @@ body.maintenance-page h1.title {
 		width: 940px;
 	}
 }
+*/
 
 @media (max-width: 979px) {
+
+	#intro {
+		width: 100%;
+		height: 147px;
+		background: #fff;
+	}
+
+	#intro #img {
+		float: left;
+		width: 100%;
+		height: 147px;
+	}
+
+	#intro-text {
+		display: none;	
+	}
+
 	#latest-content {
 		float: left;
 		width: auto;
+		padding-top: 100px;
 	}
 	
 	#latest-content div {
