@@ -8,6 +8,7 @@ html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del
 
 #main {
 	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -88,18 +89,18 @@ ul.nav.nav-tabs {
 	border-bottom: 1px solid #ddd;	
 }
 
-/* Dashboard menu */
+/* Dashboard */
+
+#block-menu-ed-dashboard-menu {
+	margin: 10px auto;
+}
 
 #block-menu-ed-dashboard-menu ul.menu > li {
     display: inline-block;
     list-style-type: none; 
 }
 
-#block-menu-ed-dashboard-menu ul.menu {
-	margin-left: 0px;
-}
-
-#block-menu-ed-dashboard-menu ul.menu li:first-child {
+#block-menu-ed-dashboard-menu ul.menu, #block-menu-ed-dashboard-menu ul.menu li:first-child {
 	margin-left: 0px;
 }
 
@@ -168,6 +169,7 @@ ul.nav.nav-tabs {
 	font-size: 14px;
 	line-height: 20px;
 	z-index: 999;
+	display: none;
 }
 
 #tour {
@@ -179,7 +181,7 @@ ul.nav.nav-tabs {
 #latest-content {
 	float: left;
 	width: 940px;
-	padding-top: 250px;
+	padding-top: 150px;
 }
 
 #latest-content > div {
