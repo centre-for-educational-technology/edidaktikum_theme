@@ -333,6 +333,18 @@ ul.entityreference-dragdrop li {
 
 /* Learning Resources */
 
+#ed-learning-resource-listing .form-item {
+	width: 230px;
+	margin: 0;
+	float: left;
+}
+
+#ed-learning-resource-listing #edit-content-submit {
+	clear: right;
+	margin: 5px 0 20px 0;
+	height: 30px;
+}
+
 .rounded-corner .wrap-corner .l, 
 .rounded-corner .wrap-corner .r {
 	background: none;
