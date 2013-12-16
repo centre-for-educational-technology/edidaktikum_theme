@@ -56,6 +56,33 @@ h2, h2 a {
 	padding-top: 10px;
 }
 
+.ed-add-new-node {
+	height: 30px;
+}
+
+.ed-add-new-node a {
+	color: #fff;
+	display: inline;
+	padding: .2em .6em .3em;
+	font-size: 75%;
+	font-weight: bold;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: .25em;
+	background-color:#5cb85c
+}
+
+dl {
+	margin: 20px 0;
+}
+
+dd {
+	margin-bottom: 20px;
+}
+
 /* Navigation bar */
 
 #navbar .nav-collapse ul li a {
@@ -154,28 +181,6 @@ ul.nav.nav-tabs {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-}
-
-#intro-text {
-	font-family: 'Open Sans', sans-serif;
-	float: right;
-	width: 600px;
-	background-color: #ededf0;
-	color: #454545;
-	padding: 20px;
-	position: relative;
-	top: -300px;
-	opacity:0.8;
-	font-size: 14px;
-	line-height: 20px;
-	z-index: 999;
-	display: none;
-}
-
-#tour {
-	position: absolute;
-	top: 250px;
-	right: 10px;
 }
 
 #latest-content {
@@ -300,7 +305,7 @@ div.panel-col-last a:hover {
 	line-height: 22px;
 	font-weight: 600;
 	color: #555;
-	margin: 20px 0 30px 0;
+	margin: 20px 0 10px 0;
 }
 
 .field-name-ed-field-content p {
@@ -380,31 +385,38 @@ ul.entityreference-dragdrop li {
 
 /* Group pages */
 
-.view-id-og_nodes .node-ed-news h2 {
+h2.ed_news {
 	background: #55ae48;
 	padding: 10px;
+	color: #fff;
 }
 
-.view-id-og_nodes .node-ed-event h2 {
+h2.ed_event {
 	background: #10b4da;
 	padding: 10px;
+	color: #fff;
 }
 
-.view-id-og_nodes .node-ed-learning-resource h2 {
+h2.ed_learning_resource {
 	background: #ded20d;
 	padding: 10px;
+	color: #fff;
 }
 
-.view-id-og_nodes .node-ed-task h2 {
+h2.ed_forum {
 	background: #de7c70;
 	padding: 10px;
+	color: #fff;
 }
 
-.view-id-og_nodes .node-ed-learning-resource h2 a,
-.view-id-og_nodes .node-ed-task h2 a,
-.view-id-og_nodes .node-ed-event h2 a,
-.view-id-og_nodes .node-ed-news h2 a {
+h2.ed_blog {
+	background: #d8832a;
+	padding: 10px;
 	color: #fff;
+}
+
+.ed-og-add-new {
+	
 }
 
 .view-id-og_nodes .submitted {
@@ -592,40 +604,6 @@ body.maintenance-page h1.title {
 
 /* Responsive */
 
-/*
-@media (max-width: 1200px) {
-
-	#intro {
-		width: 100%;
-		height: 247px;
-		background: #fff;
-	}
-
-	#intro #img {
-		float: left;
-		width: 100%;
-		height: 247px;
-	}
-	
-	#intro-text {
-		display: none;	
-	}
-	
-	#intro-text h1 {
-		font-size: 1.8em;
-		line-height: 0.5em;
-	}
-	
-	#intro-text p {
-		font-size: 12px;
-	}
-	
-	#latest-content {
-		float: left;
-		width: 940px;
-	}
-}
-*/
 
 @media (max-width: 979px) {
 
@@ -639,10 +617,6 @@ body.maintenance-page h1.title {
 		float: left;
 		width: 100%;
 		height: 147px;
-	}
-
-	#intro-text {
-		display: none;	
 	}
 
 	#latest-content {
