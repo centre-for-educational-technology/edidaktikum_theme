@@ -113,7 +113,8 @@ dd {
 /* Main navigation tabs */
 
 ul.nav.nav-tabs {
-	border-bottom: 1px solid #ddd;	
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
 }
 
 /* Dashboard */
@@ -446,7 +447,7 @@ table tr th {
 table tr th,
 table tr th a,
 table tr th a:hover {
-  color: #FFF;
+  color: #000;
   font-weight: bold;
 }
 table tbody tr th {
