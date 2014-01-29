@@ -24,6 +24,24 @@ p, a {
 	line-height: 22px;
 }
 
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+.content ul {
+	margin: 10px 0 10px 20px;
+	list-style: disc;
+}
+
+.content ol {
+	margin: 10px 0 10px 20px;
+	list-style: decimal;
+}
+
 h1 {
 	font-size: 2.5em;
 	line-height: 1em;
@@ -34,6 +52,11 @@ h1 {
 h2, h2 a {
 	font-weight: 300;
 	font-size: 36px;
+}
+
+.field-name-ed-field-content ul {
+	margin-left: 20px;
+	list-style: disc;
 }
 
 .content h2,
@@ -93,6 +116,7 @@ dd {
 
 .node {
 	padding: 10px;
+	margin-bottom: 0px;
 }
 
 .nav-tabs>li>a {
@@ -106,10 +130,6 @@ dd {
 
 .form-item .description {
 	font-size: 10px;
-}
-
-legend {
-	
 }
 
 /* Messages */
@@ -423,9 +443,11 @@ ul.entityreference-dragdrop li {
 /* Tasks */
 
 .field-name-ed-task-due-date {
-	background: #de7c70;
+	background: #f2dede;
 	padding: 5px;
-	color: #fff;
+	color: #A94442;
+	border-radius: .25em;
+	border: 1px solid #ebccd1;
 }
 
 /* Group pages */
@@ -529,27 +551,16 @@ table ul.links li {
 /* Buttons */
 
 .answer {
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	background-color: #5da423;
-	border-color: #457a1a;
-	color: white;
-	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-	-webkit-transition: background-color 300ms ease-out;
-	-moz-transition: background-color 300ms ease-out;
-	transition: background-color 300ms ease-out;
-	border-style: solid;
-	border-width: 1px;
-	cursor: pointer;
-	font-family: inherit;
+	padding: .2em .6em .3em;
+	font-size: 75%;
 	font-weight: bold;
 	line-height: 1;
-	margin: 0 0 1.25em;
-	position: relative;
-	text-decoration: none;
+	color: #fff;
 	text-align: center;
-	width: 100px;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: .25em;
+	background-color:#5cb85c
 }
 
 .answer:hover {
