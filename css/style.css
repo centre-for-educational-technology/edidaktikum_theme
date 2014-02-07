@@ -390,15 +390,23 @@ div.panel-col-last a:hover {
 /* Portfolio */
 
 .field-name-ed-portfolio-field-items > ul {
-	width: 45%;
+	width: 42%;
 }
 
 ul.entityreference-dragdrop {
 	margin-right: 0;
 }
 
+ul.entityreference-dragdrop-selected {
+	background: #eee url('../images/drag_here_icon.png') 40% 50% no-repeat;
+}
+
 ul.entityreference-dragdrop li {
 	width: auto;
+}
+
+.field-widget-entityreference-dragdrop {
+	margin-top: 20px;
 }
 
 /* Learning Resources */
@@ -596,6 +604,7 @@ table ul.links li {
 	border-top: 1px solid #ddd;
 	background-color: rgb(53, 57, 63);
 	padding-top: 20px;
+	margin-top: 30px;
 	width: 100%;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
@@ -613,6 +622,11 @@ table ul.links li {
 #footer .footer-links a:hover {
 	color: #fff;
 	text-decoration: none;
+}
+
+#footer .footer-links img {
+	position: relative;
+	top: 3px;
 }
 
 #footer .container {
