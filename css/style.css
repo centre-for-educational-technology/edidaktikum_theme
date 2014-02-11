@@ -350,20 +350,47 @@ div.panel-col-last {
 }
 
 div.panel-col-last ul {
-	margin-left: 10px;
+	margin-left: 0px;
 }
 
 div.panel-col-last ul li {
 	list-style: none;
+	background: #f9f9f9;
+	border-bottom: solid 1px #eee;
+	line-height: 22px;
+	color: #777; 
+	padding-left: 15px;
+	line-height: 30px;
+}
+
+div.panel-col-last ul li:hover {
+	background: #fff;
+}
+
+div.panel-col-last h2 {
+	background: linear-gradient(to bottom,#f7f7f7 0%,#ededed 100%);
+	border-bottom: solid 1px #e3e3e3;
+	font-size: 12px;
+	font-weight: bold;
+	color: #5A5E66;
+	padding: 10px 16px;
+	line-height: 20px;
 }
 
 div.panel-col-last a {
-	color: #737373;
+	color: #777;
 	text-decoration: none;
 }
 
 div.panel-col-last a:hover {
 	color: #08C;
+}
+
+div.panel-col-last .pane-content {
+	padding: 10px 16px;
+	font-size: 14px;
+	color: #777;
+	background: #f9f9f9;
 }
 
 /* Events */
@@ -465,7 +492,7 @@ ul.entityreference-dragdrop li {
 /* Group pages */
 
 h2.ed_event, h2.ed_news, h2.ed_learning_resource, h2.ed_forum,
-h2.ed_blog, h2.ed_bookmark, h2.ed_page {
+h2.ed_blog, h2.ed_bookmark, h2.ed_page, h2.ed_file {
 	background: #d9edf7;
 	padding: 10px;
 	margin: 20px 0px;
