@@ -489,6 +489,14 @@ ul.entityreference-dragdrop li {
 	border: 1px solid #ebccd1;
 }
 
+.ed-task-unanswered {
+	color: red;
+}
+
+.ed-task-answered {
+	color: green;
+}
+
 /* Group pages */
 
 h2.ed_event, h2.ed_news, h2.ed_learning_resource, h2.ed_forum,
