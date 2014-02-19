@@ -179,6 +179,22 @@ div.status {
     text-decoration: none;
 }
 
+#navbar .language-switcher-locale-url > li a img {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+
+#navbar .language-switcher-locale-url > li.active a img {
+    -webkit-filter: none;
+       -moz-filter: none;
+         -o-filter: none;
+        -ms-filter: none;
+            filter: none;
+}
+
 /* Main navigation tabs */
 
 ul.nav.nav-tabs {
