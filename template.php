@@ -19,3 +19,13 @@ function edidaktikum_theme_preprocess_page(&$vars) {
   $vars['breadcrumb'] = FALSE;
 }
 
+/**
+ * Implements template_preprocess_search_result().
+ */
+function edidaktikum_theme_preprocess_search_result(&$variables) {
+  if (isset($_GET['page']) && (int)$_GET['page'] > 0) {
+    global $pager_limits;
+    $variables['attributes_array']['value'] = ((int)$_GET['page'] * $pager_limits[0]) + $variables['id'];
+  }
+}
+
