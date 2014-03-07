@@ -463,6 +463,32 @@ div.panel-col-last .pane-content {
 
 /* Portfolio */
 
+.node-type-ed-portfolio {
+	background: red;
+	background: white url("../images/portfolio_bg.jpg") no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.node-type-ed-portfolio .content {
+	background: white;
+	padding-top: 20px;
+}
+
+.node-type-ed-portfolio .nav-tabs {
+	margin-bottom: 0px !important;
+}
+
+.node-type-ed-portfolio .nav-tabs>li>a, .node-type-ed-portfolio .nav-tabs>li>a:hover {
+	border: none;
+}
+
+.node-type-ed-portfolio .nav-tabs li {
+	background: #efefef;
+}
+
 .field-name-ed-portfolio-field-items > ul {
 	width: 42%;
 }
