@@ -5,6 +5,7 @@
  * Custom theme implementation to display a single Drupal page.
  */
 
+global $user;
 ?>
 
 <!-- Navbar -->
@@ -12,7 +13,26 @@
 	<div class="navbar-inner">
 		<div class="container">
       <?php print $navbar_toggler ?>
-			<?php print $navbar_brand ?>
+      <?php print $navbar_brand ?>
+
+      <?php if (user_is_logged_in()): ?>
+          <a href="<?php echo url('user'); ?>" class="brand brand-avatar">
+          <?php
+              $loaded_user = user_load($user->uid);
+              print theme(
+                  'image_style',
+                  array(
+                      'style_name' => 'thumbnail',
+                      'path' => !empty($loaded_user->picture->uri) ? $loaded_user->picture->uri : variable_get('user_picture_default'),
+                      'attributes' => array(
+                          'class' => array('avatar'),
+                      ),
+                  )
+              );
+          ?>
+          </a>
+      <?php endif; ?>
+
       <?php print $navbar_search ?>
       <?php if ($navbar_languages): ?><?php print $navbar_languages ?><?php endif ?>
       <?php if ($navbar_menu): ?>
@@ -83,7 +103,6 @@
       <a href="#"><?php print t('Back to top') ?> </a>
       <?php endif ?>
       <?php
-        global $user;
         if (!$user->uid) {
           Print l(t('Sign in'), 'user');
         }

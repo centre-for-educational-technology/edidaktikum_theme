@@ -74,6 +74,12 @@ a.brand {
 	font-weight: 100 !important;
 }
 
+a.brand-avatar .avatar {
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+}
+
 /* General styles */
 
 .breadcrumb {
