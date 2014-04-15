@@ -20,7 +20,6 @@ p, a {
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	font-size: 14px;
 	font-style: normal;
-	font-weight: normal;
 	line-height: 22px;
 }
 
@@ -62,7 +61,8 @@ h2, h2 a {
 .content h2,
 .content h2 a {
 	font-size: 26px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+	font-weight: 300;
 }
 
 .submitted span, .submitted span a {
@@ -70,14 +70,11 @@ h2, h2 a {
 	font-weight: 300;
 }
 
-a.brand {
-	font-weight: 100 !important;
-}
-
-a.brand-avatar .avatar {
-	-webkit-border-radius: 100%;
-	-moz-border-radius: 100%;
-	border-radius: 100%;
+label {
+	font-weight: bold;
+	font-size: 14px;
+	width: 200px;
+	float: left;
 }
 
 /* General styles */
@@ -88,6 +85,7 @@ a.brand-avatar .avatar {
 	list-style: none;
 	background-color: #f5f5f5;
 	border-radius: 4px;
+	font-size: 14px;
 }
 
 .container h1 {
@@ -110,7 +108,7 @@ a.brand-avatar .avatar {
 	white-space: nowrap;
 	vertical-align: baseline;
 	border-radius: .25em;
-	background-color:#5cb85c
+	background-color: #5cb85c
 }
 
 dl {
@@ -122,12 +120,16 @@ dd {
 }
 
 .ed-node-mine { /* Content created by current user */
-	background: #e0efd9;
+	background: #fcf8f2;
+}
+
+.ed-node-mine h2 a {
+	color: #f0ad4e;
 }
 
 .node {
 	padding: 10px;
-	margin-bottom: 0px;
+	margin-bottom: 10px;
 }
 
 .nav-tabs>li>a {
@@ -160,6 +162,18 @@ div.status {
 }
 
 /* Navigation bar */
+
+a.brand {
+	font-weight: 100 !important;
+}
+
+a.brand-avatar .avatar {
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	margin-left: 20px;
+	
+}
 
 #navbar .nav-collapse ul li a {
 	font-size: 12px;
@@ -211,6 +225,13 @@ ul.nav.nav-tabs {
 
 /* Dashboard */
 
+ul.ed-group-latest-updates-listing, 
+ul.ed-group-latest-updates-listing a,
+ul.ed-shared-nodes-listing,
+ul.ed-shared-nodes-listing a {
+	font-size: 14px;
+}
+
 #block-menu-ed-dashboard-menu {
 	margin: 10px auto;
 }
@@ -232,7 +253,7 @@ ul.nav.nav-tabs {
 	margin-bottom: 20px;
 }
 
-.sticky-enabled.tableheader-processed.sticky-table thead tr th {
+.sticky-enabled.tableheader-processed.sticky-table thead tr th, tbody tr th {
 	background: #fff;
 	border: 1px solid #ddd;
 	color: rgb(51, 51, 51);
@@ -350,6 +371,7 @@ ul.nav.nav-tabs {
 
 .submitted {
 	margin-top: 10px;
+	display: none; /* xxx */
 }
 
 /* Comments */
@@ -441,7 +463,7 @@ div.panel-col-last a:hover {
 }
 
 div.panel-col-last .pane-content {
-	padding: 10px 16px;
+	padding: 5px 16px;
 	font-size: 14px;
 	color: #777;
 	background: #f9f9f9;
@@ -453,9 +475,9 @@ div.panel-col-last .pane-content {
 	font-size: 14px;
 	font-style: normal;
 	line-height: 22px;
-	font-weight: 600;
+	font-weight: thin;
 	color: #555;
-	margin: 20px 0 10px 0;
+	/* margin: 20px 0 10px 0; */
 }
 
 .field-name-ed-field-content p {
@@ -466,6 +488,11 @@ div.panel-col-last .pane-content {
 .eventCalendar-wrap {
 	box-shadow: none;
 	border-radius: 0;
+}
+
+.field-type-datestamp legend {
+	background: #fcf6e4;
+	padding-left: 10px;
 }
 
 /* Portfolio */
@@ -557,12 +584,16 @@ ul.entityreference-dragdrop li {
 
 /* Tasks */
 
-.field-name-ed-task-due-date {
+#ed-task-due-date-add-more-wrapper {
 	background: #f2dede;
 	padding: 5px;
 	color: #A94442;
 	border-radius: .25em;
 	border: 1px solid #ebccd1;
+}
+
+.pane-node-ed-task-due-date  {
+	background: #f2dede !important;
 }
 
 .ed-task-unanswered {
@@ -575,11 +606,20 @@ ul.entityreference-dragdrop li {
 
 /* Group pages */
 
+.ed-group-private {
+	border-left: 2px solid red;
+	background: #fdf7f7 url('../images/icons/lock.png') 97% 10% no-repeat;
+}
+
+.ed-group-private h2 a {
+	color: #a94442;
+}
+
 h2.ed_event, h2.ed_news, h2.ed_learning_resource, h2.ed_forum,
 h2.ed_blog, h2.ed_bookmark, h2.ed_page, h2.ed_file {
 	background: #d9edf7;
-	padding: 10px;
-	margin: 20px 0px;
+	padding: 5px;
+	margin: 30px 0px;
 	color: #31708f;
 	border: 1px solid #bce8f1;
 }
@@ -590,6 +630,22 @@ h2.ed_blog, h2.ed_bookmark, h2.ed_page, h2.ed_file {
 
 .pane-node-ed-cluster-content .node {
 	background: #fff;
+	padding-left: 5px !important; 
+}
+
+.pane-node-ed-cluster-content h2, .pane-node-ed-cluster-content h2 a {
+	font-size: 16px;
+	margin-bottom: 0px;
+}
+
+.node-teaser h2 {
+	margin-bottom: 0px;
+}
+
+.field-name-group-group {
+	font-size: 14px;
+	color: #f0ad4e;
+	margin-bottom: 5px;
 }
 
 /* Table Styles */
@@ -601,51 +657,55 @@ table {
   margin: 10px 0;
   width: 100%;
 }
+
 table table {
   font-size: 1em;
 }
+
 #footer-wrapper table {
   font-size: 1em;
 }
-table tr th {
-  background: #757575;
-  background: rgba(0, 0, 0, 0.51);
-  border-bottom-style: none;
-}
+
 table tr th,
 table tr th a,
 table tr th a:hover {
-  color: #000;
   font-weight: bold;
 }
+
 table tbody tr th {
   vertical-align: top;
 }
+
 tr td,
 tr th {
   padding: 4px 9px;
   border: 1px solid #fff;
   text-align: left; /* LTR */
 }
+
 #footer-wrapper tr td,
 #footer-wrapper tr th {
   border-color: #555;
   border-color: rgba(255, 255, 255, 0.18);
 }
+
 tr.odd {
   background: #e4e4e4;
   background: rgba(0, 0, 0, 0.105);
 }
+
 tr,
 tr.even {
   background: #efefef;
   background: rgba(0, 0, 0, 0.063);
 }
+
 table ul.links {
   margin: 0;
   padding: 0;
   font-size: 1em;
 }
+
 table ul.links li {
   padding: 0 1em 0 0;
 }
@@ -662,7 +722,7 @@ table ul.links li {
 	white-space: nowrap;
 	vertical-align: baseline;
 	border-radius: .25em;
-	background-color:#5cb85c
+	background-color: #5cb85c
 }
 
 .answer:hover {
@@ -675,11 +735,28 @@ table ul.links li {
 
 /* Profile page */
 
-.profile .user-picture img {
+.page-user .profile {
+	text-align: center;
+	background: #f2f2f2;
+	width: 400px;
+	padding-bottom: 20px;
+	border-top: 2px solid #cccccc;
+}
+
+.profile .user-picture {
+	float: none;
 	position: relative;
+	top: -10px;
+	margin: 0 auto;
+}
+
+.profile .user-picture img {
 	-webkit-border-radius: 100%;
 	-moz-border-radius: 100%;
 	border-radius: 100%;
+	border: 2px solid #ccc;
+	padding: 5px;
+	background: #fff;
 }
 
 .profile .field {
@@ -690,6 +767,24 @@ table ul.links li {
 	font-size: 20px;
 	font-weight: normal;
 	line-height: 24px;
+}
+
+.page-user .profile .field-item, 
+.page-user .profile .field-item a, 
+.page-user .profile dd {
+	font-size: 12px;
+}
+
+.page-user .profile dt {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.page-user .description,
+.page-user #edit-status,
+.page-user #edit-roles .form-type-checkbox,
+.page-user #edit-language .form-item-language {
+	padding-left: 200px;
 }
 
 /* Footer */
