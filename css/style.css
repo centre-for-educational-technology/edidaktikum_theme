@@ -34,11 +34,15 @@ em {
 .content ul {
 	margin: 10px 0 10px 20px;
 	list-style: disc;
+	font-size: 14px;
+	color: #555;
 }
 
 .content ol {
 	margin: 10px 0 10px 20px;
 	list-style: decimal;
+	font-size: 14px;
+	color: #555;
 }
 
 h1 {
