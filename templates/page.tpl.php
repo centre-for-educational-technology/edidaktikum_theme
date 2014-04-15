@@ -16,21 +16,13 @@ global $user;
       <?php print $navbar_brand ?>
 
       <?php if (user_is_logged_in()): ?>
-          <a href="<?php echo url('user'); ?>" class="brand brand-avatar">
+          <div class="brand brand-avatar">
           <?php
-              $loaded_user = user_load($user->uid);
-              print theme(
-                  'image_style',
-                  array(
-                      'style_name' => 'thumbnail',
-                      'path' => !empty($loaded_user->picture->uri) ? $loaded_user->picture->uri : variable_get('user_picture_default'),
-                      'attributes' => array(
-                          'class' => array('avatar'),
-                      ),
-                  )
-              );
+              $user_picture_data = array('account' => $user);
+              template_preprocess_user_picture($user_picture_data);
+              print $user_picture_data['user_picture'];
           ?>
-          </a>
+          </div>
       <?php endif; ?>
 
       <?php print $navbar_search ?>
