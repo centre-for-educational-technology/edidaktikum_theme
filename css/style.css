@@ -74,13 +74,6 @@ h2, h2 a {
 	font-weight: 300;
 }
 
-label {
-	font-weight: bold;
-	font-size: 14px;
-	width: 200px;
-	float: left;
-}
-
 /* General styles */
 
 .breadcrumb {
@@ -782,13 +775,6 @@ table ul.links li {
 .page-user .profile dt {
 	font-size: 20px;
 	font-weight: normal;
-}
-
-.page-user .description,
-.page-user #edit-status,
-.page-user #edit-roles .form-type-checkbox,
-.page-user #edit-language .form-item-language {
-	padding-left: 200px;
 }
 
 /* Footer */
