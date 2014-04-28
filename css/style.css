@@ -143,6 +143,16 @@ dd {
 	font-size: 10px;
 }
 
+.field-tags a.badge {
+	color: #fff;
+	background: #428bca;
+}
+
+.field-tags a.badge:hover {
+	color: #fff;
+	background: #4d7faa;
+}
+
 /* Messages */
 
 div.error {
@@ -466,21 +476,20 @@ div.panel-col-last .pane-content {
 	background: #f9f9f9;
 }
 
-/* Events */
-
 .field-name-ed-field-excerpt {
 	font-size: 14px;
 	font-style: normal;
 	line-height: 22px;
 	font-weight: thin;
-	color: #555;
-	/* margin: 20px 0 10px 0; */
+	color: #000;
 }
 
 .field-name-ed-field-content p {
 	font-size: 14px;
 	color: #555;
 }
+
+/* Events */
 
 .eventCalendar-wrap {
 	box-shadow: none;
