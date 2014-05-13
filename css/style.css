@@ -892,3 +892,22 @@ body.maintenance-page h1.title {
     background-color: white;
 }
 }
+
+/* Statistics */
+
+.ed-node-statistics {
+	color: #000;
+}
+
+.ed-node-statistics i {
+	margin-right: 10px;
+}
+
+.ed-node-statistics .ed-node-statistics-likes i {
+	color: #c6456f;
+}
+
+.ed-node-statistics .ed-node-statistics-likes a:hover i {
+	color: #0088cc;
+}
+
