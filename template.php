@@ -29,3 +29,22 @@ function edidaktikum_theme_preprocess_search_result(&$variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_html().
+ */
+function edidaktikum_theme_preprocess_html(&$vars) {
+    _edidaktikum_theme_load_fontawsome();
+}
+
+/**
+ * Globally load font-awsome.
+ */
+function _edidaktikum_theme_load_fontawsome() {
+    $css_options = array(
+        'group' => CSS_THEME,
+        'weight' => -1000,
+        'every_page' => TRUE,
+    );
+    _tweme_add_asset('css', path_to_theme() . '/libraries/font-awesome/css/font-awesome.min.css', $css_options);
+}
+
