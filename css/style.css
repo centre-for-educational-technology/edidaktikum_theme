@@ -381,6 +381,18 @@ ul.ed-shared-nodes-listing a {
 	display: none; /* xxx */
 }
 
+/* Sorting for lists */
+
+#-ed-get-sorting-options {
+	height: 50px;
+	margin-top: 10px;
+}
+
+#-ed-get-sorting-options .form-item {
+	float: left;
+	margin: 0 10px 0px 0;
+}
+
 /* Comments */
 
 .comment-wrapper, .pane-node-comment-form {
