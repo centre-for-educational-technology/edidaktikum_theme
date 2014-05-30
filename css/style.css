@@ -105,7 +105,7 @@ h2, h2 a {
 	white-space: nowrap;
 	vertical-align: baseline;
 	border-radius: .25em;
-	background-color: #5cb85c
+	background-color: #5cb85c;
 }
 
 dl {
@@ -243,7 +243,7 @@ ul.ed-shared-nodes-listing a {
 }
 
 #block-menu-ed-dashboard-menu {
-	margin: 10px auto;
+	padding-bottom: 20px;
 }
 
 #block-menu-ed-dashboard-menu ul.menu > li {
@@ -270,7 +270,6 @@ ul.ed-shared-nodes-listing a {
 	display: table-cell;
 	line-height: 20px;
 	padding: 8px;
-
 }
 
 .sticky-enabled.tableheader-processed.sticky-table tr.odd {
@@ -283,10 +282,16 @@ ul.ed-shared-nodes-listing a {
 	height: 36px;
 }
 
+/* Dashboard learning analytics */
+
+.row {
+	margin-left: 0;
+}
+
 /* Main index */
 
 #intro {
-	width:100%;
+	width:100% !important;
 	height:auto;
 	max-height: 300px;
 	margin: 0 auto;
@@ -875,6 +880,37 @@ body.maintenance-page h1.title {
 	display: none;
 }
 
+/* TinyMCE */
+
+body#tinymce ul {
+	margin-left: 20px;
+	list-style: disc;
+	font-size: 14px;
+}
+
+body#tinymce ol {
+	margin-left: 20px;
+	list-style: decimal;
+}
+
+/* Statistics */
+
+.ed-node-statistics {
+	color: #000;
+}
+
+.ed-node-statistics i {
+	margin-right: 10px;
+}
+
+.ed-node-statistics .ed-node-statistics-likes i {
+	color: #c6456f;
+}
+
+.ed-node-statistics .ed-node-statistics-likes a:hover i {
+	color: #0088cc;
+}
+
 /* Responsive */
 
 
@@ -907,22 +943,3 @@ body.maintenance-page h1.title {
     background-color: white;
 }
 }
-
-/* Statistics */
-
-.ed-node-statistics {
-	color: #000;
-}
-
-.ed-node-statistics i {
-	margin-right: 10px;
-}
-
-.ed-node-statistics .ed-node-statistics-likes i {
-	color: #c6456f;
-}
-
-.ed-node-statistics .ed-node-statistics-likes a:hover i {
-	color: #0088cc;
-}
-
