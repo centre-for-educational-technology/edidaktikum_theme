@@ -739,7 +739,6 @@ table ul.links li {
 /* Buttons */
 
 .answer {
-	padding: .2em .6em .3em;
 	font-size: 75%;
 	font-weight: bold;
 	line-height: 1;
@@ -749,6 +748,13 @@ table ul.links li {
 	vertical-align: baseline;
 	border-radius: .25em;
 	background-color: #5cb85c
+}
+
+.answer a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	padding: .8em 0;
 }
 
 .answer:hover {
@@ -943,3 +949,4 @@ body#tinymce ol {
     background-color: white;
 }
 }
+
