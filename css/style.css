@@ -524,8 +524,8 @@ div.panel-col-last .pane-content {
 /* Portfolio */
 
 .node-type-ed-portfolio {
-	background: red;
-	background: white url("../images/portfolio_bg.jpg") no-repeat;
+	/*background: red;
+	background: white url("../images/portfolio_bg.jpg") no-repeat;*/
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
