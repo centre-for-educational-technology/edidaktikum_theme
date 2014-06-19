@@ -88,5 +88,6 @@
   </div>
 
   <?php print render($content['links']) ?>
+  
   <?php print '<div class="description">'.format_date($comment->created, 'short').'</div>' ?>
 </div>
