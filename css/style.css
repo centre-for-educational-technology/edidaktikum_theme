@@ -642,7 +642,7 @@ ul.entityreference-dragdrop li {
 }
 
 h2.ed_event, h2.ed_news, h2.ed_learning_resource, h2.ed_forum,
-h2.ed_blog, h2.ed_bookmark, h2.ed_page, h2.ed_file {
+h2.ed_blog, h2.ed_bookmark, h2.ed_page, h2.ed_file, h2.ed_task {
 	background: #d9edf7;
 	padding: 5px;
 	margin: 30px 0px;
