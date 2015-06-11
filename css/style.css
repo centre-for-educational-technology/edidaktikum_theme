@@ -453,9 +453,25 @@ ul.ed-shared-nodes-listing a {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+*/
+	margin: 0 auto;
+	width: 940px;
 	height: 300px;
 	margin-bottom: 20px;
-*/
+}
+
+.node-type-ed-collection #header h1 {
+	color: #fff;
+	text-transform: uppercase;
+	height: 220px;
+	line-height: 220px;
+	text-align: center;
+	text-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
+}
+
+.node-type-ed-collection .nav-tabs {
+	background: #fff;
+	position: relative;
 }
 
 .node-ed-collection.node-promoted.node-teaser.contextual-links-region.ed-node-mine .cover-image {
