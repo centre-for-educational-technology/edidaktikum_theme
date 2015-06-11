@@ -445,6 +445,35 @@ ul.ed-shared-nodes-listing a {
     background-image: url('../images/icons/txt.png');
 }
 
+/* Collections */
+
+.node-type-ed-collection #header {
+/*
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 300px;
+	margin-bottom: 20px;
+*/
+}
+
+.node-ed-collection.node-promoted.node-teaser.contextual-links-region.ed-node-mine .cover-image {
+	float: left;
+	padding: 0px 20px 0 0;
+	/* height: 100%; */
+}
+
+.node-ed-collection.node-promoted.node-teaser.contextual-links-region.ed-node-mine .description {
+	padding-top: 10px;
+	float: left;
+	width: 100%;
+}
+
+.node-ed-collection.node-promoted.node-teaser.contextual-links-region.ed-node-mine span.label.label-info.single-publishing-status {
+	float: right;
+}
+
 /* General styles for pages */
 
 .submitted {
