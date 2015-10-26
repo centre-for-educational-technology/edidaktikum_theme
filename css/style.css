@@ -752,7 +752,7 @@ ul.entityreference-dragdrop li {
 	padding: 5px;
 }
 
-td.unanswered {
+.page-dashboard-tasks td.unanswered {
 	color: #fff;
 	background: red;
 }
