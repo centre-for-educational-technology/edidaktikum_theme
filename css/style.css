@@ -752,7 +752,7 @@ ul.entityreference-dragdrop li {
 	padding: 5px;
 }
 
-td.unanswered {
+.page-dashboard-tasks td.unanswered {
 	color: #fff;
 	background: red;
 }
@@ -774,6 +774,61 @@ td.unchecked a, td.rejected a, td.answered a {
 
 .ed-group-private h2 a {
 	color: #a94442;
+}
+
+.ed_mygroup_inactive_container {
+	position: relative;
+	z-index: 1;
+}
+
+.ed_mygroup_inactive_card {
+	width: 100%;
+	height: 100%;
+}
+
+.ed_mygroup_inactive_container:hover .face.back{
+	opacity: 1;
+}
+
+.face {
+	width: 100%;
+	height: 100%;
+}
+.face.back {
+	display: block;
+	box-sizing: border-box;
+	padding: 10px;
+	color: white;
+	text-align: center;
+	background-color: #d7d7d7;
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	transition:opacity 0.5s linear;
+}
+
+p.ed_mygroup_inactive_text{
+	font-size: 2em;
+	margin-top: 50%;
+}
+
+@media only screen
+and (max-width: 979px) {
+	.face.back {
+		transform: none;
+		background-color: #000000;
+		opacity: 0.5;
+	}
+	.ed_mygroup_inactive_container:hover .face.back{
+		opacity: 0.5;
+	}
+}
+
+@media only screen
+and (max-width: 767px) {
+	p.ed_mygroup_inactive_text{
+		margin-top: 10%;
+	}
 }
 
 h2.ed_event, h2.ed_news, h2.ed_learning_resource, h2.ed_forum,
@@ -967,6 +1022,10 @@ table ul.links li {
 	width: 400px;
 	padding-bottom: 20px;
 	border-top: 2px solid #cccccc;
+}
+
+.profile .ed_group_inactive{
+	color: grey;
 }
 
 .profile .user-picture {
