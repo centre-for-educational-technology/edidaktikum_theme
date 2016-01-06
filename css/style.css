@@ -64,9 +64,10 @@ h2, h2 a {
 
 .content h2,
 .content h2 a {
-	font-size: 26px;
+	font-size: 24px;
 	margin-bottom: 10px;
 	font-weight: 300;
+	text-decoration: none;
 }
 
 .submitted span, .submitted span a {
@@ -448,12 +449,6 @@ ul.ed-shared-nodes-listing a {
 /* Collections */
 
 .node-type-ed-collection #header {
-/*
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-*/
 	margin: 0 auto;
 	width: 940px;
 	height: 300px;
@@ -488,6 +483,33 @@ ul.ed-shared-nodes-listing a {
 
 .node-ed-collection.node-promoted.node-teaser.contextual-links-region.ed-node-mine span.label.label-info.single-publishing-status {
 	float: right;
+}
+
+.node-type-ed-collection .cover-image {
+	display: none;
+}
+
+.node-type-ed-collection h2 {
+	margin-bottom: 0;
+}
+
+.field-name-ed-collection-field-items .even{
+	padding-left: 10px;
+}
+
+.node-type-ed-collection .field-item.odd {
+	background: #efefef;
+	margin-top: 15px;
+	padding-left: 10px;
+}
+
+.single-remove-from-collection {
+	color: gray;
+}
+
+.single-remove-from-collection:hover {
+	color: red;
+	text-decoration: none;
 }
 
 /* General styles for pages */
