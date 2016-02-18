@@ -720,6 +720,13 @@ ul.entityreference-dragdrop li {
 	margin-top: 20px;
 }
 
+
+/* Qualofication portfolio */
+
+.competence a{
+	font-size: 16px;
+}
+
 /* Learning Resources */
 
 #ed-learning-resource-listing .form-item {
