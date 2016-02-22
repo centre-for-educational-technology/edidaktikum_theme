@@ -727,6 +727,42 @@ ul.entityreference-dragdrop li {
 	font-size: 16px;
 }
 
+
+div.ctools-modal-content .modal-header {
+	background-color: #2385c2;
+	padding: 9px 15px;
+}
+
+div.ctools-modal-content .modal-title {
+	font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+div.ctools-modal-content a.close img {
+	margin-left: 5px;
+}
+
+.close {
+	font-weight: normal;
+	font-size: 18px;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+
+
+div.ctools-modal-content {
+	border: 0;
+	border-radius: 6px;
+	outline: 0;
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+div.ctools-modal-content .modal-header {
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: 6px 6px 0 0;
+	outline: 0;
+}
+
+
 /* Learning Resources */
 
 #ed-learning-resource-listing .form-item {
