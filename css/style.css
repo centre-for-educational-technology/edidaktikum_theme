@@ -762,6 +762,15 @@ div.ctools-modal-content .modal-header {
 	outline: 0;
 }
 
+.q-portfolio{
+	margin-top: 20px;
+}
+
+.competence.highlight{
+	font-size: 16px;
+	font-style: italic;
+}
+
 
 /* Learning Resources */
 
