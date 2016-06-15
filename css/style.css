@@ -739,7 +739,7 @@ ul.entityreference-dragdrop li {
 }
 
 
-/* Qualofication portfolio */
+/* Qualification portfolio */
 
 .competence a{
 	font-size: 16px;
@@ -764,6 +764,18 @@ div.ctools-modal-content a.close img {
 	font-size: 18px;
 	opacity: 0.6;
 	filter: alpha(opacity=60);
+}
+
+.modal-header .close {
+	margin-top: 0px;
+}
+
+.modal-header button{
+	font-size: 30px;
+}
+
+#ed-q-portfolio-form label, .description, #edit-competence-new-ed-file-upload, .btn, #ed-q-portfolio-assessor-form label{
+	font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
 
