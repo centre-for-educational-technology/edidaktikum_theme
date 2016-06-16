@@ -774,7 +774,7 @@ div.ctools-modal-content a.close img {
 	font-size: 30px;
 }
 
-#ed-q-portfolio-form label, .description, #edit-competence-new-ed-file-upload, .btn, #ed-q-portfolio-assessor-form label{
+#ed-q-portfolio-form label, .description, #edit-competence-new-ed-file-upload, .btn, #ed-q-portfolio-assessor-form label, #ed-q-portfolio-status-form label{
 	font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
@@ -794,6 +794,10 @@ div.ctools-modal-content .modal-header {
 
 .q-portfolio{
 	margin-top: 20px;
+}
+
+h3.q-portfolio-info{
+	padding-top: 0px !important;
 }
 
 .competence.highlight{
