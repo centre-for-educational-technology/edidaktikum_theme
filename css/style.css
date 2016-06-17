@@ -745,7 +745,6 @@ ul.entityreference-dragdrop li {
 	font-size: 16px;
 }
 
-
 div.ctools-modal-content .modal-header {
 	background-color: #2385c2;
 	padding: 9px 15px;
@@ -765,7 +764,6 @@ div.ctools-modal-content a.close img {
 	opacity: 0.6;
 	filter: alpha(opacity=60);
 }
-
 
 div.ctools-modal-content {
 	border: 0;
@@ -789,7 +787,9 @@ div.ctools-modal-content .modal-header {
 	font-style: italic;
 }
 
-
+.competency-profile-container label{
+	padding-top: 20px;
+}
 
 /* Learning Resources */
 
