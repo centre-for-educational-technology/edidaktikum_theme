@@ -64,9 +64,10 @@ h2, h2 a {
 
 .content h2,
 .content h2 a {
-	font-size: 26px;
+	font-size: 24px;
 	margin-bottom: 10px;
 	font-weight: 300;
+	text-decoration: none;
 }
 
 .submitted span, .submitted span a {
@@ -136,11 +137,29 @@ dd {
 
 .description {
 	padding: 5px 0;
-	color: #bcbcbc;
+	color: #ababab;
+}
+
+.description .q-portfolio-status{
+	font-weight: bold;
+	margin-top: 10px;
+	color: #333333;
+}
+
+.description .assigned{
+	font-weight: bold;
+	margin-top: 10px;
+	color: green;
+}
+
+.description .not-assigned{
+	font-weight: bold;
+	margin-top: 10px;
+	color: red;
 }
 
 .form-item .description {
-	font-size: 10px;
+	font-size: 12px;
 }
 
 .field-tags a.badge {
@@ -448,12 +467,6 @@ ul.ed-shared-nodes-listing a {
 /* Collections */
 
 .node-type-ed-collection #header {
-/*
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-*/
 	margin: 0 auto;
 	width: 940px;
 	height: 300px;
@@ -488,6 +501,33 @@ ul.ed-shared-nodes-listing a {
 
 .node-ed-collection.node-promoted.node-teaser.contextual-links-region.ed-node-mine span.label.label-info.single-publishing-status {
 	float: right;
+}
+
+.node-type-ed-collection .cover-image {
+	display: none;
+}
+
+.node-type-ed-collection h2 {
+	margin-bottom: 0;
+}
+
+.field-name-ed-collection-field-items .even{
+	padding-left: 10px;
+}
+
+.node-type-ed-collection .field-item.odd {
+	background: #efefef;
+	margin-top: 15px;
+	padding-left: 10px;
+}
+
+.single-remove-from-collection {
+	color: gray;
+}
+
+.single-remove-from-collection:hover {
+	color: red;
+	text-decoration: none;
 }
 
 /* General styles for pages */
@@ -698,6 +738,78 @@ ul.entityreference-dragdrop li {
 	margin-top: 20px;
 }
 
+
+/* Qualification portfolio */
+
+.competence a{
+	font-size: 16px;
+}
+
+div.ctools-modal-content .modal-header {
+	background-color: #2385c2;
+	padding: 9px 15px;
+}
+
+div.ctools-modal-content .modal-title {
+	font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+div.ctools-modal-content a.close img {
+	margin-left: 5px;
+}
+
+.close {
+	font-weight: normal;
+	font-size: 18px;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	color: #fff;
+}
+
+.modal-header .close {
+	margin-top: 0px;
+}
+
+.modal-header button{
+	font-size: 30px;
+}
+
+#ed-q-portfolio-form label, .description, #edit-competence-new-ed-file-upload,
+.btn, #ed-q-portfolio-assessor-form label, #ed-q-portfolio-status-form label,
+div.ctools-modal-content {
+	font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+div.ctools-modal-content {
+	border: 0;
+	border-radius: 6px;
+	outline: 0;
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+div.ctools-modal-content .modal-header {
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: 6px 6px 0 0;
+	outline: 0;
+}
+
+.q-portfolio{
+	margin-top: 20px;
+}
+
+h3.q-portfolio-info{
+	padding-top: 0px !important;
+}
+
+.competence.highlight{
+	font-size: 16px;
+	font-style: italic;
+}
+
+.competency-profile-container label{
+	padding-top: 20px;
+}
+
 /* Learning Resources */
 
 #ed-learning-resource-listing .form-item {
@@ -832,7 +944,7 @@ and (max-width: 767px) {
 }
 
 h2.ed_event, h2.ed_news, h2.ed_learning_resource, h2.ed_forum,
-h2.ed_blog, h2.ed_bookmark, h2.ed_page, h2.ed_file, h2.ed_task {
+h2.ed_blog, h2.ed_bookmark, h2.ed_page, h2.ed_file, h2.ed_task, h2.ed_q_portfolio {
 	background: #d9edf7;
 	padding: 5px;
 	margin: 30px 0px;
@@ -939,7 +1051,7 @@ table ul.links li {
 
 /* Buttons */
 
-#edit-submit {
+#edit-submit, input#edit-submit--2.btn.btn-primary.form-submit {
 	color: #fff;
 	background: #337ab7;
 	border-color: #2e6da4;
@@ -949,7 +1061,7 @@ table ul.links li {
 	text-shadow: none;
 }
 
-#edit-submit:hover {
+#edit-submit:hover, input#edit-submit--2.btn.btn-primary.form-submit:hover {
 	background: #28628F;
 }
 
