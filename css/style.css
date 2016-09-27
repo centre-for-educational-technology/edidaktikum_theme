@@ -137,7 +137,7 @@ dd {
 
 .description {
 	padding: 5px 0;
-	color: #bcbcbc;
+	color: #ababab;
 }
 
 .description .q-portfolio-status{
@@ -159,7 +159,7 @@ dd {
 }
 
 .form-item .description {
-	font-size: 10px;
+	font-size: 12px;
 }
 
 .field-tags a.badge {
@@ -761,8 +761,9 @@ div.ctools-modal-content a.close img {
 .close {
 	font-weight: normal;
 	font-size: 18px;
-	opacity: 0.6;
-	filter: alpha(opacity=60);
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	color: #fff;
 }
 
 .modal-header .close {
@@ -773,7 +774,9 @@ div.ctools-modal-content a.close img {
 	font-size: 30px;
 }
 
-#ed-q-portfolio-form label, .description, #edit-competence-new-ed-file-upload, .btn, #ed-q-portfolio-assessor-form label, #ed-q-portfolio-status-form label{
+#ed-q-portfolio-form label, .description, #edit-competence-new-ed-file-upload,
+.btn, #ed-q-portfolio-assessor-form label, #ed-q-portfolio-status-form label,
+div.ctools-modal-content {
 	font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
@@ -1052,7 +1055,7 @@ table ul.links li {
 
 /* Buttons */
 
-#edit-submit {
+#edit-submit, input#edit-submit--2.btn.btn-primary.form-submit {
 	color: #fff;
 	background: #337ab7;
 	border-color: #2e6da4;
@@ -1062,7 +1065,7 @@ table ul.links li {
 	text-shadow: none;
 }
 
-#edit-submit:hover {
+#edit-submit:hover, input#edit-submit--2.btn.btn-primary.form-submit:hover {
 	background: #28628F;
 }
 
