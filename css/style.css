@@ -873,7 +873,11 @@ td.unchecked {
 	background: #f0ad4e;
 }
 
-td.unchecked a, td.rejected a, td.answered a {
+td.na{
+	background: #bdbdbd;
+}
+
+td.unchecked a, td.rejected a, td.answered a, td.na {
 	color: #fff;
 }
 
