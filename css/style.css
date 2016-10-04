@@ -870,8 +870,7 @@ h3.q-portfolio-info{
 	padding: 5px;
 }
 
-.page-dashboard-tasks td.unanswered {
-	color: #fff;
+td.unanswered {
 	background: red;
 }
 
@@ -883,7 +882,7 @@ td.na{
 	background: #bdbdbd;
 }
 
-td.unchecked a, td.rejected a, td.answered a, td.na {
+td.unchecked a, td.rejected a, td.answered a, td.na, td.unanswered {
 	color: #fff;
 }
 
