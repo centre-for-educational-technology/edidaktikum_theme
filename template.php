@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * @file
  * Provides preprocess logic and other functionality for theming.
@@ -17,7 +18,34 @@ function edidaktikum_theme_preprocess_page(&$vars) {
   }
   // Breadcrumbs are not displayed
   $vars['breadcrumb'] = FALSE;
+
+
+
+  $contacts_text = variable_get('ed_contact_page_contacts_text', '');
+  if (is_array($contacts_text)) {
+    $contacts_text = check_markup($contacts_text['value'], $contacts_text['format']);
+  }
+
+  $vars['contacts_text'] = $contacts_text;
+
+
+  $logos_text = variable_get('ed_contact_page_logos_text', '');
+  if (is_array($logos_text)) {
+    $logos_text = check_markup($logos_text['value'], $logos_text['format']);
+  }
+
+  $vars['logos_text'] = $logos_text;
+
+
 }
+
+function edidaktikum_theme_menu_link_alter(&$link) {
+
+  if ($link['link_path'] == 'contact') {
+    $link['hidden'] = 1;
+  }
+}
+
 
 /**
  * Implements template_preprocess_search_result().

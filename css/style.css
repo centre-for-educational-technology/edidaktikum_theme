@@ -1,6 +1,8 @@
 /* CSS reset */
 
-html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{
+	/*margin:0; Overrides Bootstrap*/
+	padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
 
 /* Fonts */
 
@@ -201,19 +203,61 @@ div.status {
 
 /* Navigation bar */
 
+.navbar .navbar-inner {
+	border: 0;
+	-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+	box-shadow: 0 2px 10px rgba(0,0,0,.25);
+}
+
+.navbar .brand {
+	padding: 14px 20px 16px;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+
+.navbar .nav > li > a {
+	padding: 15px 20px;
+}
+
+.navbar .btn-navbar {
+	margin-top: 10px;
+}
+
 a.brand {
 	font-weight: 100 !important;
+}
+
+.navbar-search{
+	margin-top: 10px;
 }
 
 .brand-avatar {
 	padding-right: 0px !important;
 }
 
+.front-image-section .navbar .brand img {
+	margin: 0 0 0 -5px;
+
+}
+
 .brand-avatar img {
 	-webkit-border-radius: 100%;
 	-moz-border-radius: 100%;
 	border-radius: 100%;
-	margin-left: 20px;
+	width: 30px;
+	height: 30px;
+	max-width: none;
+	margin: 0px 5px -5px 20px !important;
+}
+
+.brand-avatar a {
+	display: inline-block;
+	position: relative;
+}
+
+.brand-avatar{
+	padding-top: 10px !important;
 }
 
 #navbar .nav-collapse ul li a {
@@ -223,7 +267,7 @@ a.brand {
 #navbar .language-switcher-locale-url {
     float: right;
     list-style-type: none;
-    padding: 10px 15px 0 0;
+    padding: 15px 15px 0 0;
 }
 
 #navbar .language-switcher-locale-url > li {
@@ -282,6 +326,13 @@ ul.ed-shared-nodes-listing a {
     list-style-type: none;
 }
 
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	margin: 0 auto -60px;
+}
+
+
 #block-menu-ed-dashboard-menu ul.menu, #block-menu-ed-dashboard-menu ul.menu li:first-child {
 	margin-left: 0px;
 }
@@ -315,11 +366,233 @@ ul.ed-shared-nodes-listing a {
 
 /* Dashboard learning analytics */
 
-.row {
-	margin-left: 0;
-}
+/*.row {*/
+	/*margin-left: 0; Overrides Bootstrap*/
+/*}*/
 
 /* Main index page */
+
+
+.front-image-section {
+	padding: 30px 0px 60px;
+	height: 500px;
+	margin-bottom: 30px;
+
+}
+
+.front-image-section:after {
+	padding: 30px 0px 60px;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/intro_bg.png') repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	height: 500px;
+	margin-bottom: 30px;
+
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+
+}
+
+.flex-video {
+	position: relative;
+	padding-top: 25px;
+	padding-bottom: 67.5%;
+	height: 0;
+	margin-bottom: 16px;
+	overflow: hidden;
+}
+
+/* Overrides max-width 940 css of Tweme */
+@media (min-width: 1200px) {
+	.container.front-page, .container.front-page-image {
+		width: 1170px;
+	}
+}
+
+.flex-video.widescreen { padding-bottom: 57.25%; }
+.flex-video.vimeo { padding-top: 0; }
+
+.flex-video iframe,
+.flex-video object,
+.flex-video embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* GLOBAL STYLES
+    -------------------------------------------------- */
+body {
+	color: #5a5a5a;
+}
+
+/* Center align the text within the three columns below the carousel */
+.front-page .span4 {
+	text-align: center;
+}
+.front-page h2 {
+	font-weight: normal;
+}
+.front-page .span4 p {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+	margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+.featurette {
+	padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+	overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+.featurette-image {
+	margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+	margin-right: 40px;
+}
+.featurette-image.pull-right {
+	margin-left: 40px;
+}
+
+/* Thin out the front-page headings */
+.featurette-heading {
+	font-size: 50px;
+	font-weight: 300;
+	line-height: 1;
+	letter-spacing: -1px;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 979px) {
+
+	.container.navbar-wrapper {
+		margin-bottom: 0;
+		width: auto;
+	}
+	.navbar-inner {
+		border-radius: 0;
+	}
+
+	.carousel .item {
+		height: 500px;
+	}
+	.carousel img {
+		width: auto;
+		height: 500px;
+	}
+
+	.featurette {
+		height: auto;
+		padding: 0;
+	}
+	.featurette-image.pull-left,
+	.featurette-image.pull-right {
+		display: block;
+		float: none;
+		max-width: 40%;
+		margin: 0 auto 20px;
+	}
+}
+
+
+@media (max-width: 767px) {
+
+	.carousel {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	.carousel .container {
+
+	}
+	.carousel .item {
+		height: 300px;
+	}
+	.carousel img {
+		height: 300px;
+	}
+	.carousel-caption {
+		width: 65%;
+		padding: 0 70px;
+		margin-top: 100px;
+	}
+	.carousel-caption h1 {
+		font-size: 30px;
+	}
+	.carousel-caption .lead,
+	.carousel-caption .btn {
+		font-size: 18px;
+	}
+
+	.front-page .span4 + .span4 {
+		margin-top: 40px;
+	}
+
+	.featurette-heading {
+		font-size: 30px;
+	}
+	.featurette .lead {
+		font-size: 18px;
+		line-height: 1.5;
+	}
+
+}
+
+
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+	.flex-video { padding-top: 0; }
+}
+
+.front-page .heading{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+
+
+.front-image-section .front-calltoaction {
+	margin: 30px -20px 30px -20px;
+}
+
+.front-image-section .front-calltoaction h1.headline {
+	color: #fff;
+	font-family: 'OpenSans',Arial,sans-serif;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 46px;
+	line-height: 62px;
+}
+
+.front-image-section .front-calltoaction h1, .front-image-section .front-calltoaction h2, .front-image-section .front-calltoaction h3, .front-image-section .front-calltoaction h4, .front-image-section .front-calltoaction h5, .front-image-section .front-calltoaction h6 {
+	color: #fff;
+	text-align: center;
+	display: block;
+	margin: 30px auto;
+}
+
+.front-image-section .front-calltoaction p.call-to-action {
+	text-align: center;
+	margin-top: 60px;
+	float: none;
+}
 
 #intro {
 	width:100% !important;
@@ -1158,6 +1431,8 @@ table ul.links li {
 	border: 2px solid #ccc;
 	padding: 5px;
 	background: #fff;
+	height: 115px;
+	width: 115px;
 }
 
 .profile .field {
@@ -1212,10 +1487,45 @@ table ul.links li {
 	top: 3px;
 }
 
-#footer .container {
-	background-color: rgb(53, 57, 63);
-	padding-bottom: 20px;
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
 }
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+	height: 60px;
+}
+#footer {
+	background-color: #f5f5f5;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+	#footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
 
 /* Maintenance mode public view */
 
