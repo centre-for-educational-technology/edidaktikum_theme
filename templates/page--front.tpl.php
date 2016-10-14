@@ -54,9 +54,24 @@ global $user;
         <?php print t('Didaktikavaramu ja õpetajakoolituse keskkond') ?>
         </h1>
         <p class="call-to-action">
-          <a href="#" class="btn btn-large btn-primary rounded">Logi sisse</a>
-          <a href="#" class="btn btn-large btn-success rounded">Registreeru</a>
+<!--          <a href="#" class="btn btn-large btn-primary rounded">Logi sisse</a>-->
+          <?php
+          if (!$user->uid) {
+            print l(t('Sign in'), 'user', array('attributes' => array('class' => 'btn btn-large btn-primary rounded')));
+          }
+          ?>
+          <?php
+          if (!$user->uid) {
+            print l(t('Register'), 'user/register', array('attributes' => array('class' => 'btn btn-large btn-success rounded')));
+          }
+          ?>
+          <?php
+          if ($user->uid) {
+            print l(t('Dashboard'), 'dashboard', array('attributes' => array('class' => 'btn btn-large btn-success rounded')));
+          }
+          ?>
         </p>
+
 
 
     </article>
@@ -105,7 +120,7 @@ global $user;
 
   <section class="row">
     <div class="span12">
-      <div class="flex-video widescreen"><iframe src="https://player.vimeo.com/video/185232584?title=0&byline=0&portrait=0" frameborder="0" allowfullscreen=""></iframe></div>
+      <div class="flex-video widescreen"><iframe src="https://www.youtube.com/embed/nr-G27pQohM" frameborder="0" allowfullscreen=""></iframe></div>
 
     </div>
 
@@ -122,15 +137,15 @@ global $user;
     </div>
     <div class="span4">
       <i class="fa fa-5x fa-smile-o"></i>
-      <p>152 õppejõudu 1925 tudengit</p>
+      <p><?php print $teachers_count ?> õppejõudu ja <?php print $students_count ?> tudengit</p>
     </div><!-- /.span4 -->
     <div class="span4">
       <i class="fa fa-5x fa-book"></i>
-      <p>78 kursust ja gruppi 360 õppematerjali</p>
+      <p><?php print $groups_count ?> kursust ja gruppi <?php print $res_count ?> õppematerjali</p>
     </div><!-- /.span4 -->
     <div class="span4">
       <i class="fa fa-5x fa-files-o"></i>
-      <p>687 antud ülesannet</p>
+      <p><?php print $tasks_count ?> antud ülesannet</p>
     </div><!-- /.span4 -->
   </div><!-- /.row -->
   <hr class="featurette-divider">
@@ -153,11 +168,6 @@ global $user;
     <div class="span12">
       <div id="logos-text">
         <?php print $logos_text ?>
-        <h2><?php print t('Supported by') ?></h2>
-        <p>&nbsp;</p>
-        <p><img src="http://edidaktikum.ee/et/system/files/ed_file_uploads/eduko_ESF.jpg" alt="Eduko ja ESF"></p>
-        <p>&nbsp;</p>
-        <p><span style="font-family:helvetica;color:#999999;">E-didaktikumi arendust toetas Euroopa Liit, Euroopa Sotsiaalfond haridusteaduse ja õpetajakoolituse arendamise programmi Eduko kaudu</span></p>
       </div>
 
     </div>
@@ -165,6 +175,7 @@ global $user;
 
 </div><!-- /.container -->
 
+</div>
 
   <!-- Footer -->
 <footer id="footer">
@@ -189,7 +200,7 @@ global $user;
 </footer>
 
 
-</div>
+
 
 
 

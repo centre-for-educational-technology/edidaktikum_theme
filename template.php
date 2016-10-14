@@ -37,6 +37,68 @@ function edidaktikum_theme_preprocess_page(&$vars) {
   $vars['logos_text'] = $logos_text;
 
 
+
+  $vars['students_count'] = get_student_qt();
+
+  $vars['teachers_count'] = get_teacher_qt();
+
+  $vars['groups_count'] = get_cluster_qt();
+
+  $vars['res_count'] = get_lr_qt();
+
+  $vars['tasks_count'] = get_task_qt();
+
+
+}
+
+
+function get_student_qt(){
+  $query = db_select('users', 'u');
+  $query->leftJoin('users_roles', 'ur', 'ur.uid = u.uid');
+  $query->leftJoin('role', 'r', 'r.rid = ur.rid');
+  $query->fields('u', array('uid'))
+      ->condition('u.uid', 0, '!=')
+      ->isNull('r.name');
+
+  return $query->countQuery()->execute()->fetchField();
+}
+
+function get_teacher_qt(){
+  $query = db_select('users', 'u');
+  $query->join('users_roles', 'ur', 'ur.uid = u.uid');
+  $query->join('role', 'r', 'r.rid = ur.rid');
+  $query->condition('r.name' , 'teacher')
+      ->addTag('node_access');
+  $query->fields('u',array('uid'));
+
+  return $query->countQuery()->execute()->fetchField();
+}
+
+function get_task_qt(){
+  $query = db_select('node', 'n')
+      ->fields('n', array('nid'))
+      ->addTag('node_access')
+      ->condition('type', 'ed_task');
+
+  return $query->countQuery()->execute()->fetchField();
+}
+
+function get_lr_qt(){
+  $query = db_select('node', 'n')
+      ->fields('n', array('nid'))
+      ->addTag('node_access')
+      ->condition('type', 'ed_learning_resource');
+
+  return $query->countQuery()->execute()->fetchField();
+}
+
+function get_cluster_qt(){
+  $query = db_select('node', 'n')
+      ->fields('n', array('nid'))
+      ->addTag('node_access')
+      ->condition('type', 'ed_cluster');
+
+  return $query->countQuery()->execute()->fetchField();
 }
 
 function edidaktikum_theme_menu_link_alter(&$link) {

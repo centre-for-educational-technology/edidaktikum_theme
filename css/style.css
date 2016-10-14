@@ -111,6 +111,10 @@ h2, h2 a {
 	background-color: #5cb85c;
 }
 
+.filters.form-wrapper{
+	padding: 10px;
+}
+
 dl {
 	margin: 20px 0;
 }
@@ -326,11 +330,6 @@ ul.ed-shared-nodes-listing a {
     list-style-type: none;
 }
 
-#wrap {
-	min-height: 100%;
-	height: auto !important;
-	margin: 0 auto -60px;
-}
 
 
 #block-menu-ed-dashboard-menu ul.menu, #block-menu-ed-dashboard-menu ul.menu li:first-child {
@@ -378,6 +377,16 @@ ul.ed-shared-nodes-listing a {
 	height: 500px;
 	margin-bottom: 30px;
 
+}
+
+body.front #wrap .row{
+	margin-left: -20px;
+}
+
+@media (min-width: 1200px) {
+	body.front #wrap .row {
+		margin-left: -30px !important;
+	}
 }
 
 .front-image-section:after {
@@ -1165,6 +1174,10 @@ td.unchecked a, td.rejected a, td.answered a, td.na {
 	color: #a94442;
 }
 
+.row {
+	margin-left: 0;
+}
+
 .ed_mygroup_inactive_container {
 	position: relative;
 	z-index: 1;
@@ -1504,7 +1517,7 @@ body {
 	height: auto !important;
 	height: 100%;
 	/* Negative indent footer by it's height */
-	margin: 0 auto -60px;
+	margin: 0 auto 60px;
 }
 
 /* Set the fixed height of the footer here */
