@@ -57,7 +57,7 @@ global $user;
 <!--          <a href="#" class="btn btn-large btn-primary rounded">Logi sisse</a>-->
           <?php
           if (!$user->uid) {
-            print l(t('Sign in'), 'user', array('attributes' => array('class' => 'btn btn-large btn-primary rounded')));
+            print l(t('Sign in'), 'user', array('attributes' => array('class' => 'btn btn-large btn-info rounded')));
           }
           ?>
           <?php
@@ -90,25 +90,25 @@ global $user;
   <!-- Three columns of text below the carousel -->
   <div class="row">
     <div class="span12 heading">
-      <h2>Mis on eDidaktikum?</h2>
-      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+      <h2><?php print t('What is eDidaktikum?'); ?></h2>
+      <p><?php print $what_text ?></p>
     </div>
     <div class="span4">
       <i class="fa fa-5x fa-dashboard"></i>
-      <h2>Töölaud</h2>
-      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+      <h2><?php print t('Dashboard'); ?></h2>
+      <p><?php print $dashboard_text ?></p>
       <p><a class="btn" href="#">View details »</a></p>
     </div><!-- /.span4 -->
     <div class="span4">
       <i class="fa fa-5x fa-users"></i>
-      <h2>Grupid ja kursused</h2>
-      <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <h2><?php print t('Groups and Courses'); ?></h2>
+      <p><?php print $groups_text ?></p>
       <p><a class="btn" href="#">View details »</a></p>
     </div><!-- /.span4 -->
     <div class="span4">
       <i class="fa fa-5x fa-star"></i>
-      <h2>Kollektsioonid</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <h2><?php print t('Collections'); ?></h2>
+      <p><?php print $collections_text ?></p>
       <p><a class="btn" href="#">View details »</a></p>
     </div><!-- /.span4 -->
   </div><!-- /.row -->
