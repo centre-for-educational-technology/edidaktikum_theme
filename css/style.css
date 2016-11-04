@@ -974,10 +974,10 @@ div.panel-col-first label.option, .block-system label.option {
 }
 
 /* Two column stacked top modification */
-.panel-2col-stacked-top .panel-col-bottom { 
-	padding: 0px 20px;
-	width: 550px !important;
-}
+/*.panel-2col-stacked-top .panel-col-bottom { */
+	/*padding: 0px 20px;*/
+	/*width: 550px !important;*/
+/*}*/
 
 /* Two column pages */
 

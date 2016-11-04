@@ -19,4 +19,4 @@ regions[sidebar_second] = Sidebar second
 regions[sidebar_second_affix] = Sidebar second affix
 regions[footer] = Footer
 
-plugins[panels][layouts] = layouts
+;plugins[panels][layouts] = layouts
