@@ -8,32 +8,36 @@
 global $user;
 ?>
 
+<div id="wrap">
+
 <!-- Navbar -->
-<div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top">
-	<div class="navbar-inner">
-		<div class="container">
-      <?php print $navbar_toggler ?>
-      <?php print $navbar_brand ?>
+<div id="navbar" class="navbar navbar-static-top">
+  <div class="navbar-inner">
+    <div class="container">
 
-      <?php if (user_is_logged_in()): ?>
-          <div class="brand brand-avatar">
-          <?php
-              $user_picture_data = array('account' => $user);
-              template_preprocess_user_picture($user_picture_data);
-              print $user_picture_data['user_picture'];
-          ?>
-          </div>
-      <?php endif; ?>
+    <?php print $navbar_toggler ?>
+    <?php print $navbar_brand ?>
 
-      <?php print $navbar_search ?>
-      <?php if ($navbar_languages): ?><?php print $navbar_languages ?><?php endif ?>
-      <?php if ($navbar_menu): ?>
-			<nav class="nav-collapse collapse" role="navigation">
+    <?php if (user_is_logged_in()): ?>
+      <div class="brand brand-avatar">
+        <?php
+        $user_picture_data = array('account' => $user);
+        template_preprocess_user_picture($user_picture_data);
+        print $user_picture_data['user_picture'];
+        ?>
+      </div>
+    <?php endif; ?>
+
+    <?php print $navbar_search ?>
+    <?php if ($navbar_languages): ?><?php print $navbar_languages ?><?php endif ?>
+    <?php if ($navbar_menu): ?>
+      <nav class="nav-collapse collapse" role="navigation">
         <?php print $navbar_menu ?>
       </nav>
-			<?php endif ?>
-		</div>
-	</div>
+    <?php endif ?>
+
+    </div>
+  </div>
 </div>
 
 <?php if ($page['featured']): ?>
@@ -80,6 +84,8 @@ global $user;
       <?php endif ?>
     </div>
 	</div>
+</div>
+
 </div>
 
 <!-- Footer -->
