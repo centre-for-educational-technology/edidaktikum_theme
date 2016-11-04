@@ -123,19 +123,19 @@ global $user;
       <!-- Three columns of statistics -->
       <div class="row">
         <div class="span12 heading">
-          <h2>eDidaktikum numbrites</h2>
+          <h2><?php print t('eDidaktikum in numbers') ?></h2>
         </div>
         <div class="span4">
           <i class="fa fa-5x fa-smile-o"></i>
-          <p><?php print $teachers_count ?> õppejõudu ja <?php print $students_count ?> tudengit</p>
+          <p><?php print $teachers_count ?> <?php print t('teachers and') ?> <?php print $students_count ?> <?php print t('students') ?></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <i class="fa fa-5x fa-book"></i>
-          <p><?php print $groups_count ?> kursust ja gruppi <?php print $res_count ?> õppematerjali</p>
+          <p><?php print $groups_count ?> <?php print t('courses and groups') ?>, <?php print $res_count ?> <?php print t('learning materials') ?></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <i class="fa fa-5x fa-files-o"></i>
-          <p><?php print $tasks_count ?> antud ülesannet</p>
+          <p><?php print $tasks_count ?> <?php print t('tasks given') ?></p>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
       <hr class="featurette-divider">
@@ -179,7 +179,7 @@ global $user;
           <?php print l($item['title'], $item['href']) ?>
         <?php endforeach ?>
 
-        <a href="#"><?php print t('Back to top') ?> </a>
+        <a href="#wrap"><?php print t('Back to top') ?> </a>
       <?php endif ?>
       <?php
       if (!$user->uid) {
