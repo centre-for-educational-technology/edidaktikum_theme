@@ -131,7 +131,7 @@ global $user;
         </div><!-- /.span4 -->
         <div class="span4">
           <i class="fa fa-5x fa-book"></i>
-          <p><?php print $groups_count ?> <?php print t('courses and of groups') ?> <?php print $res_count ?> <?php print t('learning materials') ?></p>
+          <p><?php print $groups_count ?> <?php print t('groups that made up') ?> <?php print $res_count ?> <?php print t('learning materials') ?></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <i class="fa fa-5x fa-files-o"></i>
