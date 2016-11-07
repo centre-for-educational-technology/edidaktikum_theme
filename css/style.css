@@ -405,6 +405,7 @@ body.front #uvTab{
 
 html {
 	height: 100%;
+	height: 100vh;
 	overflow: hidden;
 }
 body.front {
@@ -820,6 +821,10 @@ body {
 	.front-image-section .front-calltoaction h1.headline{
 		font-size: 2.5em;
 		line-height: 1em;
+	}
+
+	.front-image-section .front-calltoaction h1.headline {
+		margin-top: 10vh;
 	}
 
 }
