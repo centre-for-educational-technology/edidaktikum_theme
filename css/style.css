@@ -96,6 +96,11 @@ h2, h2 a {
 	padding-top: 10px;
 }
 
+#search-form #edit-submit--2{
+	width: 1px;
+	padding: 0;
+}
+
 .ed-add-new-node {
 	height: 26px;
 	display: inline-block;
@@ -426,7 +431,6 @@ body{
 .front-page-image {
 	box-sizing: border-box;
 	min-height: calc(100vh - 80px);
-
 	position: relative;
 	-webkit-transform-style: inherit;
 	transform-style: inherit;
@@ -458,6 +462,7 @@ body{
 	-webkit-transform: translateZ(-1px) scale(2);
 	transform-origin: center center 0;
 	transform: translateZ(-1px) scale(2);
+
 }
 
 .main {
@@ -742,6 +747,21 @@ body {
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
+@media only screen
+and (max-device-width : 1024px)  {
+
+	html{
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	/* Tested on iPad Retina */
+	.front-page-image {
+		box-sizing: border-box;
+		min-height: calc(100vh - 137px);
+	}
+}
+
 @media (max-width: 979px) {
 
 	.container.navbar-wrapper {
@@ -771,6 +791,8 @@ body {
 		max-width: 40%;
 		margin: 0 auto 20px;
 	}
+
+
 }
 
 
@@ -824,11 +846,18 @@ body {
 	}
 
 	.front-image-section .front-calltoaction h1.headline {
-		margin-top: 10vh;
+		margin-top: 0.5vh;
+		font-size: 30px;
 	}
 
-	html{
-		overflow: visible;
+	.front-image-section .front-calltoaction p.call-to-action {
+		margin-top: 20px;
+	}
+
+	/* Tested on iPhone 6s */
+	.front-page-image {
+		box-sizing: border-box;
+		min-height: calc(100vh - 149px);
 	}
 
 	.front-image-section .front-calltoaction p.call-to-action .btn{
@@ -1617,6 +1646,12 @@ table ul.links li {
 
 /* Sticky footer styles
 -------------------------------------------------- */
+
+html,
+body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+}
 
 /* Wrapper for page content to push down footer */
 #wrap {
