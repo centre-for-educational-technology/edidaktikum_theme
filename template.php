@@ -132,18 +132,17 @@ function edidaktikum_theme_preprocess_search_result(&$variables) {
 function edidaktikum_theme_preprocess_html(&$vars) {
     _edidaktikum_theme_load_fontawsome();
 
-
   $viewport = array(
       '#type' => 'html_tag',
       '#tag' => 'meta',
       '#attributes' => array(
           'name' => 'viewport',
-
           'content' => 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=yes',
       )
   );
 
   drupal_add_html_head($viewport, 'viewport');
+
 
 
   $_meta_shortcut_icon = array(
