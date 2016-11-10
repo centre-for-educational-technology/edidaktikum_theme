@@ -399,6 +399,11 @@ body.front #wrap .row{
 	margin-left: -20px;
 }
 
+body.not-front .navbar-inner{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 /* Hide Feedback button */
 body.front #uvTab{
 	visibility: hidden;
