@@ -1,0 +1,40 @@
+
+.panel-2col-stacked-top { 
+/*  overflow: hidden;  */
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.panel-2col-stacked-top .panel-col-top { 
+  width: 99.9%; 
+  clear: both;
+}
+
+.panel-2col-stacked-top .panel-col-top .inside {
+  margin-bottom: .5em;
+}
+
+.panel-2col-stacked-top .panel-col-first, .panel-2col-stacked-top .panel-col-bottom { 
+  float: left; 
+  width: 50%; 
+}
+* html .panel-2col-stacked-top .panel-col-first {
+  width: 49.9%;
+}
+
+.panel-2col-stacked-top .panel-col-first .inside { 
+  margin: 0 .5em 1em 0;
+}
+
+.panel-2col-stacked-top .panel-col-last { 
+  float: left; 
+  width: 49.9%; 
+}
+
+.panel-2col-stacked-top .panel-col-last .inside { 
+  margin: 0 0 1em .5em;
+}
+
+.panel-2col-stacked-top .panel-separator {
+  margin: 0 0 1em 0;
+}
