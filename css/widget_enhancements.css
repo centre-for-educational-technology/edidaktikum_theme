@@ -1,8 +1,8 @@
+/* dropdown */
+
 .ed_we_dropdown_head {
 	position:relative;
 }
-
-
 
 .ed_we_dropdown_head:before {
 	position:absolute;
@@ -31,4 +31,15 @@
 [ed_we_dropdown_hidden] {
 	height:0 !important;
 	opacity:0;
+}
+
+/* averaging table */
+
+.ed_we_at_hidden {
+	opacity: 0;
+}
+
+.ed_we_at_cell {
+	background-color:rgba(0,0,0,0.2);
+	color:white;
 }
