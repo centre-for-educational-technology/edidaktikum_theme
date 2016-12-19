@@ -1435,6 +1435,10 @@ table {
   width: 100%;
 }
 
+table.sticky-header {
+	visibility:hidden !important;
+}
+
 table table {
   font-size: 1em;
 }
