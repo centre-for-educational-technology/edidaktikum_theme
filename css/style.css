@@ -260,7 +260,6 @@ a.brand {
 
 .front-image-section .navbar .brand img {
 	margin: 0 0 0 -5px;
-
 }
 
 .brand-avatar img {
@@ -271,6 +270,7 @@ a.brand {
 	height: 30px;
 	max-width: none;
 	margin: 0px 5px -5px 20px !important;
+	object-fit:cover;
 }
 
 .brand-avatar a {
@@ -995,6 +995,7 @@ div.panel-col-first label.option, .block-system label.option {
 	width: 75px;
 	height: 75px;
 	border-radius: 50px 50px 0px 50px;
+	object-fit:cover;
 }
 
 .comment h3, .comment .submitted, .comment .content, .comment span.new {
@@ -1593,6 +1594,7 @@ table ul.links li {
 	background: #fff;
 	height: 115px;
 	width: 115px;
+	object-fit:cover;
 }
 
 .profile .field {
