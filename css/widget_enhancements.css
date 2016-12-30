@@ -43,3 +43,24 @@
 	background-color:rgba(0,0,0,0.2);
 	color:white;
 }
+
+/* sticky headers table */
+
+[data-sticky_headers] {
+	position:relative;
+}
+
+[data-sticky_headers] td, [data-sticky_headers] th {
+	position:relative;
+	z-index:1;
+}
+
+td[data-sticky_header] {
+	z-index:2;
+}
+
+th[data-sticky_header] {
+	z-index:3;
+}
+
+

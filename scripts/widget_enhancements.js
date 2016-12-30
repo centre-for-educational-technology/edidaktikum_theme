@@ -38,7 +38,7 @@ window.addEventListener("load", function() {
 	});
 
 
-	// enhance fields wrapped with hc grade limiter
+	// enhance fields wrapped with grade limiter
 	var fields = document.querySelectorAll("[data-grade_limiter] input");
 	var f_min = 1;
 	var f_max = 100;
@@ -132,6 +132,54 @@ window.addEventListener("load", function() {
 			td.className = "ed_we_at_cell";
 			tr.appendChild(td);
 		}
+	});
+
+
+	// enhance sticky headers
+	var sticky_header_tables = document.querySelectorAll("[data-sticky_headers]");
+	sticky_header_tables.forEach(function(table) {
+		var side_headers = [];
+		var rows = table.querySelectorAll("tr");
+		for (var i = 0; i < rows.length; i++) {
+			if (rows[i].childNodes.length < 1) continue;
+			var header = rows[i].childNodes[0];	
+			header.setAttribute("data-sticky_header", "");
+			side_headers.push(header);
+
+			// hack to get around current style mess
+			if (i == 0) continue;
+			header.style.background = getComputedStyle(rows[i]).background;	
+		}
+		
+		var top_headers = [];
+		for (var i = 0; i < rows[0].childNodes.length; i++) {
+			var header = rows[0].childNodes[i];
+			if (header.tagName != "TH") continue;
+			header.setAttribute("data-sticky_header", "");
+			top_headers.push(header);
+		}
+
+		var cr_corner = top_headers[0].getBoundingClientRect();
+		var cr_table = table.getBoundingClientRect();
+		var max_horizontal = cr_table.right - cr_table.left - cr_corner.right + cr_corner.left;
+		var max_vertical = cr_table.bottom - cr_table.top - cr_corner.bottom + cr_corner.top;
+		
+		document.addEventListener("scroll", function() {
+			var cr = table.getBoundingClientRect();
+			var off_x = Math.min(Math.max(0, -cr.left), max_horizontal);
+			var off_y = Math.min(Math.max(0, -cr.top), max_vertical);
+
+			top_headers[0].style.transform = "translate(" + off_x + "px," + off_y + "px)";
+
+			for (var i = 1; i < side_headers.length; i++) {
+				side_headers[i].style.transform = "translateX(" + off_x + "px)";
+			}
+
+			for (var i = 1; i < top_headers.length; i++) {
+				top_headers[i].style.transform = "translateY(" + off_y + "px)";
+			}
+
+		});
 	});
 
 });
