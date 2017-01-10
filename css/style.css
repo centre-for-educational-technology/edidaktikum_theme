@@ -260,7 +260,6 @@ a.brand {
 
 .front-image-section .navbar .brand img {
 	margin: 0 0 0 -5px;
-
 }
 
 .brand-avatar img {
@@ -271,6 +270,7 @@ a.brand {
 	height: 30px;
 	max-width: none;
 	margin: 0px 5px -5px 20px !important;
+	object-fit:cover;
 }
 
 .brand-avatar a {
@@ -995,6 +995,7 @@ div.panel-col-first label.option, .block-system label.option {
 	width: 75px;
 	height: 75px;
 	border-radius: 50px 50px 0px 50px;
+	object-fit:cover;
 }
 
 .comment h3, .comment .submitted, .comment .content, .comment span.new {
@@ -1023,10 +1024,10 @@ div.panel-col-first label.option, .block-system label.option {
 }
 
 /* Two column stacked top modification */
-/*.panel-2col-stacked-top .panel-col-bottom { */
-	/*padding: 0px 20px;*/
-	/*width: 550px !important;*/
-/*}*/
+.panel-2col-stacked-top .panel-col-bottom {
+	padding: 0px 20px;
+	width: 550px !important;
+}
 
 /* Two column pages */
 
@@ -1434,6 +1435,10 @@ table {
   width: 100%;
 }
 
+table.sticky-header {
+	visibility:hidden !important;
+}
+
 table table {
   font-size: 1em;
 }
@@ -1593,6 +1598,7 @@ table ul.links li {
 	background: #fff;
 	height: 115px;
 	width: 115px;
+	object-fit:cover;
 }
 
 .profile .field {

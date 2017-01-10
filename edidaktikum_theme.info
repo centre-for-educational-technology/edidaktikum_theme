@@ -4,6 +4,7 @@ base theme = tweme
 core = 7.x
 
 stylesheets[all][] = css/style.css
+stylesheets[all][] = css/widget_enhancements.css
 
 regions[hidden] = Hidden
 regions[header] = Header
@@ -19,4 +20,4 @@ regions[sidebar_second] = Sidebar second
 regions[sidebar_second_affix] = Sidebar second affix
 regions[footer] = Footer
 
-;plugins[panels][layouts] = layouts
+plugins[panels][layouts] = layouts

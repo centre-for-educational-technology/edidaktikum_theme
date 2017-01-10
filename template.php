@@ -282,3 +282,8 @@ function _edidaktikum_theme_load_fontawsome() {
     _tweme_add_asset('css', path_to_theme() . '/libraries/font-awesome/css/font-awesome.min.css', $css_options);
 }
 
+// load scripts
+drupal_add_js(drupal_get_path('theme', 'edidaktikum_theme') . '/scripts/widget_enhancements.js', array('type'=>'file', 'group'=>JS_THEME));
+
+
+
