@@ -929,8 +929,15 @@ and (max-device-width : 1024px)  {
 	float: right;
 }
 
+.node-type-ed-collection .description {
+	display: block;
+	clear: both;
+}
+
 .node-type-ed-collection .cover-image {
-	display: none;
+	float: left;
+	margin: 0 10px 10px 0;
+	/*display: none;*/
 }
 
 .node-type-ed-collection h2 {
