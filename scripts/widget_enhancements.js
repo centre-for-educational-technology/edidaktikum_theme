@@ -57,6 +57,7 @@ window.addEventListener("load", function() {
 	//	enhance averaging tables
 	var tables = document.querySelectorAll("[data-averaging_table]");
 	tables.forEach(function(table) {
+		var t_average = table.getAttribute("data-averaging_table");
 
 		//gather data
 		var by_row = [];
@@ -108,7 +109,7 @@ window.addEventListener("load", function() {
 
 		//present by_row data
 		var th = document.createElement("th");
-		th.innerHTML = "Average";
+		th.innerHTML = t_average;
 		rows[0].appendChild(th);
 
 		for (var y = 1; y < rows.length; y++) {
@@ -124,7 +125,7 @@ window.addEventListener("load", function() {
 		tr.style = "border:none";
 		rows[1].parentElement.appendChild(tr);
 		var th2 = document.createElement("td");
-		th2.innerHTML = "Average";
+		th2.innerHTML = t_average;
 		tr.appendChild(th2);
 		for (var x = 0; x < by_col.length; x++) {
 			var td = document.createElement("td");
