@@ -67,6 +67,7 @@ window.addEventListener("load", function() {
 		if (rows.length < 2) return;
 		for (var y = 1; y < rows.length; y++) {
 			var cols = rows[y].querySelectorAll("td");
+			if (cols.length < 2) return;
 			for (var x = 1; x < cols.length; x++) {
 				var cell = cols[x];
 				var xx = x - 1;
