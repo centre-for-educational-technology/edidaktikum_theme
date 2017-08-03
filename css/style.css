@@ -102,7 +102,6 @@ h2, h2 a {
 }
 
 .ed-add-new-node {
-	height: 26px;
 	display: inline-block;
 	padding: 2px 4px;
 	font-size: 14px;
@@ -114,7 +113,13 @@ h2, h2 a {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+	margin-right: 5px;
 
+}
+
+.ed-add-new-node .form-item{
+	margin-top: 0;
+ 	margin-bottom: 0;
 }
 
 .ed-add-new-node a {
@@ -1312,6 +1317,13 @@ td.unchecked a, td.rejected a, td.answered a, td.na {
 }
 
 /* Group pages */
+.field-name-ed-field-study-year .container-inline-date .date-padding {
+	padding: 0px;
+}
+
+.field-name-ed-field-study-year legend {
+	margin: 0px;
+}
 
 .ed-group-private {
 	border-left: 2px solid red;
