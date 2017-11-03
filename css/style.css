@@ -1426,6 +1426,10 @@ h2.ed_blog, h2.ed_bookmark, h2.ed_page, h2.ed_file, h2.ed_task, h2.ed_q_portfoli
 	margin-bottom: 5px;
 }
 
+#edit-ed-field-group-type-und-0-value{
+	pointer-events: none;
+}
+
 /* Taxonomy tree */
 
 .field-type-taxonomy-term-reference .term-reference-tree label {
