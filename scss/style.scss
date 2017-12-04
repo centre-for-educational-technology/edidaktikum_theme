@@ -7,6 +7,70 @@
 // Base-theme overrides.
 @import 'overrides';
 
+@import '../custom_styles/owl.carousel.min.css';
+@import "../custom_styles/style.css";
+//@import"../custom_styles/custom.css";
+
+
+
+
+.search-block__form input{
+    border: 1px solid #eeeeee;
+    height: 38px;
+    width: 233px;
+    padding: 5px 19px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.info-box-02__box-01 ul.dropdown-menu{
+  left: auto;
+}
+
+.contact-block-01__email{
+  padding-right: 25px;
+}
+.contact-block-01__email.faq::before{
+  content: '\f059';
+}
+
+.contact-block-01__email.user::before{
+  content: '\f007';
+}
+
+.contact-block-01__email.logout::before{
+  content: '\f08b';
+
+}
+
+.contact-block-01__email.login::before{
+  content: '\f090';
+
+}
+
+@media only screen and (max-width: 1199px) {
+  .search-block__form input {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

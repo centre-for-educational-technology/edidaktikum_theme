@@ -44,5 +44,20 @@ scripts[] = 'bootstrap/assets/javascripts/bootstrap/scrollspy.js'
 scripts[] = 'bootstrap/assets/javascripts/bootstrap/tab.js'
 scripts[] = 'bootstrap/assets/javascripts/bootstrap/transition.js'
 
+scripts[] = 'scripts/plugins/jquery.countdown.min.js'
+scripts[] = 'scripts/plugins/jquery.isotope.min.js'
+scripts[] = 'scripts/plugins/jquery.matchHeight-min.js'
+scripts[] = 'scripts/plugins/jquery.nivo.min.js'
+scripts[] = 'scripts/plugins/jquery.owl.carousel.min.js'
+scripts[] = 'scripts/plugins/jquery.parallax.min.js'
+scripts[] = 'scripts/plugins/jquery.prettyPhoto.min.js'
+scripts[] = 'scripts/plugins/jquery.progress.circle.min.js'
+scripts[] = 'scripts/plugins/jquery.superfish.min.js'
+scripts[] = 'scripts/plugins/jquery.swipebox.min.js'
+scripts[] = 'scripts/plugins/jquery.typed.min.js'
+scripts[] = 'scripts/plugins/jquery.waypoint.min.js'
+;scripts[] = 'scripts/main.js'
+
+
 ; Disable the CDN provider so compiled source files can be used.
 settings[bootstrap_cdn] = ''
