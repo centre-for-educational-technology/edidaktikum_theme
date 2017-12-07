@@ -30,8 +30,9 @@ global $user;
                         </div>
                         <div class="col-sm-8 col-md-8 col-lg-8 text-sm-center text-right">
                             <div class="contact-block-01">
-                                <a class="contact-block-01__email register" href="#">Registreeru</a>
-                                <a class="contact-block-01__email log_in" href="#">Logi sisse</a>
+			                        <?php if (!empty($secondary_nav)): ?>
+				                        <?php print render($secondary_nav); ?>
+			                        <?php endif; ?>
                             </div>
                         </div>
                     </div>
