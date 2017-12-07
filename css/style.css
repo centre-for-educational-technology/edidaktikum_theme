@@ -15857,43 +15857,6 @@ h3 {
     color: #303638; } }
 /*
 ==========================================================================
-style.scss
-==========================================================================
-*/
-.search-block__form input {
-  border: 1px solid #eeeeee;
-  height: 38px;
-  width: 233px;
-  padding: 5px 19px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  box-shadow: none;
-  -webkit-box-shadow: none; }
-
-.info-box-02__box-01 ul.dropdown-menu {
-  left: auto; }
-
-.contact-block-01__email {
-  padding-right: 25px; }
-
-.contact-block-01__email.faq::before {
-  content: '\f059'; }
-
-.contact-block-01__email.user::before {
-  content: '\f007'; }
-
-.contact-block-01__email.logout::before {
-  content: '\f08b'; }
-
-.contact-block-01__email.login::before {
-  content: '\f090'; }
-
-@media only screen and (max-width: 1199px) {
-  .search-block__form input {
-    -webkit-border-radius: 0;
-    border-radius: 0; } }
-/*
-==========================================================================
 for-schools.css
 ==========================================================================
 */
@@ -15933,5 +15896,66 @@ blockquote p {
   background: url("../img/school-kivioli-grad.jpg") no-repeat center center;
   background-size: cover;
   background-position: center; }
+
+/*
+==========================================================================
+style.scss
+==========================================================================
+*/
+.search-block__form input {
+  border: 1px solid #eeeeee;
+  height: 38px;
+  width: 233px;
+  padding: 5px 19px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: none;
+  -webkit-box-shadow: none; }
+
+.info-box-02__box-01 ul.dropdown-menu {
+  left: auto; }
+
+.contact-block-01__email {
+  padding-right: 25px; }
+
+.contact-block-01__email.faq::before {
+  content: '\f059'; }
+
+.contact-block-01__email.user::before {
+  content: '\f007'; }
+
+.contact-block-01__email.logout::before {
+  content: '\f08b'; }
+
+.contact-block-01__email.login::before {
+  content: '\f090'; }
+
+@media only screen and (max-width: 1199px) {
+  .search-block__form input {
+    -webkit-border-radius: 0;
+    border-radius: 0; } }
+.content-box-03.support {
+  background-color: #ffffff;
+  background: none; }
+
+.new-group-buttons {
+  display: inline-flex;
+  margin-top: 10px; }
+
+.btn.new-group {
+  margin-right: 10px; }
+
+.page-clusters .item-info__text-01::before {
+  content: "\f0f0"; }
+
+.item-info__text-01 img {
+  height: 30px;
+  margin: 0 5px 5px 0; }
+
+.product-list__item-info {
+  text-align: center; }
+
+.product-list__content.admins {
+  border-top: none; }
 
 /*# sourceMappingURL=style.css.map */

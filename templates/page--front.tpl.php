@@ -100,8 +100,8 @@ global $user;
                             <div class="info-box-text">
                                 <p>eDidaktikumi eesmärk on koondada kõikide erialavaldkondade<br> didaktikaalase info jagamist ja soodustada erinevates valdkondades<br> didaktikaga tegelevate inimeste koostööd.</p>
                             </div>
-                            <a href="#" class="btn-01">Alusta</a>
-                            <a href="#" class="btn-03">Loe edasi</a>
+                            <a href="user" class="btn-01">Alusta</a>
+                            <a href="#front-info" class="btn-03">Loe edasi</a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@ global $user;
     
     
         <main class="content-row">
-            <div class="content-box-01 padding-top-100 padding-sm-top-50">
+            <div class="content-box-01 padding-top-100 padding-sm-top-50" id="front-info">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4 col-md-4 col-lg-4">
