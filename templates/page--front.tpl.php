@@ -610,7 +610,7 @@ global $user;
                             </div>
                             <div class="owl-theme-01__item">
                                 <figure class="owl-theme-01__item-img">
-                                    <img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/portree_naine_01.jpg" alt="">
+                                    <img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/kairit.jpg" alt="">
                                 </figure>
                                 <div class="owl-theme-01__item-header">
                                     <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>
