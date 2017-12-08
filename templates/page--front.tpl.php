@@ -574,50 +574,50 @@ global $user;
                         <div class="owl-carousel owl-option-01 owl-theme-01">
                             <div class="owl-theme-01__item">
                                 <figure class="owl-theme-01__item-img">
-                                    <img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/portree_naine_01.jpg" alt="">
+                                    <img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/kairit.jpg" alt="">
                                 </figure>
                                 <div class="owl-theme-01__item-header">
-                                    <h3 class="owl-theme-01__item-title">Katrin Maripuu</h3>
+                                    <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>
                                     <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>
                                 </div>
                                 <div class="owl-theme-01__item-content">
-                                    <p>“Duis aute irure dolor in reprehenderit in volu ptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.”</p>
+                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad. ”</p>
                                 </div>
                             </div>
                             <div class="owl-theme-01__item">
                                 <figure class="owl-theme-01__item-img">
-                                    <img src="<?php print base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/portree_mees_02.jpg" alt="">
+                                    <img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/kairit.jpg" alt="">
                                 </figure>
                                 <div class="owl-theme-01__item-header">
-                                    <h3 class="owl-theme-01__item-title">Kaarel Kaare</h3>
-                                    <p class="owl-theme-01__item-subtitle">Tudeng</p>
+                                    <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>
+                                    <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>
                                 </div>
                                 <div class="owl-theme-01__item-content">
-                                    <p>“Duis aute irure dolor in reprehenderit in volu ptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.”</p>
+                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad. ”</p>
                                 </div>
                             </div>
                             <div class="owl-theme-01__item">
                                 <figure class="owl-theme-01__item-img">
-                                    <img src="<?php print base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/portree_naine_04.jpg" alt="">
+                                    <img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/kairit.jpg" alt="">
                                 </figure>
                                 <div class="owl-theme-01__item-header">
-                                    <h3 class="owl-theme-01__item-title">Mari-Liis Lusmägi</h3>
-                                    <p class="owl-theme-01__item-subtitle">Õppejõud</p>
+                                    <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>
+                                    <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>
                                 </div>
                                 <div class="owl-theme-01__item-content">
-                                    <p>“Duis aute irure dolor in reprehenderit in volu ptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.”</p>
+                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad. ”</p>
                                 </div>
                             </div>
                             <div class="owl-theme-01__item">
                                 <figure class="owl-theme-01__item-img">
-                                    <img src="<?php print base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/portree_mees_03.jpg" alt="">
+                                    <img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/kairit.jpg" alt="">
                                 </figure>
                                 <div class="owl-theme-01__item-header">
-                                    <h3 class="owl-theme-01__item-title">Mihkel Pukspuu</h3>
-                                    <p class="owl-theme-01__item-subtitle">Tudeng</p>
+                                    <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>
+                                    <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>
                                 </div>
                                 <div class="owl-theme-01__item-content">
-                                    <p>“Duis aute irure dolor in reprehenderit in volu ptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.”</p>
+                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad. ”</p>
                                 </div>
                             </div>
                         </div>
