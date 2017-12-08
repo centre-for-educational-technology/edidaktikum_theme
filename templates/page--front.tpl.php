@@ -98,7 +98,7 @@ global $user;
                                 <span class="info-box-title__text"></span>
                             </p>
                             <div class="info-box-text">
-                                <p>eDidaktikumi eesmärk on koondada kõikide erialavaldkondade<br> didaktikaalase info jagamist ja soodustada erinevates valdkondades<br> didaktikaga tegelevate inimeste koostööd.</p>
+                                <p>eDidaktikumi eesmärk on toetada pädevuspõhist õppimist, <br>edendada õpetajahariduse valdkonna digiõppevara jagamist<br> ja soodustada koostööd õpetajahariduses.</p>
                             </div>
                             <a href="user" class="btn-01">Alusta</a>
                             <a href="#front-info" class="btn-03">Loe edasi</a>
@@ -212,7 +212,7 @@ global $user;
                                         <div class="counter_content">
                                             <div class="stat_count_wrapper">
                                                 <p class="stat_count" data-count="<?php print $teachers_count ?>">0</p>
-                                                <p class="counter_title"><?php print t('Teachers') ?></p>
+                                                <p class="counter_title">Õppejõudu</p>
                                             </div>
     
                                             <div class="stat_temp"></div>
@@ -224,7 +224,7 @@ global $user;
                                         <div class="counter_content">
                                             <div class="stat_count_wrapper">
                                                 <p class="stat_count" data-count="<?php print $students_count ?>">0</p>
-                                                <p class="counter_title"><?php print t('Students') ?></p>
+                                                <p class="counter_title">Tudengit</p>
                                             </div>
                                             <div class="stat_temp"></div>
                                         </div>
@@ -235,7 +235,7 @@ global $user;
                                         <div class="counter_content">
                                             <div class="stat_count_wrapper">
                                                 <p class="stat_count" data-count="<?php print $res_count ?>">0</p>
-                                                <p class="counter_title"><?php print t('Learning Materials') ?></p>
+                                                <p class="counter_title">Õppematerjali</p>
                                             </div>
                                             <div class="stat_temp"></div>
                                         </div>
@@ -246,7 +246,7 @@ global $user;
                                         <div class="counter_content">
                                             <div class="stat_count_wrapper">
                                                 <p class="stat_count" data-count="<?php print $tasks_count ?>">0</p>
-                                                <p class="counter_title"><?php print t('Tasks Given') ?></p>
+                                                <p class="counter_title">Antud ülesannet</p>
                                             </div>
                                             <div class="stat_temp"></div>
                                         </div>
@@ -563,8 +563,8 @@ global $user;
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 text-center">
-                            <h3 class="title-02">Õppejõudude ja tudengite
-                                <span>arvamus</span>
+                            <h3 class="title-02">Õppejõud ja õppijad
+                                <span>arvavad</span>
                             </h3>
                             <p class="subtitle-01 margin-bottom-34">eDidaktikum on väga innovaatiline ja praktiline. Loe õppejõudude, õpetajate ja tudengite arvamust.
                             </p>
@@ -630,7 +630,7 @@ global $user;
                         <div class="col-sm-7">
                             <h3>Partnerid</h3><img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/partners_logos-1.png" class="img-responsive"></div>
                         <div class="col-sm-5">
-                            <h3 style="padding-bottom: 12px;">Toetab</h3><img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/eduko_ESF-1.jpg" class="img-responsive"></div>
+                            <h3 style="padding-bottom: 12px;">Toetajad</h3><img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/eduko_ESF-1.jpg" class="img-responsive"></div>
                     </div>
                 </div>
             </div>
