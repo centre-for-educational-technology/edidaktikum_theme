@@ -7,6 +7,9 @@
 
 // load scripts
 function edidaktikum_theme_bs3_preprocess_html(&$variables) {
+
+	
+	//$variables['page']['header']['menu_ed-dashboard-menu'];
 	
 	if (drupal_is_front_page()) {
 		$variables['classes_array'][] = 'home-02 home';
@@ -23,6 +26,11 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
  drupal_add_js(drupal_get_path('theme', 'edidaktikum_theme_bs3') . '/scripts/main.js', array('type' => 'file', 'scope' => 'footer'));
 	
 
+}
+
+
+function edidaktikum_theme_bs3_menu_tree__ed_dashboard_menu($variables){
+	return '<div class="container"><ul class="nav nav-tabs">' . $variables['tree'] . '</ul></div>';
 }
 
 function edidaktikum_theme_bs3_menu_tree__primary($variables) {
@@ -202,15 +210,17 @@ function edidaktikum_theme_bs3_menu_link(array $variables) {
 	$element = $variables['element'];
 
 	if($element['#original_link']['menu_name'] == 'user-menu'){
-	
+		
 		if($element['#href'] == 'faq'){
-			$output = '<a class="contact-block-01__email faq" href="'.$element['#href'].'">'.$element['#title'].'</a>';
+			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => 'contact-block-01__email faq')));
 		}else if($element['#href'] == 'user'){
-			$output = '<a class="contact-block-01__email user" href="'.$element['#href'].'">'.$element['#title'].'</a>';
+			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => 'contact-block-01__email user')));
 		}else if($element['#href'] == 'user/logout'){
-			$output = '<a class="contact-block-01__email logout" href="'.$element['#href'].'">'.$element['#title'].'</a>';
+			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => 'contact-block-01__email logout')));
+		} else if($element['#href'] == 'privacy-policy'){
+			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => 'contact-block-01__email privacy')));
 		} else if($element['#href'] == 'user/login'){
-			$output = '<a class="contact-block-01__email login" href="'.$element['#href'].'">'.$element['#title'].'</a>';
+			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => 'contact-block-01__email login')));
 		}
 	
 		return $output;
@@ -223,6 +233,7 @@ function edidaktikum_theme_bs3_menu_link(array $variables) {
 			$sub_menu = drupal_render($element['#below']);
 		}
 		$output = l($element['#title'], $element['#href'], $element['#localized_options']);
+		
 		return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 	}
 }

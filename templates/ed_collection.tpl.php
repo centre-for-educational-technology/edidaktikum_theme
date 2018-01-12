@@ -1,6 +1,6 @@
+
 <div class="row grid">
 <?php
-
 foreach ($nodes as $node) : ?>
 	
     <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 psyhholoogia">
@@ -63,6 +63,8 @@ foreach ($nodes as $node) : ?>
             </div>
         </div>
     </div>
+
+
 
 
 <?php endforeach; ?>

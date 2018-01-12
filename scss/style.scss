@@ -11045,6 +11045,10 @@ style.scss
   content: '\f059';
 }
 
+.contact-block-01__email.privacy::before{
+  content: '\f21b';
+}
+
 .contact-block-01__email.user::before{
   content: '\f007';
 }
@@ -11065,6 +11069,7 @@ style.scss
     border-radius: 0;
   }
 }
+
 
 
 .content-box-03.support{

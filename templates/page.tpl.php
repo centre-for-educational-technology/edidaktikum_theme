@@ -84,6 +84,7 @@ global $user;
     </header>
 
     <main class="content-row">
+     
 	
 	    <?php if (!empty($page['sidebar_first'])): ?>
           <aside class="col-sm-3" role="complementary">
@@ -112,6 +113,11 @@ global $user;
                 </div>
             </div>
         <?php endif; ?>
+
+
+        <header role="banner" id="page-header">
+			    <?php print render($page['header']); ?>
+        </header> <!-- /#page-header -->
 
 
         <div class="content-box padding-bottom-36">
