@@ -212,15 +212,15 @@ function edidaktikum_theme_bs3_menu_link(array $variables) {
 	if($element['#original_link']['menu_name'] == 'user-menu'){
 		
 		if($element['#href'] == 'faq'){
-			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => 'contact-block-01__email faq')));
+			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => array('contact-block-01__email', 'faq'))));
 		}else if($element['#href'] == 'user'){
-			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => 'contact-block-01__email user')));
+			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => array('contact-block-01__email', 'user'))));
 		}else if($element['#href'] == 'user/logout'){
-			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => 'contact-block-01__email logout')));
-		} else if($element['#href'] == 'privacy-policy'){
-			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => 'contact-block-01__email privacy')));
+			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => array('contact-block-01__email', 'logout'))));
 		} else if($element['#href'] == 'user/login'){
-			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => 'contact-block-01__email login')));
+			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => array('contact-block-01__email', 'login'))));
+		}else if($element['#href'] == 'privacy'){
+			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => array('contact-block-01__email', 'privacy'))));
 		}
 	
 		return $output;
