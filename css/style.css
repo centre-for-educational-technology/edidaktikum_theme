@@ -6464,11 +6464,6 @@ a.icon-after .glyphicon {
   margin-left: .25em;
   margin-right: -.25em; }
 
-/*
-==========================================================================
-style.css
-==========================================================================
-*/
 /*// Montserrat //*/
 /*============================================
 //  Typography:
@@ -9983,7 +9978,7 @@ ol li::before {
   -webkit-transition: opacity 500ms;
   transition: opacity 500ms;
   z-index: 11;
-  background-image: url("../img/blog_post/blog_post_05.jpg"); }
+  background-image: url("../img/blog/blog-02.jpg"); }
 
 .video_img-02 {
   position: absolute;
@@ -11935,7 +11930,7 @@ ol li::before {
 
 .price-list .diactive span::before {
   content: '';
-  background: url("../img/price_icon_img.png") no-repeat center center;
+  /*background: url("../img/price_icon_img.png") no-repeat center center;*/
   width: 9px;
   height: 9px;
   display: inline-block;
@@ -15540,11 +15535,6 @@ ol li::before {
   .coming-soon__btn {
     font-size: 13px;
     padding: 10px 30px; } }
-/*
-==========================================================================
-custom.css
-==========================================================================
-*/
 .info-box-01 {
   background-color: #2c3e50 !important; }
 
@@ -15840,14 +15830,20 @@ body.makings .col-sm-4.col-md-4.col-lg-4.text-center {
   margin-right: 0px;
   margin-top: 20px; }
 
-h3 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-size: 30px;
-  line-height: 48px;
-  font-weight: 600;
-  color: #303638;
-  margin-top: 10px;
-  margin-bottom: 12px; }
+.related-posts__img img,
+.comments__user-img img {
+  max-width: 80px; }
+
+.sort-item.is-checked {
+  color: #fff;
+  background: #1abc9c; }
+
+.groups .price-btn {
+  padding: 12px 28px;
+  font-size: 13px; }
+
+.blog-listing.right.group-single {
+  width: 100%; }
 
 @media only screen and (max-width: 767px) {
   .home-02 .main-nav__list {
@@ -15855,104 +15851,9 @@ h3 {
 
   .home-02 .main-nav__list li a {
     color: #303638; } }
-/*
-==========================================================================
-for-schools.css
-==========================================================================
-*/
-.single-team__info {
-  padding: 36px 39px 45px;
-  margin-bottom: 0px; }
-
-.accordion-01__title.state-active::before {
-  background-color: #1cbc9c; }
-
-body.detail.page .single-course-tabs .tabs__caption li {
-  max-width: 225px; }
-
-blockquote p::after {
-  font-family: 'FontAwesome';
-  content: '\f10e';
-  font-size: 30px;
-  color: #1abc9c;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 14px; }
-
-blockquote p::before {
-  font-family: 'FontAwesome';
-  content: '\f10e';
-  font-size: 30px;
-  color: #1abc9c;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 14px; }
-
-blockquote p {
-  font-size: 17px; }
-
-.content-box-03 {
-  padding: 66px 0 70px;
-  background: url("../img/school-kivioli-grad.jpg") no-repeat center center;
-  background-size: cover;
-  background-position: center; }
-
-/*color add*/
-.row-color-1 {
-  padding: 15px;
-  background-color: #dbeeff;
-  margin-left: -30px;
-  margin-right: 0px; }
-
-.row-color-2 {
-  padding: 15px;
-  background-color: #e4ffe9;
-  margin-left: -30px;
-  margin-right: 0px; }
-
-.row-color-3 {
-  padding: 15px;
-  background-color: #ffffdf;
-  margin-left: -30px;
-  margin-right: 0px; }
-
-.custom-icon {
-  max-width: 130px;
-  display: inline; }
-
-.single-course-tabs h2 {
-  display: inline; }
-
-.changes {
-  background: aliceblue;
-  padding: 15px;
-  margin: -20px;
-  margin-top: 0px;
-  border: 5px solid #eeee; }
-
-.sustainability {
-  background: #DFE9FB;
-  padding: 15px;
-  margin: -20px;
-  margin-top: 0px;
-  border: 5px solid #eeee; }
-
-.school-tabs {
-  padding: 15px;
-  margin: -20px;
-  margin-top: 0px;
-  border: 5px solid #eeee; }
-
-.single-team__info {
-  background-color: aliceblue; }
-
-.col-sm-12.padding-top-20 h2 {
-  display: inline;
-  background-color: #1abc9c;
-  padding: 5px;
-  color: #fff;
-  border-radius: 4px; }
-
+@media only screen and (max-width: 767px) {
+  .box {
+    height: auto !important; } }
 /*
 ==========================================================================
 style.scss
@@ -16017,6 +15918,9 @@ style.scss
 .product-list__item-info {
   text-align: center; }
 
+.new-group.price-btn {
+  padding: 6px 12px; }
+
 .product-list__content.admins {
   border-top: none; }
 
@@ -16025,5 +15929,12 @@ style.scss
   width: 30px;
   border-radius: 20px;
   margin: 1px; }
+
+.price-btn:hover {
+  background: transparent;
+  color: #1abc9c;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  border-color: initial; }
 
 /*# sourceMappingURL=style.css.map */

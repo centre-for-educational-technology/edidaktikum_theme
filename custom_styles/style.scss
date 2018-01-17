@@ -4160,7 +4160,7 @@ ol li::before {
     -webkit-transition: opacity 500ms;
     transition: opacity 500ms;
     z-index: 11;
-    background-image: url("../img/blog_post/blog_post_05.jpg");
+    background-image: url("../img/blog/blog-02.jpg");
 }
 
 .video_img-02 {
@@ -6488,7 +6488,7 @@ ol li::before {
 
 .price-list .diactive span::before {
     content: '';
-    background: url("../img/price_icon_img.png") no-repeat center center;
+    /*background: url("../img/price_icon_img.png") no-repeat center center;*/
     width: 9px;
     height: 9px;
     display: inline-block;

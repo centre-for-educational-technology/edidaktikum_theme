@@ -366,11 +366,36 @@ body.makings .col-sm-4.col-md-4.col-lg-4.text-center {
     margin-top: 20px;
 }
 
+.related-posts__img img,
+.comments__user-img img {
+    max-width: 80px;
+}
+
+.sort-item.is-checked {
+    color: #fff;
+    background: #1abc9c;
+}
+
+.groups .price-btn {
+    padding: 12px 28px;
+    font-size: 13px;
+}
+
+.blog-listing.right.group-single {
+    width: 100%;
+}
+
 @media only screen and (max-width: 767px) {
     .home-02 .main-nav__list {
         padding-top: 0;
     }
     .home-02 .main-nav__list li a {
-    color: #303638;
+        color: #303638;
+    }
 }
+
+@media only screen and (max-width: 767px) {
+    .box {
+        height: auto !important;
+    }
 }
