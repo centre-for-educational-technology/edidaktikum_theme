@@ -1304,6 +1304,10 @@ h3.q-portfolio-info{
 	color: #fff;
 }
 
+td.checked {
+	background: #84bfeb;
+}
+
 td.unchecked {
 	background: #f0ad4e;
 }
@@ -1312,7 +1316,7 @@ td.na{
 	background: #bdbdbd;
 }
 
-td.unchecked a, td.rejected a, td.answered a, td.na {
+td.unchecked a, td.rejected a, td.answered a, td.na, td.checked a {
 	color: #fff;
 }
 
