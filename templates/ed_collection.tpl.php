@@ -1,3 +1,6 @@
+<?php if (ed_collection_teacher_or_admin_is_logged_in()): ?>
+    <div class="form-item form-type-item form-group"><a href="<?php print url('node/add/ed-collection'); ?>" <button class="btn btn-success new-group price-btn" type="button"><?php print t('Add new collection'); ?></button></a></div>
+<?php endif; ?>
 <div class="row">
 <?php
 foreach ($nodes as $node) : ?>
@@ -8,7 +11,7 @@ foreach ($nodes as $node) : ?>
                 <figure class="product-list__img">
                     <a href="<?php print url('node/'. $node->nid); ?>">
                         <img src="<?php
-                        print image_style_url('thumbnail', $node->ed_field_featured_image[LANGUAGE_NONE][0]['uri'])
+                        print image_style_url('large', $node->ed_field_featured_image[LANGUAGE_NONE][0]['uri'])
                         
                         ?>" alt="">
                     </a>
