@@ -42,7 +42,7 @@ global $user;
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <a href="<?php print $site_frontpage; ?>" class="logo">
+                            <a href="<?php print url('/'.$site_frontpage); ?>" class="logo">
                                 <h3 class="logo">eDidaktikum</h3>
                             </a>
                             <div class="main-nav__btn text-center info-nav-wrap">

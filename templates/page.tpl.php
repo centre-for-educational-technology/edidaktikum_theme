@@ -34,7 +34,7 @@ global $user;
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2">
-                        <a href="<?php print $site_frontpage; ?>">
+                        <a href="<?php print url('/'.$site_frontpage); ?>">
                             <h3 class="logo">eDidaktikum</h3>
                         </a>
                     </div>

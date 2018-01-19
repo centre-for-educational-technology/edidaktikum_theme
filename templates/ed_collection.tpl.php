@@ -1,20 +1,19 @@
-
-<div class="row grid">
+<div class="row">
 <?php
 foreach ($nodes as $node) : ?>
 	
-    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 psyhholoogia">
-        <div class="item">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+   
             <div class="product-list__item">
                 <figure class="product-list__img">
-                    <a href="<?php url('node/'. $node->nid); ?>">
+                    <a href="<?php print url('node/'. $node->nid); ?>">
                         <img src="<?php
                         print image_style_url('thumbnail', $node->ed_field_featured_image[LANGUAGE_NONE][0]['uri'])
                         
                         ?>" alt="">
                     </a>
                 </figure>
-                <div class="product-list__content">
+                <div class="product-list__content collection">
                   <?php
                       $author = user_load($node->uid);
                       $username = edidaktikum_get_full_name_for_user_account($author);
@@ -61,7 +60,7 @@ foreach ($nodes as $node) : ?>
                     <p class="item-info__text-02"><?php print ed_get_views($node->nid); ?></p>
                 </div>
             </div>
-        </div>
+      
     </div>
 
 
@@ -69,5 +68,3 @@ foreach ($nodes as $node) : ?>
 
 <?php endforeach; ?>
 </div>
-
-
