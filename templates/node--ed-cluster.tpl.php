@@ -22,6 +22,8 @@ if(!empty($node->ed_field_featured_image)){
 	$image = $GLOBALS['base_url'].'/'.drupal_get_path('theme', $GLOBALS['theme']).'/images/icons/ed_group_icon_default.png';
 }
 
+
+kpr($node);
 ?>
 <div class="row">
 	<div class="col-lg-12">
@@ -63,10 +65,10 @@ if(!empty($node->ed_field_featured_image)){
 					<div class="tabs__content active">
 						<h3><?php print t('Excerpt'); ?></h3>
 						<p><?php print check_plain($node->ed_field_excerpt['und'][0]['value']); ?></p>
-						<? if(!empty( $node->ed_field_course_aim)): ?>
-							<h3><?php print t('Course objective'); ?></h3>
-							<p><?php print $node->ed_field_course_aim['und'][0]['value']; ?></p>
-						<? endif; ?>
+<!--						--><?// if(!empty( $node->ed_field_course_aim)): ?>
+<!--							<h3>--><?php //print t('Course objective'); ?><!--</h3>-->
+<!--							<p>--><?php //print $node->ed_field_course_aim['und'][0]['value']; ?><!--</p>-->
+<!--						--><?// endif; ?>
 					</div>
 					<? if(!empty( $tasks)): ?>
 					<div class="tabs__content">
@@ -238,10 +240,13 @@ if(!empty($node->ed_field_featured_image)){
 			<div class="featured-image padding-bottom-36">
 					<img src="<?php print $image ?>" class="img-responsive">
 			</div>
-			<div class="widget text-widget">
-				<h3 class="widget-title">Aine eesmärk</h3>
-				<p>Kursuse eesmärk on toetada praktiliste oskuste kujunemist haridustehnoloogia rakendamise suunamiseks ja toetamiseks ning oskust nõustada erinevat tüüpi organisatsioonides selle liikmeid haridustehnoloogilistes ja digitehnoloogia rakendamise küsimustes.</p>
-			</div>
+            <? if(!empty( $node->ed_field_course_aim)): ?>
+            <div class="widget text-widget">
+                <h3 class="widget-title"><?php print t('Course objective'); ?></h3>
+                <p><?php print $node->ed_field_course_aim['und'][0]['value']; ?></p>
+            </div>
+            <? endif; ?>
+			
 			<div class="widget tags-cloud">
 				<h3 class="widget-title"><?php print check_plain($node->title).' '.t('members') ?></h3>
 				<ul class="tags-cloud__list">
