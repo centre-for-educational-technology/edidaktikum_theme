@@ -15941,4 +15941,16 @@ style.scss
   background-color: #f0ad4e;
   border-color: #eea236; }
 
+.new-group.price-btn:active, .new-group.price-btn:focus {
+  background: transparent;
+  color: #1abc9c;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  border-color: initial;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.ed-add-new-node a {
+  margin-bottom: 15px; }
+
 /*# sourceMappingURL=style.css.map */
