@@ -44,7 +44,7 @@ if(!empty($node->ed_field_featured_image)){
 							<?php print l($userfullname, '/user/'.$node->uid); ?>
 						</p>
 					</li>
-					<? if(!empty( $node->ed_field_course_code)): ?>
+					<?php if(!empty( $node->ed_field_course_code)): ?>
 						<li>
 							<p class="blog-post__meta-category"><?php print check_plain($node->ed_field_course_code[LANGUAGE_NONE][0]['value']); ?></p>
 						</li>

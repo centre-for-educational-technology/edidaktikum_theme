@@ -50,7 +50,7 @@ kpr($node);
 					<p><?php print $node->ed_field_content['und'][0]['safe_value']; ?></p>
 				</div>
 				<div class="blog-post__btn-wrapp ed-node-statistics">
-					<? if(!empty( $node->field_tags )): ?>
+					<?php if(!empty( $node->field_tags )): ?>
 						<ul class="post-tag-list">
 						<?php foreach($node->field_tags[LANGUAGE_NONE] as $tag): ?>
 								<li>
@@ -58,7 +58,7 @@ kpr($node);
 								</li>
 						<?php endforeach; ?>
 						</ul>
-					<? endif; ?>
+					<?php endif; ?>
 					
 					<div class="ed-node-statistics-likes">
 						<a href="#" data-id="<?php print $node->nid; ?>" class="blog-post__likes"><span class="count"><?php print ed_get_likes($node->nid); ?></span><?php print ' '.t('Likes'); ?></a>
@@ -291,7 +291,7 @@ kpr($node);
                       </li>
                 </ul>
             </div>
-			<? if(!empty( $node->ed_learning_resource_authors )): ?>
+			<?php if(!empty( $node->ed_learning_resource_authors )): ?>
 			<div class="widget tags-cloud">
 				<h3 class="widget-title"><?php print t('Authors'); ?></h3>
 				<ul class="tags-cloud__list">
@@ -302,7 +302,7 @@ kpr($node);
 					<?php endforeach; ?>
 				</ul>
 			</div>
-			<? endif; ?>
+			<?php endif; ?>
 		</aside>
 	</div>
 </div>
