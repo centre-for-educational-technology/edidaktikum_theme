@@ -15845,6 +15845,14 @@ body.makings .col-sm-4.col-md-4.col-lg-4.text-center {
 .blog-listing.right.group-single {
   width: 100%; }
 
+.collection-img {
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  min-height: 235px;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 @media only screen and (max-width: 767px) {
   .home-02 .main-nav__list {
     padding-top: 0; }
@@ -15952,5 +15960,8 @@ style.scss
 
 .ed-add-new-node a {
   margin-bottom: 15px; }
+
+#edit-ed-field-group-type-und-0-value {
+  pointer-events: none; }
 
 /*# sourceMappingURL=style.css.map */

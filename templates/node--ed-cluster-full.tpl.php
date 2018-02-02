@@ -23,7 +23,6 @@ if(!empty($node->ed_field_featured_image)){
 }
 
 
-kpr($node);
 ?>
 <div class="row">
 	<div class="col-lg-12">
@@ -47,7 +46,7 @@ kpr($node);
 					</li>
 					<? if(!empty( $node->ed_field_course_code)): ?>
 						<li>
-							<p class="blog-post__meta-category"><?php print check_plain($node->ed_field_course_code); ?></p>
+							<p class="blog-post__meta-category"><?php print check_plain($node->ed_field_course_code[LANGUAGE_NONE][0]['value']); ?></p>
 						</li>
 					<? endif; ?>
 <!--					<li>-->
@@ -65,10 +64,17 @@ kpr($node);
 					<div class="tabs__content active">
 						<h3><?php print t('Excerpt'); ?></h3>
 						<p><?php print check_plain($node->ed_field_excerpt['und'][0]['value']); ?></p>
-<!--						--><?// if(!empty( $node->ed_field_course_aim)): ?>
-<!--							<h3>--><?php //print t('Course objective'); ?><!--</h3>-->
-<!--							<p>--><?php //print $node->ed_field_course_aim['und'][0]['value']; ?><!--</p>-->
-<!--						--><?// endif; ?>
+						<? if(!empty( $node->ed_field_content )): ?>
+							<h3><?php print t('Content'); ?></h3>
+							<p><?php print $node->ed_field_content['und'][0]['safe_value']; ?></p>
+						<? endif; ?>
+                        <? if(!empty( $node->ed_g_drive_file )): ?>
+                            <h3><?php print t('Failid Google Drive-st'); ?></h3>
+                            <?php foreach($node->ed_g_drive_file[LANGUAGE_NONE] as $drive_file): ?>
+                                <p><a href="<?php print $drive_file['url']; ?>" target="_blank"><?php print $drive_file['name']; ?></a> <img src="<?php print $drive_file['mime']; ?>"></p>
+	                        <?php endforeach; ?>
+                         
+                        <? endif; ?>
 					</div>
 					<? if(!empty( $tasks)): ?>
 					<div class="tabs__content">
@@ -242,7 +248,7 @@ kpr($node);
 			</div>
             <? if(!empty( $node->ed_field_course_aim)): ?>
             <div class="widget text-widget">
-                <h3 class="widget-title"><?php print t('Course objective'); ?></h3>
+                <h3 class="widget-title"><?php print t('Aine eesmärk'); ?></h3>
                 <p><?php print $node->ed_field_course_aim['und'][0]['value']; ?></p>
             </div>
             <? endif; ?>
