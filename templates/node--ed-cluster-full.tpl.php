@@ -48,7 +48,7 @@ if(!empty($node->ed_field_featured_image)){
 						<li>
 							<p class="blog-post__meta-category"><?php print check_plain($node->ed_field_course_code[LANGUAGE_NONE][0]['value']); ?></p>
 						</li>
-					<? endif; ?>
+					<?php endif; ?>
 <!--					<li>-->
 <!--						<p class="blog-post__meta-comments">3 Kommentaari</p>-->
 <!--					</li>-->
@@ -64,19 +64,19 @@ if(!empty($node->ed_field_featured_image)){
 					<div class="tabs__content active">
 						<h3><?php print t('Excerpt'); ?></h3>
 						<p><?php print check_plain($node->ed_field_excerpt['und'][0]['value']); ?></p>
-						<? if(!empty( $node->ed_field_content )): ?>
+						<?php if(!empty( $node->ed_field_content )): ?>
 							<h3><?php print t('Content'); ?></h3>
 							<p><?php print $node->ed_field_content['und'][0]['safe_value']; ?></p>
-						<? endif; ?>
-                        <? if(!empty( $node->ed_g_drive_file )): ?>
+						<?php endif; ?>
+                        <?php if(!empty( $node->ed_g_drive_file )): ?>
                             <h3><?php print t('Failid Google Drive-st'); ?></h3>
                             <?php foreach($node->ed_g_drive_file[LANGUAGE_NONE] as $drive_file): ?>
                                 <p><a href="<?php print $drive_file['url']; ?>" target="_blank"><?php print $drive_file['name']; ?></a> <img src="<?php print $drive_file['mime']; ?>"></p>
 	                        <?php endforeach; ?>
                          
-                        <? endif; ?>
+                        <?php endif; ?>
 					</div>
-					<? if(!empty( $tasks)): ?>
+					<?php if(!empty( $tasks)): ?>
 					<div class="tabs__content">
 						<ul class="curriculum-list">
 							<li>
@@ -98,8 +98,8 @@ if(!empty($node->ed_field_featured_image)){
 						</ul>
 						<p><?php print t('Tasks'); ?> (<?php print t('Total'); ?>: <?php print count($tasks); ?>)</p>
 					</div>
-					<? endif; ?>
-					<? if(!empty( $bookmarks)): ?>
+					<?php endif; ?>
+					<?php if(!empty( $bookmarks)): ?>
 						<div class="tabs__content">
 							<ul class="curriculum-list">
 								<li>
@@ -120,8 +120,8 @@ if(!empty($node->ed_field_featured_image)){
 							</ul>
 							<p><?php print t('Bookmarks'); ?> (<?php print t('Total'); ?>: <?php print count($bookmarks); ?>)</p>
 						</div>
-					<? endif; ?>
-					<? if(!empty( $files)): ?>
+					<?php endif; ?>
+					<?php if(!empty( $files)): ?>
 						<div class="tabs__content">
 							<ul class="curriculum-list">
 								<li>
@@ -142,7 +142,7 @@ if(!empty($node->ed_field_featured_image)){
 							</ul>
 							<p><?php print t('Files'); ?> (<?php print t('Total'); ?>: <?php print count($files); ?>)</p>
 						</div>
-					<? endif; ?>
+					<?php endif; ?>
 <!--					<div class="tabs__content">-->
 <!--						<div class="teachers-wrapp">-->
 <!--							<div class="row">-->
@@ -246,12 +246,12 @@ if(!empty($node->ed_field_featured_image)){
 			<div class="featured-image padding-bottom-36">
 					<img src="<?php print $image ?>" class="img-responsive">
 			</div>
-            <? if(!empty( $node->ed_field_course_aim)): ?>
+            <?php if(!empty( $node->ed_field_course_aim)): ?>
             <div class="widget text-widget">
                 <h3 class="widget-title"><?php print t('Aine eesmärk'); ?></h3>
                 <p><?php print $node->ed_field_course_aim['und'][0]['value']; ?></p>
             </div>
-            <? endif; ?>
+            <?php endif; ?>
 			
 			<div class="widget tags-cloud">
 				<h3 class="widget-title"><?php print check_plain($node->title).' '.t('members') ?></h3>
