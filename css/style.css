@@ -15964,4 +15964,25 @@ style.scss
 #edit-ed-field-group-type-und-0-value {
   pointer-events: none; }
 
+.categories-list .field-label {
+  display: none; }
+
+.categories-list ul.term {
+  padding-left: 0px; }
+
+.resizable-textarea textarea {
+  width: 100%;
+  border: 1px solid #d4d8da;
+  -webkit-border-radius: 24px;
+  border-radius: 24px;
+  padding: 14px 29px;
+  resize: none;
+  height: 120px; }
+
+.reply-form__topic {
+  border: 1px solid #d4d8da;
+  -webkit-border-radius: 24px;
+  border-radius: 24px;
+  padding: 14px 29px; }
+
 /*# sourceMappingURL=style.css.map */

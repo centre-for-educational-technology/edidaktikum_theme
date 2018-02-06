@@ -15,16 +15,45 @@ $study_area = $study_areas[$node->ed_field_study_area[LANGUAGE_NONE][0]['value']
 $languages = _ed_learning_resource_language_list();
 $language = $languages[$node->ed_learning_resource_language[LANGUAGE_NONE][0]['value']];
 
+
+$assets_distribution_list = _ed_learning_resource_assets_distribution_options_list();
+$assets_distribution = $assets_distribution_list[$node->ed_field_assets_distribution[LANGUAGE_NONE][0]['value']];
+
+
+$study_areas_list  = _ed_learning_resource_study_areas_options_list();
+$study_area = $study_areas_list[$node->ed_field_study_area [LANGUAGE_NONE][0]['value']];
+
+
+
 kpr($node);
+
+
+if(!empty( $node->ed_field_category )){
+	$ed_field_category = field_view_field('node', $node, 'ed_field_category', 'full');
+}else{
+	$ed_field_category =null;
+}
+
+
+if(!empty($node->ed_field_featured_image)){
+	$image = image_style_url('large', $node->ed_field_featured_image[LANGUAGE_NONE][0]['uri']);
+}else{
+	$image = null;
+}
+
+
 ?>
 
 <div class="row">
 	<div class="col-lg-12">
 		<div class="blog-listing right">
 			<article class="blog-post single">
-				<figure class="blog-post__img">
-					<img src="img/blog/blog-01.jpg" alt="">
-				</figure>
+                <?php if($image): ?>
+                    <figure class="blog-post__img">
+                        <img src="<?php print $image ?>" alt="">
+                    </figure>
+                <?php endif; ?>
+				
 				<div class="blog-post__meta">
 					<ul class="blog-post__meta-list">
 						<li>
@@ -131,55 +160,57 @@ kpr($node);
 <!--				-->
 <!--				</ul>-->
 <!--			</div>-->
-			<div class="comments">
-				<h3 class="comments-title">Kommentaarid (3)</h3>
-				<ul class="comments__list">
-					<li>
-						<div class="comments__user-wrapp">
-							<figure class="comments__user-img">
-								<img src="img/portree_naine_04.jpg" alt="">
-							</figure>
-						</div>
-						<div class="comments__content">
-							<h4 class="comments__user-name">Nimi Perenimi</h4>
-							<p class="comments__data">12 jaanuar, 2018</p>
-							<a class="comments__reply" href="#">Vasta</a>
-							<div class="comments__text">
-								<p>Mauris, quis auctor risus libero et diam. Mauris vel felis eros. Donec ut nulla ornare, tristique risus quis, feugiat elit. Aliquam ornare libero quis lectus tempor convallis. Phasellus et mauris trist</p>
-							</div>
-						</div>
-						<ul class="comments__child-list">
-							<li>
-								<div class="comments__user-wrapp">
-									<figure class="comments__user-img">
-										<img src="img/portree_mees_03.jpg" alt="">
-									</figure>
-								</div>
-								<div class="comments__content">
-									<h4 class="comments__user-name">Nimi Perenimi</h4>
-									<p class="comments__data">13 jaanuar, 2018</p>
-									<a class="comments__reply" href="#">Vasta</a>
-									<div class="comments__text">
-										<p>Donec ut nulla ornare, tristique risus quis, feugiat elit. Aliquam ornare libero quis lectus tempor convallis. Phasellus et mauris trist </p>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="reply-form">
-				<h3 class="reply-form__title">Kommenteeri</h3>
-				<form action="./" class="reply-form__form">
+<!--			<div class="comments">-->
+<!--				<h3 class="comments-title">Kommentaarid (3)</h3>-->
+<!--				<ul class="comments__list">-->
+<!--					<li>-->
+<!--						<div class="comments__user-wrapp">-->
+<!--							<figure class="comments__user-img">-->
+<!--								<img src="img/portree_naine_04.jpg" alt="">-->
+<!--							</figure>-->
+<!--						</div>-->
+<!--						<div class="comments__content">-->
+<!--							<h4 class="comments__user-name">Nimi Perenimi</h4>-->
+<!--							<p class="comments__data">12 jaanuar, 2018</p>-->
+<!--							<a class="comments__reply" href="#">Vasta</a>-->
+<!--							<div class="comments__text">-->
+<!--								<p>Mauris, quis auctor risus libero et diam. Mauris vel felis eros. Donec ut nulla ornare, tristique risus quis, feugiat elit. Aliquam ornare libero quis lectus tempor convallis. Phasellus et mauris trist</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<ul class="comments__child-list">-->
+<!--							<li>-->
+<!--								<div class="comments__user-wrapp">-->
+<!--									<figure class="comments__user-img">-->
+<!--										<img src="img/portree_mees_03.jpg" alt="">-->
+<!--									</figure>-->
+<!--								</div>-->
+<!--								<div class="comments__content">-->
+<!--									<h4 class="comments__user-name">Nimi Perenimi</h4>-->
+<!--									<p class="comments__data">13 jaanuar, 2018</p>-->
+<!--									<a class="comments__reply" href="#">Vasta</a>-->
+<!--									<div class="comments__text">-->
+<!--										<p>Donec ut nulla ornare, tristique risus quis, feugiat elit. Aliquam ornare libero quis lectus tempor convallis. Phasellus et mauris trist </p>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</li>-->
+<!--						</ul>-->
+<!--					</li>-->
+<!--				</ul>-->
+<!--			</div>-->
 					
-					<div class="reply-form__box-04">
-						<textarea class="reply-form__message" name="message" cols="30" rows="10" placeholder="Sõnum..."></textarea>
-					</div>
-					<div class="reply-form__box-05">
-						<button class="btn-01" type="submit">Postita</button>
-					</div>
-				</form>
-			</div>
+            <?php print render($content['comments']); ?>
+<!--			<div class="reply-form">-->
+<!--				<h3 class="reply-form__title">Kommenteeri</h3>-->
+<!--				<form action="./" class="reply-form__form">-->
+<!--					-->
+<!--					<div class="reply-form__box-04">-->
+<!--						<textarea class="reply-form__message" name="message" cols="30" rows="10" placeholder="Sõnum..."></textarea>-->
+<!--					</div>-->
+<!--					<div class="reply-form__box-05">-->
+<!--						<button class="btn-01" type="submit">Postita</button>-->
+<!--					</div>-->
+<!--				</form>-->
+<!--			</div>-->
 		</div>
 		<aside class="blog-listing-sidebar right">
 <!--			<div class="widget sidebar-search-block">-->
@@ -190,31 +221,77 @@ kpr($node);
 <!--					</div>-->
 <!--				</form>-->
 <!--			</div>-->
-			<div class="widget categories">
-				<h3 class="widget-title">Kategooriad</h3>
-				<ul class="categories-list">
-					<li>
-						<a href="#">Ülddidaktika (15)</a>
-						<ul>
-							<li>
-								<a href="#">Kategooria 2 (08)</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Kategooria 4 (17)</a>
-					</li>
-					<li>
-						<a href="#">Kategooria 3 (09)</a>
-					</li>
-					<li>
-						<a href="#">Kategooria 6 (25)</a>
-					</li>
-					<li>
-						<a href="#">Kategooria 5 (03)</a>
-					</li>
-				</ul>
-			</div>
+            <?php if(!empty( $node->og_group_ref  )): ?>
+              <div class="widget tags-cloud">
+                  <h3 class="widget-title"><?php print t('Group'); ?></h3>
+                  <ul class="tags-cloud__list">
+                    <?php foreach($node->og_group_ref[LANGUAGE_NONE] as $group): ?>
+                        <li>
+                            <?php print l(_ed_get_group_name_from_id($group['target_id']),'/node/'.$group['target_id']) ; ?>
+                        </li>
+                    <?php endforeach; ?>
+                  </ul>
+              </div>
+            <?php endif; ?>
+            <?php if(!empty( $node->ed_learning_resource_authors )): ?>
+              <div class="widget tags-cloud">
+                  <h3 class="widget-title"><?php print t('Authors'); ?></h3>
+                  <ul class="tags-cloud__list">
+                    <?php foreach($node->ed_learning_resource_authors[LANGUAGE_NONE] as $author): ?>
+                        <li>
+							<?php print l($author['taxonomy_term']->name,'/taxonomy/term/'.$author['taxonomy_term']->tid) ; ?>
+                        </li>
+                    <?php endforeach; ?>
+                  </ul>
+              </div>
+            <?php endif; ?>
+            <div class="widget tags-cloud">
+                <h3 class="widget-title"><?php print t('Valdkond'); ?></h3>
+                <p><?php print t($study_area); ?></p>
+            </div>
+            <div class="widget tags-cloud">
+                <h3 class="widget-title"><?php print t('Õppevara jaotus'); ?></h3>
+                <p><?php print t($assets_distribution); ?></p>
+            </div>
+            <div class="widget tags-cloud">
+                <h3 class="widget-title"><?php print t('Learning Resource Type'); ?></h3>
+                <ul class="tags-cloud__list">
+                    <li>
+						<?php print l(taxonomy_term_load($node->ed_learning_resource_type[LANGUAGE_NONE][0]['value'])->name,'/resources/type/'.$node->ed_learning_resource_type[LANGUAGE_NONE][0]['value']) ; ?>
+                    </li>
+                </ul>
+            </div>
+            <?php if(!empty( $node->ed_field_category  )): ?>
+            <div class="widget categories">
+                <h3 class="widget-title"><?php print t('Category'); ?></h3>
+	            <?php print render($ed_field_category); ?>
+            </div>
+            <?php endif; ?>
+			
+            
+<!--				<h3 class="widget-title">Kategooriad</h3>-->
+<!--				<ul class="categories-list">-->
+<!--					<li>-->
+<!--						<a href="#">Ülddidaktika (15)</a>-->
+<!--						<ul>-->
+<!--							<li>-->
+<!--								<a href="#">Kategooria 2 (08)</a>-->
+<!--							</li>-->
+<!--						</ul>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<a href="#">Kategooria 4 (17)</a>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<a href="#">Kategooria 3 (09)</a>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<a href="#">Kategooria 6 (25)</a>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<a href="#">Kategooria 5 (03)</a>-->
+<!--					</li>-->
+<!--				</ul>-->
 <!--			<div class="widget related-posts">-->
 <!--				<h3 class="widget-title">Seotud postitused</h3>-->
 <!--				<ul class="related-posts__list">-->

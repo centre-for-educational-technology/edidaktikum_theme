@@ -410,3 +410,68 @@ function edidaktikum_theme_bs3_preprocess_search_result(&$variables) {
 		$variables['attributes_array']['value'] = ((int)$_GET['page'] * $pager_limits[0]) + $variables['id'];
 	}
 }
+
+
+function edidaktikum_theme_bs3_preprocess_field(&$variables) {
+	if($variables['element']['#field_name'] == 'ed_field_category') {
+		$variables['classes_array'][] = 'categories-list';
+	}
+}
+
+function edidaktikum_theme_bs3_textarea($variables) {
+	$element = $variables ['element'];
+	element_set_attributes($element, array('id', 'name', 'cols', 'rows'));
+	_form_set_class($element, array('form-textarea'));
+	
+	$wrapper_attributes = array(
+			'class' => array('form-textarea-wrapper'),
+	);
+	
+	$output = '<div' . drupal_attributes($wrapper_attributes) . '>';
+	$output .= '<textarea' . drupal_attributes($element ['#attributes']) . '>' . check_plain($element ['#value']) . '</textarea>';
+	$output .= '</div>';
+	return $output;
+}
+
+function edidaktikum_theme_bs3_form_comment_form_alter(&$form, &$form_state) {
+
+	
+	$form['comment_body'][LANGUAGE_NONE][0]['#attributes']['class'][] = 'reply-form__message';
+	$form['subject']['#attributes']['class'][] = 'reply-form__topic';
+	
+//	kpr($form);
+}
+
+//
+//function edidaktikum_theme_bs3_preprocess_comment_wrapper(&$variables) {
+//
+//
+////	$variables['classes_array'][] = 'reply-form';
+////	$variables['content']['comment_form']['comment_body']['#attributes']['class'][] = 'reply-form__message';
+////
+//	kpr($variables);
+//
+////	$comment_form = drupal_render_children($variables['form']);
+////
+////	return $comment_form;
+//
+////	if ($variables['content']) {
+////		$variables['content'] = '<div id="comment-head"><div  id="postnew"><a href="#commentform" name="commentlist" title="Post  a comment"></a></div></div>'.  $vars['content'];
+////	}
+//
+//}
+
+//function edidaktikum_theme_bs3_comment_block() {
+//	kpr('hello');
+//	$items = array();
+//	$number = variable_get('comment_block_count', 10);
+//	foreach (comment_get_recent($number) as $comment) {
+//		$items[] = l($comment->subject, 'comment/' . $comment->cid, array('fragment' => 'comment-' . $comment->cid)) . '&nbsp;<span>' . t('@time ago', array('@time' => format_interval(REQUEST_TIME - $comment->changed))) . '</span>';
+//	}
+//	if ($items) {
+//		return theme('item_list', array('items' => $items));
+//	}
+//	else {
+//		return t('No comments available.');
+//	}
+//}
