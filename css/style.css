@@ -7,7 +7,7 @@
 
 /* Fonts */
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
 
 #main {
 	font-family: 'Open Sans', Helvetica, sans-serif;
@@ -1304,6 +1304,10 @@ h3.q-portfolio-info{
 	color: #fff;
 }
 
+td.checked {
+	background: #84bfeb;
+}
+
 td.unchecked {
 	background: #f0ad4e;
 }
@@ -1312,7 +1316,7 @@ td.na{
 	background: #bdbdbd;
 }
 
-td.unchecked a, td.rejected a, td.answered a, td.na {
+td.unchecked a, td.rejected a, td.answered a, td.na, td.checked a {
 	color: #fff;
 }
 
