@@ -30,7 +30,7 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 
 
 function edidaktikum_theme_bs3_menu_tree__ed_dashboard_menu($variables){
-	return '<div class="container"><ul class="nav nav-tabs">' . $variables['tree'] . '</ul></div>';
+	return '<div class="container"><div class="list-group tabs">' . $variables['tree'] . '</div></div> ';
 }
 
 function edidaktikum_theme_bs3_menu_tree__primary($variables) {
@@ -225,7 +225,14 @@ function edidaktikum_theme_bs3_menu_link(array $variables) {
 	
 		return $output;
 
-	}else{
+	}elseif ($element['#original_link']['menu_name'] == 'ed-dashboard-menu'){
+		
+		$element['#localized_options']['attributes'] = array('class' => array('list-group-item'));
+		$output = l($element['#title'], $element['#href'], $element['#localized_options']);
+		
+		return $output;
+	}
+	else{
 		
 		$sub_menu = '';
 		
@@ -437,10 +444,61 @@ function edidaktikum_theme_bs3_form_comment_form_alter(&$form, &$form_state) {
 
 	
 	$form['comment_body'][LANGUAGE_NONE][0]['#attributes']['class'][] = 'reply-form__message';
+	$form['subject']['#access'] = false;
 	$form['subject']['#attributes']['class'][] = 'reply-form__topic';
 	
-//	kpr($form);
+
 }
+
+
+function edidaktikum_theme_bs3_menu_local_tasks(&$variables) {
+	$output = '';
+	
+	if (!empty($variables['primary'])) {
+		$variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
+		$variables['primary']['#prefix'] .= '<div class="list-group tabs">';
+		$variables['primary']['#suffix'] = '</div>';
+		$output .= drupal_render($variables['primary']);
+	}
+	
+	if (!empty($variables['secondary'])) {
+		$variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
+		$variables['secondary']['#prefix'] .= '<ul class="tabs--secondary pagination pagination-sm">';
+		$variables['secondary']['#suffix'] = '</ul>';
+		$output .= drupal_render($variables['secondary']);
+	}
+	
+	return $output;
+}
+
+
+function edidaktikum_theme_bs3_menu_local_task($variables) {
+	$link = $variables['element']['#link'];
+	$link_text = $link['title'];
+	if (!empty($variables['element']['#active'])) {
+		
+		// Add text to indicate active tab for non-visual users.
+		$active = '<span class="element-invisible">' . t('(active tab)') . '</span>';
+		
+		// If the link does not contain HTML already, check_plain() it now.
+		// After we set 'html'=TRUE the link will not be sanitized by l().
+		if (empty($link['localized_options']['html'])) {
+			$link['title'] = check_plain($link['title']);
+		}
+		$link['localized_options']['html'] = TRUE;
+		
+		$link_text = t('!local-task-title!active', array(
+				'!local-task-title' => $link['title'],
+				'!active' => $active,
+		));
+	}
+	
+	$link['localized_options']['attributes'] = array('class' => array('list-group-item'));
+	return l($link_text, $link['href'], $link['localized_options']);
+}
+
+
+
 
 //
 //function edidaktikum_theme_bs3_preprocess_comment_wrapper(&$variables) {

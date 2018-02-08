@@ -24,10 +24,6 @@ $study_areas_list  = _ed_learning_resource_study_areas_options_list();
 $study_area = $study_areas_list[$node->ed_field_study_area [LANGUAGE_NONE][0]['value']];
 
 
-
-kpr($node);
-
-
 if(!empty( $node->ed_field_category )){
 	$ed_field_category = field_view_field('node', $node, 'ed_field_category', 'full');
 }else{

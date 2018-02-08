@@ -1,9 +1,10 @@
 <?php if (ed_collection_teacher_or_admin_is_logged_in()): ?>
-    <div class="form-item form-type-item form-group"><a href="<?php print url('node/add/ed-collection'); ?>" <button class="btn btn-success new-group price-btn" type="button"><?php print t('Add new collection'); ?></button></a></div>
+    <div class="form-item form-type-item form-group"><a href="<?php print url('node/add/ed-collection'); ?>" <button class="btn btn-success price-btn" type="button"><?php print t('Add new collection'); ?></button></a></div>
 <?php endif; ?>
-<div class="row пкшв">
+<div class="row">
 <?php
 foreach ($nodes as $node) : ?>
+
     <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
    
             <div class="product-list__item">

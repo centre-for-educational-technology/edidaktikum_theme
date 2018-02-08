@@ -22,6 +22,8 @@ if(!empty($node->ed_field_featured_image)){
 	$image = $GLOBALS['base_url'].'/'.drupal_get_path('theme', $GLOBALS['theme']).'/images/icons/ed_group_icon_default.png';
 }
 
+global $user;
+
 
 ?>
 <div class="row">
@@ -36,14 +38,14 @@ if(!empty($node->ed_field_featured_image)){
 <!--					--><?php //print $node->title; ?>
 <!--				</h3>-->
 				<ul class="blog-post__meta-list">
-					<li>
-						<p class="blog-post__meta-date"><?php print format_date($node->created, 'full'); ?></p>
-					</li>
-					<li>
-						<p class="blog-post__meta-author">
-							<?php print l($userfullname, '/user/'.$node->uid); ?>
-						</p>
-					</li>
+<!--					<li>-->
+<!--						<p class="blog-post__meta-date">--><?php //print format_date($node->created, 'full'); ?><!--</p>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<p class="blog-post__meta-author">-->
+<!--							--><?php //print l($userfullname, '/user/'.$node->uid); ?>
+<!--						</p>-->
+<!--					</li>-->
 					<?php if(!empty( $node->ed_field_course_code)): ?>
 						<li>
 							<p class="blog-post__meta-category"><?php print check_plain($node->ed_field_course_code[LANGUAGE_NONE][0]['value']); ?></p>
@@ -57,10 +59,25 @@ if(!empty($node->ed_field_featured_image)){
 					<ul class="tabs__caption">
 						<li class="active"><?php print t('Home'); ?></li>
 						<li><?php print t('Tasks'); ?></li>
-<!--						<li>--><?php //print t('Learning Resources'); ?><!--</li>-->
+						<li><?php print t('Learning Resources'); ?></li>
 						<li><?php print t('Bookmarks'); ?></li>
 						<li><?php print t('Files'); ?></li>
 					</ul>
+<!--                    <div class="list-group tabs">-->
+<!--                      --><?php //if(ed_task_manager_access('node', $node)): ?>
+<!--                          <a class="list-group-item" href="--><?php //print url('/node/'.$node->nid.'/edit')?><!--">--><?php //print t('Edit'); ?><!--</a>-->
+<!--                          <a class="list-group-item" href="--><?php //print url('/node/'.$node->nid.'/group')?><!--">--><?php //print t('Members'); ?><!--</a>-->
+<!--                      --><?php //endif; ?>
+<!--                        <a class="list-group-item" href="--><?php //print url('/node/'.$node->nid.'/forum')?><!--">--><?php //print t('Forum'); ?><!--</a>-->
+<!--                        <a class="list-group-item" href="--><?php //print url('/node/'.$node->nid.'/pages')?><!--">--><?php //print t('Pages'); ?><!--</a>-->
+<!--                        <a class="list-group-item" href="--><?php //print url('/node/'.$node->nid.'/learning-resource')?><!--">--><?php //print t('Learning Resource'); ?><!--</a>-->
+<!--                        <a class="list-group-item" href="--><?php //print url('/node/'.$node->nid.'/blog')?><!--">--><?php //print t('Blog'); ?><!--</a>-->
+<!--                        <a class="list-group-item" href="--><?php //print url('/node/'.$node->nid.'/event')?><!--">--><?php //print t('Event'); ?><!--</a>-->
+<!--                        <a class="list-group-item" href="--><?php //print url('/node/'.$node->nid.'/news')?><!--">--><?php //print t('News'); ?><!--</a>-->
+<!--	                    --><?php //if(ed_task_manager_access('node', $node)): ?>
+<!--                          <a class="list-group-item" href="--><?php //print url('/node/'.$node->nid.'/task-manager')?><!--">--><?php //print t('Task Manager'); ?><!--</a>-->
+<!--	                    --><?php //endif; ?>
+<!--                    </div>-->
 					<div class="tabs__content active">
 						<h3><?php print t('Excerpt'); ?></h3>
 						<p><?php print check_plain($node->ed_field_excerpt['und'][0]['value']); ?></p>
