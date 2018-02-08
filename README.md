@@ -22,3 +22,10 @@ https://www.drupal.org/project/fontawesome
 
 Don't forget to change default jQuery to version 1.10 in en/admin/config/development/jquery_update
 
+### 5. Install Panels Bootstrap Layouts module
+
+https://www.drupal.org/project/panels_bootstrap_layouts
+
+Change and adjust panels
+
+Usage here: https://www.youtube.com/watch?v=60NjhK5YW14
