@@ -60,10 +60,18 @@ global $user;
 				<div class="tabs single-course-tabs">
 					<ul class="tabs__caption">
 						<li class="active"><?php print t('Info'); ?></li>
+						<?php if(!empty( $tasks)): ?>
 						<li><?php print t('Tasks'); ?></li>
+                        <?php endif; ?>
+						<?php if(!empty( $bookmarks)): ?>
                         <li><?php print t('Bookmarks'); ?></li>
+						<?php endif; ?>
+						<?php if(!empty( $learning_resources)): ?>
 						<li><?php print t('Learning Resources'); ?></li>
+						<?php endif; ?>
+						<?php if(!empty( $files)): ?>
 						<li><?php print t('Files'); ?></li>
+						<?php endif; ?>
 					</ul>
 <!--                    <div class="list-group tabs">-->
 <!--                      --><?php //if(ed_task_manager_access('node', $node)): ?>
