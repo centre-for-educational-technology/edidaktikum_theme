@@ -16056,9 +16056,6 @@ style.scss
 .indented {
   margin-left: 100px; }
 
-li a:focus {
-  color: #ffffff; }
-
 .list-group.tabs a.list-group-item {
   font-size: 14px;
   line-height: 16px;
