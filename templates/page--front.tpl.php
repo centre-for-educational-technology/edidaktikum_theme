@@ -100,7 +100,7 @@ global $user;
                             <div class="info-box-text">
                                 <p>eDidaktikumi eesmärk on toetada pädevuspõhist õppimist, <br>edendada õpetajahariduse valdkonna digiõppevara jagamist<br> ja soodustada koostööd õpetajahariduses.</p>
                             </div>
-                            <a href="user" class="btn-01">Alusta</a>
+                            <a href=" <?php print url('user'); ?>" class="btn-01">Logi sisse</a>
                             <a href="#front-info" class="btn-03">Loe edasi</a>
                         </div>
                     </div>

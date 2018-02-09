@@ -13,6 +13,7 @@ $userfullname = edidaktikum_get_full_name_for_user_account($author);
 $tasks = ed_get_group_tasks($node->nid, true, true, true, true);
 $bookmarks = ed_get_group_bookmarks($node->nid);
 $files = ed_get_group_files($node->nid);
+$learning_resources = ed_get_group_learning_resources($node->nid);
 
 
 
@@ -55,12 +56,13 @@ global $user;
 <!--						<p class="blog-post__meta-comments">3 Kommentaari</p>-->
 <!--					</li>-->
 				</ul>
+    
 				<div class="tabs single-course-tabs">
 					<ul class="tabs__caption">
-						<li class="active"><?php print t('Home'); ?></li>
+						<li class="active"><?php print t('Info'); ?></li>
 						<li><?php print t('Tasks'); ?></li>
+                        <li><?php print t('Bookmarks'); ?></li>
 						<li><?php print t('Learning Resources'); ?></li>
-						<li><?php print t('Bookmarks'); ?></li>
 						<li><?php print t('Files'); ?></li>
 					</ul>
 <!--                    <div class="list-group tabs">-->
@@ -80,7 +82,7 @@ global $user;
 <!--                    </div>-->
 					<div class="tabs__content active">
 						<h3><?php print t('Excerpt'); ?></h3>
-						<p><?php print check_plain($node->ed_field_excerpt['und'][0]['value']); ?></p>
+						<p><?php print $node->ed_field_excerpt['und'][0]['safe_value']; ?></p>
 						<?php if(!empty( $node->ed_field_content )): ?>
 							<h3><?php print t('Content'); ?></h3>
 							<p><?php print $node->ed_field_content['und'][0]['safe_value']; ?></p>
@@ -138,6 +140,27 @@ global $user;
 							<p><?php print t('Bookmarks'); ?> (<?php print t('Total'); ?>: <?php print count($bookmarks); ?>)</p>
 						</div>
 					<?php endif; ?>
+                    <?php if(!empty( $learning_resources)): ?>
+                      <div class="tabs__content">
+                          <ul class="curriculum-list">
+                              <li>
+                                  <!--								<h5 class="curriculum-list__title-01">Osa 1</h5>-->
+                                  <ul>
+                                    <?php foreach($learning_resources as $learning_resource): ?>
+                                        <li>
+                                            <div class="curriculum-list__box">
+                                                <a href="<?php print url('/node/'.$learning_resource['nid'])?>">
+                                                    <span class="curriculum-list__title-02"></span> <?php print check_plain($learning_resource['title']); ?></a>
+                                            </div>
+                                        </li>
+                                    <?php endforeach; ?>
+
+                                  </ul>
+                              </li>
+                          </ul>
+                          <p><?php print t('Learning Resources'); ?> (<?php print t('Total'); ?>: <?php print count($learning_resources); ?>)</p>
+                      </div>
+                    <?php endif; ?>
 					<?php if(!empty( $files)): ?>
 						<div class="tabs__content">
 							<ul class="curriculum-list">
@@ -242,7 +265,7 @@ global $user;
 							<i class="fa fa fa-share-alt"></i>
 						</a>
 						<div class="preview_share_block">
-							<a class="share_facebook" href="#" data-image="<?php print $image ?>" data-title="<?php print check_plain($node->title); ?>" data-desc="<?php print check_plain($node->ed_field_excerpt['und'][0]['value']); ?>">
+							<a class="share_facebook" href="#" data-image="<?php print $image ?>" data-title="<?php print check_plain($node->title); ?>" data-desc="<?php print $node->ed_field_excerpt['und'][0]['safe_value']; ?>">
 								<i class="fa fa-facebook"></i>
 							</a>
 							<a class="share_twitter" href="https://twitter.com/intent/tweet?text=eDidaktikum%20%22<?php print check_plain($node->title); ?>%22%20<?php print url(current_path(), array('absolute' => TRUE)) ?>">

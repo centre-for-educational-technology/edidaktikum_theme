@@ -16095,4 +16095,22 @@ li a:focus {
   -webkit-transition: 0.5s all;
   transition: 0.5s all; }
 
+.single-course-tabs ul.tabs__caption li {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #1abc9c;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  letter-spacing: 1px;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #1abc9c;
+  padding: 6px 12px; }
+
+.comments__content {
+  padding-left: 30px;
+  padding-bottom: 40px; }
+
 /*# sourceMappingURL=style.css.map */
