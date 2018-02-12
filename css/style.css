@@ -16110,4 +16110,14 @@ style.scss
   padding-left: 30px;
   padding-bottom: 40px; }
 
+.product-list__img img {
+  width: 100%;
+  -webkit-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  height: 220px;
+  /* overflow: hidden; */
+  /* background-size: cover; */
+  object-fit: cover; }
+
 /*# sourceMappingURL=style.css.map */

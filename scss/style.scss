@@ -328,6 +328,11 @@ style.scss
   padding-bottom: 40px;
 }
 
+.product-list__img img {
+  height: 220px;
+  object-fit: cover;
+}
+
 
 
 
