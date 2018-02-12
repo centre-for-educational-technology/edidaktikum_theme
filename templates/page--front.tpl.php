@@ -559,71 +559,71 @@ global $user;
     
     
     
-            <div class="content-box-02 padding-top-96 padding-bottom-67">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <h3 class="title-02">Õppejõud ja õppijad
-                                <span>arvavad</span>
-                            </h3>
-                            <p class="subtitle-01 margin-bottom-34">eDidaktikum on väga innovaatiline ja praktiline. Loe õppejõudude, õpetajate ja tudengite arvamust.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="owl-carousel owl-option-01 owl-theme-01">
-                            <div class="owl-theme-01__item">
-                                <figure class="owl-theme-01__item-img">
-                                    <img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/kairit.jpg" alt="">
-                                </figure>
-                                <div class="owl-theme-01__item-header">
-                                    <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>
-                                    <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>
-                                </div>
-                                <div class="owl-theme-01__item-content">
-                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad. ”</p>
-                                </div>
-                            </div>
-                            <div class="owl-theme-01__item">
-                                <figure class="owl-theme-01__item-img">
-                                    <img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/kairit.jpg" alt="">
-                                </figure>
-                                <div class="owl-theme-01__item-header">
-                                    <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>
-                                    <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>
-                                </div>
-                                <div class="owl-theme-01__item-content">
-                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad. ”</p>
-                                </div>
-                            </div>
-                            <div class="owl-theme-01__item">
-                                <figure class="owl-theme-01__item-img">
-                                    <img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/kairit.jpg" alt="">
-                                </figure>
-                                <div class="owl-theme-01__item-header">
-                                    <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>
-                                    <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>
-                                </div>
-                                <div class="owl-theme-01__item-content">
-                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad. ”</p>
-                                </div>
-                            </div>
-                            <div class="owl-theme-01__item">
-                                <figure class="owl-theme-01__item-img">
-                                    <img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/kairit.jpg" alt="">
-                                </figure>
-                                <div class="owl-theme-01__item-header">
-                                    <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>
-                                    <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>
-                                </div>
-                                <div class="owl-theme-01__item-content">
-                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad. ”</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="content-box-02 padding-top-96 padding-bottom-67">-->
+<!--                <div class="container">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-lg-12 text-center">-->
+<!--                            <h3 class="title-02">Õppejõud ja õppijad-->
+<!--                                <span>arvavad</span>-->
+<!--                            </h3>-->
+<!--                            <p class="subtitle-01 margin-bottom-34">eDidaktikum on väga innovaatiline ja praktiline. Loe õppejõudude, õpetajate ja tudengite arvamust.-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <div class="owl-carousel owl-option-01 owl-theme-01">-->
+<!--                            <div class="owl-theme-01__item">-->
+<!--                                <figure class="owl-theme-01__item-img">-->
+<!--                                    <img src="--><?php //echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?><!--/img/kairit.jpg" alt="">-->
+<!--                                </figure>-->
+<!--                                <div class="owl-theme-01__item-header">-->
+<!--                                    <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>-->
+<!--                                    <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>-->
+<!--                                </div>-->
+<!--                                <div class="owl-theme-01__item-content">-->
+<!--                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad. ”</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="owl-theme-01__item">-->
+<!--                                <figure class="owl-theme-01__item-img">-->
+<!--                                    <img src="--><?php //echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?><!--/img/kairit.jpg" alt="">-->
+<!--                                </figure>-->
+<!--                                <div class="owl-theme-01__item-header">-->
+<!--                                    <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>-->
+<!--                                    <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>-->
+<!--                                </div>-->
+<!--                                <div class="owl-theme-01__item-content">-->
+<!--                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad. ”</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="owl-theme-01__item">-->
+<!--                                <figure class="owl-theme-01__item-img">-->
+<!--                                    <img src="--><?php //echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?><!--/img/kairit.jpg" alt="">-->
+<!--                                </figure>-->
+<!--                                <div class="owl-theme-01__item-header">-->
+<!--                                    <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>-->
+<!--                                    <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>-->
+<!--                                </div>-->
+<!--                                <div class="owl-theme-01__item-content">-->
+<!--                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad. ”</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="owl-theme-01__item">-->
+<!--                                <figure class="owl-theme-01__item-img">-->
+<!--                                    <img src="--><?php //echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?><!--/img/kairit.jpg" alt="">-->
+<!--                                </figure>-->
+<!--                                <div class="owl-theme-01__item-header">-->
+<!--                                    <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>-->
+<!--                                    <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>-->
+<!--                                </div>-->
+<!--                                <div class="owl-theme-01__item-content">-->
+<!--                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad. ”</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
             <div class="content-box-03 padding-top-96 padding-bottom-67 support" style="background-color:#fff;">
                 <div class="container">
                     <div class="row">
