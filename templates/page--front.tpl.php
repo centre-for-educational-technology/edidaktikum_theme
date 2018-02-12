@@ -25,7 +25,7 @@ global $user;
                     <div class="row">
                         <div class="col-sm-4 col-md-4 col-lg-4 text-sm-center">
                             <div class="contact-block-01 email-02">
-                                <a class="contact-block-01__email email_us" href="#">edidaktikum@tlu.ee</a>
+                                <a class="contact-block-01__email email_us" href="mailto:edidaktikum@tlu.ee">edidaktikum@tlu.ee</a>
                             </div>
                         </div>
                         <div class="col-sm-8 col-md-8 col-lg-8 text-sm-center text-right">
