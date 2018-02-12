@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * @file
  * Default theme implementation for comments.
@@ -58,36 +59,34 @@
  *
  * @ingroup themeable
  */
+
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php print $picture ?>
-
-
-
-  <?php print render($title_prefix); ?>
-  <h3<?php print $title_attributes; ?>><?php print $author ?></h3>
-  <?php print render($title_suffix); ?>
-
-  <div class="submitted">
-    <?php print $permalink; ?>
-    <?php print $submitted; ?>
-  </div>
-
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['links']);
-      print render($content);
-    ?>
-    <?php if ($signature): ?>
-    <div class="user-signature clearfix">
-      <?php print $signature ?>
+ 
+    <div class="comments__user-wrapp">
+      
+        <?php print $picture ?>
+      
     </div>
-    <?php endif; ?>
 
-  </div>
+    
+  <?php if ($new): ?>
+    <span class="badge"><?php print $new ?></span>
+  <?php endif; ?>
 
-  <?php print render($content['links']) ?>
-  
-  <?php print '<div class="description">'.format_date($comment->created, 'short').'</div>' ?>
+
+    <div class="comments__content">
+        <h4 class="comments__user-name"><?php print $author ?></h4>
+        <p class="comments__data"><?php print $submitted; ?></p>
+        <?php print render($content['links']) ?>
+        <div class="comments__text">
+	        <?php
+	        // We hide the comments and links now so that we can render them later.
+	        hide($content['links']);
+	        print render($content);
+	        ?>
+        </div>
+    </div>
+    
 </div>
+
