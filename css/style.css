@@ -15907,8 +15907,7 @@ style.scss
   background: none; }
 
 .new-group-buttons {
-  display: inline-flex;
-  margin-top: 10px; }
+  display: inline-flex; }
 
 .btn.new-group {
   margin-right: 10px; }
@@ -16113,5 +16112,8 @@ style.scss
 .product-list__img img {
   height: 220px;
   object-fit: cover; }
+
+#-ed-get-sorting-options button {
+  margin-bottom: 15px; }
 
 /*# sourceMappingURL=style.css.map */
