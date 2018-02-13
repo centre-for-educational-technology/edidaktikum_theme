@@ -181,9 +181,9 @@ global $user;
                             <li>
                                 <a href="<?php print url('dashboard'); ?>">Minu töölaud</a>
                             </li>
-                            <li>
-                                <a href="<?php print url('dashboard/qualification_portfolio'); ?>">Kutseomistamise portfoolio</a>
-                            </li>
+<!--                            <li>-->
+<!--                                <a href="--><?php //print url('dashboard/qualification_portfolio'); ?><!--">Kutseomistamise portfoolio</a>-->
+<!--                            </li>-->
 
 
                             <li>
