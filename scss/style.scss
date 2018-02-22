@@ -338,10 +338,20 @@ style.scss
 }
 
 
+.answer .btn{
+  margin-bottom: 25px;
+}
 
 
 
 
+.ed-add-new-node a{
+  @extend .btn;
+  @extend .price-btn;
+  @extend .new-group.price-btn;
+  @extend .btn-success;
+
+}
 
 
 
