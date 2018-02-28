@@ -25,7 +25,9 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 
  drupal_add_js(drupal_get_path('theme', 'edidaktikum_theme_bs3') . '/scripts/main.js', array('type' => 'file', 'scope' => 'footer'));
 	
- 
+	drupal_add_js('jQuery(document).ready(function(){
+        jQuery(".owl-theme-01__item").matchHeight();
+        });','inline');
 	
 	
 	$_meta_shortcut_icon = array(
@@ -372,6 +374,23 @@ function edidaktikum_theme_bs3_menu_link(array $variables) {
 }
 
 
+function get_current_search_terms() {
+// only do this once per request
+	static $return;
+	if (!isset($return)) {
+		// extract keys from path
+		$path = explode('/', $_GET['q'], 3);
+		// only if the path is search (if you have a different search url, please modify)
+		if(count($path) == 3 && $path[0]=="search") {
+			$return = $path[2];
+		} else {
+			$keys = empty($_REQUEST['keys']) ? '' : $_REQUEST['keys'];
+			$return = $keys;
+		}
+	}
+	return $return;
+}
+
 /**
  * Implements hook_preprocess_page().
  */
@@ -402,8 +421,15 @@ function edidaktikum_theme_bs3_preprocess_page(&$vars) {
 	//kpr($other_languages);
 	
 	
-	$search_form = drupal_get_form('search_form');
+
+
+	//With detailed search
+	//$search_form = drupal_get_form('search_form', NULL, get_current_search_terms(), 'node');
+	
+	$search_form = drupal_get_form('search_form', NULL, get_current_search_terms());
 	$search_box = drupal_render($search_form);
+	
+	
 	$vars['search_box'] = $search_box;
 	
 	
