@@ -9,19 +9,21 @@ if(!empty($node->ed_field_featured_image)){
 	$image = $GLOBALS['base_url'].'/'.drupal_get_path('theme', $GLOBALS['theme']).'/images/icons/ed_group_icon_default.png';
 }
 
-$study_areas = _ed_learning_resource_study_areas_options_list();
-$study_area = $study_areas[$node->ed_field_study_area[LANGUAGE_NONE][0]['value']];
+if(!empty($node->ed_field_study_area)){
+	$study_areas = _ed_learning_resource_study_areas_options_list();
+	$study_area = $study_areas[$node->ed_field_study_area[LANGUAGE_NONE][0]['value']];
+}
+if(!empty($node->ed_field_assets_distribution)) {
+	$assets_distribution_list = _ed_learning_resource_assets_distribution_options_list();
+	$assets_distribution = $assets_distribution_list[$node->ed_field_assets_distribution[LANGUAGE_NONE][0]['value']];
+}
+
 
 $languages = _ed_learning_resource_language_list();
 $language = $languages[$node->ed_learning_resource_language[LANGUAGE_NONE][0]['value']];
 
 
-$assets_distribution_list = _ed_learning_resource_assets_distribution_options_list();
-$assets_distribution = $assets_distribution_list[$node->ed_field_assets_distribution[LANGUAGE_NONE][0]['value']];
 
-
-$study_areas_list  = _ed_learning_resource_study_areas_options_list();
-$study_area = $study_areas_list[$node->ed_field_study_area [LANGUAGE_NONE][0]['value']];
 
 
 if(!empty( $node->ed_field_category )){
@@ -60,9 +62,11 @@ if(!empty($node->ed_field_featured_image)){
 								<?php print l($userfullname, '/user/'.$node->uid); ?>
 							</p>
 						</li>
+						<?php if(!empty( $study_area )): ?>
 						<li>
 							<p class="blog-post__meta-category"><?php print $study_area; ?></p>
 						</li>
+						<?php endif; ?>
 						<li>
 							<p class="blog-post__meta-comments"><?php print $node->comment_count.' '.t('Comments'); ?></p>
 						</li>
@@ -94,7 +98,7 @@ if(!empty($node->ed_field_featured_image)){
 							<i class="fa fa fa-share-alt"></i>
 						</a>
 						<div class="preview_share_block">
-							<a class="share_facebook" href="#" data-image="<?php print $image ?>" data-title="<?php print check_plain($node->title); ?>" data-desc="<?php print check_plain($node->ed_field_excerpt['und'][0]['value']); ?>">
+							<a class="share_facebook" href="#" data-image="<?php print $image ?>" data-title="<?php print check_plain($node->title); ?>" data-desc="<?php print check_plain( strlen( $node->ed_field_content['und'][0]['value']) > 50 ? substr( $node->ed_field_content['und'][0]['value'],0,50)."..." :  $node->ed_field_content['und'][0]['value']); ?>">
 								<i class="fa fa-facebook"></i>
 							</a>
 							<a class="share_twitter" href="https://twitter.com/intent/tweet?text=eDidaktikum%20%22<?php print check_plain($node->title); ?>%22%20<?php print url(current_path(), array('absolute' => TRUE)) ?>">
@@ -241,14 +245,19 @@ if(!empty($node->ed_field_featured_image)){
                   </ul>
               </div>
             <?php endif; ?>
+					
+			<?php if(!empty( $study_area )): ?>
             <div class="widget tags-cloud">
                 <h3 class="widget-title"><?php print t('Valdkond'); ?></h3>
                 <p><?php print t($study_area); ?></p>
             </div>
+			<?php endif; ?>
+			<?php if(!empty( $assets_distribution )): ?>
             <div class="widget tags-cloud">
                 <h3 class="widget-title"><?php print t('Õppevara jaotus'); ?></h3>
                 <p><?php print t($assets_distribution); ?></p>
             </div>
+			<?php endif; ?>
             <div class="widget tags-cloud">
                 <h3 class="widget-title"><?php print t('Learning Resource Type'); ?></h3>
                 <ul class="tags-cloud__list">

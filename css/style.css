@@ -15930,10 +15930,6 @@ style.scss
 .contact-block-01__email.login::before {
   content: '\f090'; }
 
-@media only screen and (max-width: 1199px) {
-  .search-block__form input {
-    -webkit-border-radius: 0;
-    border-radius: 0; } }
 .content-box-03.support {
   background-color: #ffffff;
   background: none; }
@@ -16157,7 +16153,26 @@ input[type="text"]:focus, input[type="search"]:focus, input[type="url"]:focus, i
   -webkit-box-shadow: none;
   box-shadow: none; }
 
+.search-block__form.full_search {
+  position: relative;
+  top: 0;
+  right: 0;
+  visibility: visible;
+  display: block; }
+
 #block-system-main .search-block__form {
   display: none; }
+
+.search-advanced .btn, .search-advanced .ed-add-new-node a, .ed-add-new-node .search-advanced a {
+  margin-top: 10px; }
+
+@media only screen and (max-width: 1199px) {
+  .search-block__form::before {
+    right: 25px; }
+
+  .search-block__form::after {
+    right: 25px; } }
+.ed-add-new-node {
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=style.css.map */
