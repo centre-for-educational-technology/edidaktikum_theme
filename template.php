@@ -25,9 +25,9 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 
  drupal_add_js(drupal_get_path('theme', 'edidaktikum_theme_bs3') . '/scripts/main.js', array('type' => 'file', 'scope' => 'footer'));
 	
-	drupal_add_js('jQuery(document).ready(function(){
-        jQuery(".owl-theme-01__item").matchHeight();
-        });','inline');
+ drupal_add_js('jQuery(document).ready(function(){
+      jQuery(".owl-theme-01__item").matchHeight();
+      });','inline');
 	
 	
 	$_meta_shortcut_icon = array(

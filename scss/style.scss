@@ -60,13 +60,6 @@ style.scss
 
 }
 
-@media only screen and (max-width: 1199px) {
-  .search-block__form input {
-    -webkit-border-radius: 0;
-    border-radius: 0;
-  }
-}
-
 
 
 .content-box-03.support{
@@ -360,9 +353,47 @@ input[type="text"]:focus, input[type="search"]:focus, input[type="url"]:focus, i
   box-shadow: none;
 }
 
+.search-block__form.full_search{
+  position: relative;
+  top: 0;
+  right: 0;
+  visibility: visible;
+  display: block;
+}
 
 #block-system-main .search-block__form {
   display: none;
 }
+
+
+
+.search-advanced .btn{
+  margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 1199px) {
+
+
+  .search-block__form::before {
+    right: 25px;
+  }
+  .search-block__form::after {
+    right: 25px;
+  }
+
+
+}
+
+.ed-add-new-node{
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
 
 
