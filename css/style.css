@@ -16175,4 +16175,60 @@ input[type="text"]:focus, input[type="search"]:focus, input[type="url"]:focus, i
 .ed-add-new-node {
   margin-bottom: 15px; }
 
+#slider label {
+  position: absolute;
+  width: 20px;
+  margin-left: -10px;
+  text-align: center;
+  margin-top: 20px; }
+
+/* below is not necessary, just for style */
+#slider {
+  width: 50%;
+  margin: 2em auto; }
+
+#edit-ed-field-satisf-feedb-und input[type="radio"] {
+  -webkit-appearance: none;
+  width: 90px;
+  height: 90px;
+  border: none;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: all .2s ease; }
+  #edit-ed-field-satisf-feedb-und input[type="radio"]:hover, #edit-ed-field-satisf-feedb-und input[type="radio"]:checked {
+    filter: grayscale(0); }
+  #edit-ed-field-satisf-feedb-und input[type="radio"]:focus {
+    outline: 0; }
+  #edit-ed-field-satisf-feedb-und input[type="radio"]#edit-ed-field-satisf-feedb-und-3 {
+    background: url("../img/icons/happy_smile.svg") center;
+    background-size: cover; }
+  #edit-ed-field-satisf-feedb-und input[type="radio"]#edit-ed-field-satisf-feedb-und-2 {
+    background: url("../img/icons/neutral_smile.svg") center;
+    background-size: cover; }
+  #edit-ed-field-satisf-feedb-und input[type="radio"]#edit-ed-field-satisf-feedb-und-1 {
+    background: url("../img/icons/sad_smile.svg") center;
+    background-size: cover; }
+
+#edit-ed-field-satisf-feedb-und {
+  display: table;
+  width: 100%;
+  height: 100px; }
+
+#edit-ed-field-satisf-feedb-und .form-item.radio {
+  display: table-cell;
+  text-align: center; }
+
+#edit-ed-field-difficulty-feedb {
+  height: 100px;
+  margin-top: 43px; }
+
+.form-item-ed-field-satisf-feedb-und .radio label {
+  padding-left: 0px;
+  min-width: 90px;
+  min-height: 90px; }
+
+#edit-ed-field-satisf-feedb-und input[type="radio"] {
+  margin-left: 0px;
+  display: table-cell; }
+
 /*# sourceMappingURL=style.css.map */
