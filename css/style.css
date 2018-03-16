@@ -16175,4 +16175,75 @@ input[type="text"]:focus, input[type="search"]:focus, input[type="url"]:focus, i
 .ed-add-new-node {
   margin-bottom: 15px; }
 
+#slider label {
+  position: absolute;
+  width: 20px;
+  margin-left: -10px;
+  text-align: center;
+  margin-top: 20px; }
+
+#slider {
+  width: 50%;
+  margin: 2em auto; }
+
+#edit-ed-field-satisf-feedb-und input[type="radio"] {
+  -webkit-appearance: none;
+  width: 70px;
+  height: 70px;
+  border: none;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: all .2s ease; }
+  #edit-ed-field-satisf-feedb-und input[type="radio"]:hover, #edit-ed-field-satisf-feedb-und input[type="radio"]:checked {
+    filter: grayscale(0); }
+  #edit-ed-field-satisf-feedb-und input[type="radio"]:focus {
+    outline: 0; }
+  #edit-ed-field-satisf-feedb-und input[type="radio"]#edit-ed-field-satisf-feedb-und-4 {
+    width: 70px;
+    height: 70px;
+    background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2025%2025%22%3E%3Ctitle%3E4%3C%2Ftitle%3E%3Ccircle%20cx%3D%228%22%20cy%3D%229%22%20r%3D%221%22%20fill%3D%22%231abc9c%22%2F%3E%3Ccircle%20cx%3D%2217%22%20cy%3D%229%22%20r%3D%221%22%20fill%3D%22%231abc9c%22%2F%3E%3Cpath%20d%3D%22M16.5%2C25A7.39%2C7.39%2C0%2C0%2C0%2C24%2C19H9A7.39%2C7.39%2C0%2C0%2C0%2C16.5%2C25Zm0-1a6.3%2C6.3%2C0%2C0%2C1-6.18-4h12.3A6.18%2C6.18%2C0%2C0%2C1%2C16.52%2C24Z%22%20transform%3D%22translate%28-4%20-4%29%22%20fill%3D%22%231abc9c%22%2F%3E%3Cpath%20d%3D%22M16.5%2C4A12.5%2C12.5%2C0%2C1%2C0%2C29%2C16.5%2C12.5%2C12.5%2C0%2C0%2C0%2C16.5%2C4Zm0%2C24A11.5%2C11.5%2C0%2C1%2C1%2C28%2C16.5%2C11.5%2C11.5%2C0%2C0%2C1%2C16.5%2C28Z%22%20transform%3D%22translate%28-4%20-4%29%22%20fill%3D%22%231abc9c%22%2F%3E%3C%2Fsvg%3E");
+    background-size: cover; }
+  #edit-ed-field-satisf-feedb-und input[type="radio"]#edit-ed-field-satisf-feedb-und-3 {
+    width: 70px;
+    height: 70px;
+    background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2025%2025%22%3E%3Ctitle%3E3%3C%2Ftitle%3E%3Ccircle%20cx%3D%228%22%20cy%3D%229%22%20r%3D%221%22%20fill%3D%22%231abc9c%22%2F%3E%3Cpath%20d%3D%22M11%2C20v1a8.15%2C8.15%2C0%2C0%2C0%2C5.48%2C2A8.3%2C8.3%2C0%2C0%2C0%2C22%2C21V20a8.3%2C8.3%2C0%2C0%2C1-5.52%2C2A8.15%2C8.15%2C0%2C0%2C1%2C11%2C20Z%22%20transform%3D%22translate%28-4%20-4%29%22%20fill%3D%22%231abc9c%22%2F%3E%3Ccircle%20cx%3D%2217%22%20cy%3D%229%22%20r%3D%221%22%20fill%3D%22%231abc9c%22%2F%3E%3Cpath%20d%3D%22M16.5%2C4A12.5%2C12.5%2C0%2C1%2C0%2C29%2C16.5%2C12.5%2C12.5%2C0%2C0%2C0%2C16.5%2C4Zm0%2C24A11.5%2C11.5%2C0%2C1%2C1%2C28%2C16.5%2C11.5%2C11.5%2C0%2C0%2C1%2C16.5%2C28Z%22%20transform%3D%22translate%28-4%20-4%29%22%20fill%3D%22%231abc9c%22%2F%3E%3C%2Fsvg%3E");
+    background-size: cover; }
+  #edit-ed-field-satisf-feedb-und input[type="radio"]#edit-ed-field-satisf-feedb-und-2 {
+    width: 70px;
+    height: 70px;
+    background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2025%2025%22%3E%3Ctitle%3E2%3C%2Ftitle%3E%3Ccircle%20cx%3D%228%22%20cy%3D%2210%22%20r%3D%221%22%20fill%3D%22%231abc9c%22%2F%3E%3Cpath%20d%3D%22M11%2C22v1a8.15%2C8.15%2C0%2C0%2C1%2C5.48-2A8.3%2C8.3%2C0%2C0%2C1%2C22%2C23V22a8.3%2C8.3%2C0%2C0%2C0-5.52-2A8.15%2C8.15%2C0%2C0%2C0%2C11%2C22Z%22%20transform%3D%22translate%28-4%20-4%29%22%20fill%3D%22%231abc9c%22%2F%3E%3Ccircle%20cx%3D%2217%22%20cy%3D%2210%22%20r%3D%221%22%20fill%3D%22%231abc9c%22%2F%3E%3Cpath%20d%3D%22M16.5%2C4A12.5%2C12.5%2C0%2C1%2C0%2C29%2C16.5%2C12.5%2C12.5%2C0%2C0%2C0%2C16.5%2C4Zm0%2C24A11.5%2C11.5%2C0%2C1%2C1%2C28%2C16.5%2C11.5%2C11.5%2C0%2C0%2C1%2C16.5%2C28Z%22%20transform%3D%22translate%28-4%20-4%29%22%20fill%3D%22%231abc9c%22%2F%3E%3C%2Fsvg%3E");
+    background-size: cover; }
+  #edit-ed-field-satisf-feedb-und input[type="radio"]#edit-ed-field-satisf-feedb-und-1 {
+    width: 70px;
+    height: 70px;
+    background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2025%2025%22%3E%3Ctitle%3E1%3C%2Ftitle%3E%3Ccircle%20cx%3D%228%22%20cy%3D%2210%22%20r%3D%221%22%20fill%3D%22%231abc9c%22%2F%3E%3Crect%20x%3D%2218%22%20y%3D%2211%22%20width%3D%224%22%20height%3D%221%22%20transform%3D%22translate%28-7.01%209.15%29%20rotate%28-34%29%22%20fill%3D%22%231abc9c%22%2F%3E%3Crect%20x%3D%2212.5%22%20y%3D%229.5%22%20width%3D%221%22%20height%3D%224%22%20transform%3D%22translate%28-7.8%2011.85%29%20rotate%28-56%29%22%20fill%3D%22%231abc9c%22%2F%3E%3Ccircle%20cx%3D%2217%22%20cy%3D%2210%22%20r%3D%221%22%20fill%3D%22%231abc9c%22%2F%3E%3Cpath%20d%3D%22M16.5%2C4A12.5%2C12.5%2C0%2C1%2C0%2C29%2C16.5%2C12.5%2C12.5%2C0%2C0%2C0%2C16.5%2C4Zm0%2C24A11.5%2C11.5%2C0%2C1%2C1%2C28%2C16.5%2C11.5%2C11.5%2C0%2C0%2C1%2C16.5%2C28Z%22%20transform%3D%22translate%28-4%20-4%29%22%20fill%3D%22%231abc9c%22%2F%3E%3Cpath%20d%3D%22M20.49%2C19h-8a2.5%2C2.5%2C0%2C1%2C0%2C0%2C5h8A2.5%2C2.5%2C0%2C1%2C0%2C20.49%2C19ZM20%2C20h0.49a1.5%2C1.5%2C0%2C0%2C1%2C1.42%2C1H20V20Zm-7%2C3H12.51a1.5%2C1.5%2C0%2C0%2C1-1.42-1H13v1Zm0-2H11.08a1.5%2C1.5%2C0%2C0%2C1%2C1.42-1H13v1Zm3%2C2H14V22h2v1Zm0-2H14V20h2v1Zm3%2C2H17V22h2v1Zm0-2H17V20h2v1Zm1.49%2C2H20V22h1.92A1.5%2C1.5%2C0%2C0%2C1%2C20.49%2C23Z%22%20transform%3D%22translate%28-4%20-4%29%22%20fill%3D%22%231abc9c%22%2F%3E%3C%2Fsvg%3E");
+    background-size: cover; }
+
+#edit-ed-field-satisf-feedb-und {
+  display: table;
+  width: 100%;
+  height: 100px; }
+
+#edit-ed-field-satisf-feedb-und .form-item.radio {
+  display: table-cell;
+  text-align: center; }
+
+#edit-ed-field-difficulty-feedb {
+  height: 100px; }
+
+.alert.feedback-notice {
+  margin-top: 43px; }
+
+.form-item-ed-field-satisf-feedb-und .radio label {
+  padding-left: 0px;
+  min-width: 90px;
+  min-height: 90px; }
+
+#edit-ed-field-satisf-feedb-und input[type="radio"] {
+  margin-left: 0px;
+  display: table-cell; }
+
+#edit-ed-field-satisf-feedb {
+  margin-top: 50px; }
+
 /*# sourceMappingURL=style.css.map */
