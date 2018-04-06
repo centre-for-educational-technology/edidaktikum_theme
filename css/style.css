@@ -16246,4 +16246,7 @@ input[type="text"]:focus, input[type="search"]:focus, input[type="url"]:focus, i
 #edit-ed-field-satisf-feedb {
   margin-top: 50px; }
 
+iframe {
+  border: none; }
+
 /*# sourceMappingURL=style.css.map */
