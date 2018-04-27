@@ -546,3 +546,67 @@ $icon-color: #1abc9c;
 iframe{
   border: none;
 }
+
+
+/**
+Dashboard circles
+ */
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+
+
+
+
+#animated-chart-done circle {
+  fill: #ff9f00;
+}
+
+#animated-chart-success circle {
+  fill: #1abc9c;
+}
+
+
+#animated-chart-satisfaction circle {
+  fill: #3c9ee5;
+}
+
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+/*---------- star rating ----------*/
+%flex-display {
+  display: flex;
+}
+.star-rating {
+  @extend %flex-display;
+  align-items: center;
+  font-size: 3em;
+  justify-content: center;
+}
+.back-stars {
+  @extend %flex-display;
+  color: #bdbdbd;
+  position: relative;
+}
+.front-stars {
+  @extend %flex-display;
+  color: #00aa9d;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
