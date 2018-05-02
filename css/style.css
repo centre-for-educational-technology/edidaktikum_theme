@@ -16278,6 +16278,10 @@ Dashboard circles
   font-size: 0.5em;
   text-anchor: middle; }
 
+#student-dash-table .btn-success:hover, #student-dash-table .ed-add-new-node a:hover, .ed-add-new-node #student-dash-table a:hover, .ed-add-new-node a:hover {
+  background-color: #00847a;
+  border-color: #00776e; }
+
 /*---------- star rating ----------*/
 .star-rating, .back-stars, .front-stars {
   display: flex; }

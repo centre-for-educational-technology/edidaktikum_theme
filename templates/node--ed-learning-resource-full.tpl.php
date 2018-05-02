@@ -78,6 +78,13 @@ if(!empty($node->ed_field_featured_image)){
 				<div class="blog-post__text">
 					<p><?php print $node->ed_field_content['und'][0]['safe_value']; ?></p>
 				</div>
+				<?php if(!empty( $node->ed_g_drive_file )): ?>
+                  <h3><?php print t('Failid Google Drive-st'); ?></h3>
+                  <?php foreach($node->ed_g_drive_file[LANGUAGE_NONE] as $drive_file): ?>
+                      <p><a href="<?php print $drive_file['url']; ?>" target="_blank"><?php print $drive_file['name']; ?></a> <img src="<?php print $drive_file['mime']; ?>"></p>
+                  <?php endforeach; ?>
+							
+                <?php endif; ?>
 				<div class="blog-post__btn-wrapp ed-node-statistics">
 					<?php if(!empty( $node->field_tags )): ?>
 						<ul class="post-tag-list">

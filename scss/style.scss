@@ -587,6 +587,14 @@ Dashboard circles
   text-anchor: middle;
 }
 
+#student-dash-table .btn-success:hover, .ed-add-new-node a:hover {
+  background-color: darken(#00aa9d, 7.5%);
+  border-color: darken(#00aa9d, 10%);;
+}
+
+
+
+
 /*---------- star rating ----------*/
 %flex-display {
   display: flex;
