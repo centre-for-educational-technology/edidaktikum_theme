@@ -718,7 +718,7 @@ global $user;
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4 col-md-4 col-lg-4">
-                            <p class="copy-info">&copy; 2017 eDidaktikum. Kõik õigused kaitstud.</p>
+                            <p class="copy-info">&copy; <?php echo date("Y"); ?> eDidaktikum. Kõik õigused kaitstud.</p>
                         </div>
                         <div class="col-sm-4 col-md-4 col-lg-4 text-center">
     
