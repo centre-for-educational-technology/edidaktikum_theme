@@ -589,15 +589,27 @@
   }
 
   // Typed
-  if ($('.info-box-title').size() > 0) {
-    var typed = new Typed('.info-box-title__text', {
-      strings: ['teadmisi täiendada.', 'avastada midagi uut.', 'muutustega kaasa minna.'],
+  if ($('.info-box-subtitle').size() > 0) {
+    var typed_top = new Typed('.info-box-title__text', {
+      strings: ['Tudeng`<br>siin saan kavandada ja mõtestada oma õppimist`', 'Õppejõud`<br>siin hoian kätt õppetöö pulsil`', 'Õpetaja`<br>siit leian mõttekaaslasi, soovitusi ja tuge`', 'Haridusjuht`<br>siit leian kooliarenduse kompassi`'],
       typeSpeed: 100,
       backSpeed: 50,
+      backDelay: 2000,
       smartBackspace: true,
-      loop: true
+      loop: true,
+      contentType: 'html'
     });
   }
+
+  // if ($('.info-box-title').size() > 0) {
+  //   var typed_bottom = new Typed('.info-box-title__text', {
+  //     strings: ['Siin saan kavandada ja mõtestada oma õppimist', 'Siin hoian kätt õppetöö pulsil', 'Siit leian mõttekaaslasi, soovitusi ja tuge', 'Siit leian kooliarenduse kompassi'],
+  //     typeSpeed: 100,
+  //     backSpeed: 50,
+  //     smartBackspace: true,
+  //     loop: true
+  //   });
+  // }
 
   // Google maps
   if ($('#map-canvas').size() > 0) {

@@ -44,6 +44,7 @@ global $user;
                         <div class="col-lg-12">
                             <a href="<?php print url('/'.$site_frontpage); ?>" class="logo">
                                 <h3 class="logo">eDidaktikum</h3>
+                                <p class="tagline">Õppimise ja õpetamise ruum</p>
                             </a>
                             <div class="main-nav__btn text-center info-nav-wrap">
                                 <div class="icon-left"></div>
@@ -92,13 +93,15 @@ global $user;
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h3 class="info-box-subtitle">Õpin selleks,</h3>
+                            <h3 class="info-box-subtitle" style="white-space:pre"></h3>
                             <p class="info-box-title">
-                                et
                                 <span class="info-box-title__text"></span>
                             </p>
                             <div class="info-box-text">
-                                <p>eDidaktikumi eesmärk on toetada pädevuspõhist õppimist, <br>edendada õpetajahariduse valdkonna digiõppevara jagamist<br> ja soodustada koostööd õpetajahariduses.</p>
+                                <p> eDidaktikum pakub värsket pilti haridusmaailmas toimuvast.
+                                    <br><?php print $teachers_count+$students_count ?> tudengit, õpetajat, haridusjuhti ja õppejõudu kasutab igapäevaselt eDidaktikumi,
+                                    <br>et koguda ja jagada materjale ja arutada õppimise ning õpetamise üle.
+                                    <br>Koos kavandades ja mõtestades on õppimine tõhusam!</p>
                             </div>
                             <a href=" <?php print url('user'); ?>" class="btn-01">Logi sisse</a>
                             <a href="#front-info" class="btn-03">Loe edasi</a>

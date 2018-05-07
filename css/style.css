@@ -16301,4 +16301,41 @@ Dashboard circles
   position: absolute;
   top: 0; }
 
+.info-box-title__text {
+  display: initial; }
+
+.home-02 .info-box-title {
+  font-size: 40px;
+  line-height: 60px;
+  height: 10vh; }
+
+@media only screen and (max-width: 1199px) {
+  .home-02 .info-box-title {
+    height: 15vh; } }
+@media only screen and (max-width: 1024px) {
+  .home-02 .info-box-title {
+    height: 20vw; } }
+@media only screen and (max-width: 767px) {
+  .home-02 .info-box-title {
+    height: 25vw; } }
+@media only screen and (max-width: 640px) {
+  .home-02 .info-box-title {
+    height: 42vw; } }
+@media only screen and (max-width: 420px) {
+  .home-02 .info-box-title {
+    height: 72vw; } }
+@media only screen and (max-width: 375px) {
+  .home-02 .info-box-title {
+    height: 80vw; } }
+@media only screen and (max-width: 325px) {
+  .home-02 .info-box-title {
+    height: 80vw;
+    font-size: 30px;
+    line-height: 50px; } }
+p.tagline {
+  color: #fff; }
+
+body.home h3.logo {
+  margin-bottom: 0px; }
+
 /*# sourceMappingURL=style.css.map */
