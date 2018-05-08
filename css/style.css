@@ -16338,4 +16338,7 @@ p.tagline {
 body.home h3.logo {
   margin-bottom: 0px; }
 
+fieldset .panel-body.collapsed {
+  display: none; }
+
 /*# sourceMappingURL=style.css.map */
