@@ -16307,11 +16307,11 @@ Dashboard circles
 .home-02 .info-box-title {
   font-size: 40px;
   line-height: 60px;
-  height: 10vh; }
+  height: 15vh; }
 
 @media only screen and (max-width: 1199px) {
   .home-02 .info-box-title {
-    height: 15vh; } }
+    height: 20vh; } }
 @media only screen and (max-width: 1024px) {
   .home-02 .info-box-title {
     height: 20vw; } }
@@ -16337,5 +16337,8 @@ p.tagline {
 
 body.home h3.logo {
   margin-bottom: 0px; }
+
+fieldset .panel-body.collapsed {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
