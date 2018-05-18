@@ -9,6 +9,7 @@
 
 
 @import '../custom_styles/owl.carousel.min.css';
+@import '../custom_styles/magnific-popup.css';
 //Importing css files does not preserve the order, so they are changed to scss
 @import "../custom_styles/style";
 @import"../custom_styles/custom";
@@ -690,9 +691,3 @@ body.home h3.logo{
 fieldset .panel-body.collapsed{
   display: none;
 }
-
-
-
-
-
-
