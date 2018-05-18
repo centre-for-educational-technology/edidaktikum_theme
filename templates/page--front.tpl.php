@@ -12,12 +12,12 @@ global $user;
     <!--[if lt IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
+
     <div class="wrapp-content">
 
-        
-    
-        
+
+
+
         <!-- Header -->
         <header class="wrapp-header parallax">
             <div class="info-box-01">
@@ -51,18 +51,18 @@ global $user;
                                 <div class="icon-right"></div>
                             </div>
                             <div class="search-block">
-                               
+
                                         <a class="dropdown-toggle contact-block-01__lang" data-toggle="dropdown" href="#" role="button" id="dropdownMenu1" aria-haspopup="true" aria-expanded="false"><?php print $language->name; ?></a>
-    
-                                
+
+
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                             <?php
                                                 foreach ($other_languages as $other_language){
                                                     print "<li><a href='".base_path().$other_language['name']."/".language_url_split_prefix(current_path(), array($language->language))[1]."'>".$other_language['value']."</a></li>";
-	
+
                                                 }
                                             ?>
-                                           
+
                                         </ul>
 
 
@@ -70,23 +70,23 @@ global $user;
                                     <button class="search-btn">Search</button>
                                     <?php print $search_box; ?>
                                 </div>
-	                            
+
                             </div>
-	
+
 	                        <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-			                        
-                            
+
+
 	                                <?php if (!empty($primary_nav)): ?>
 		                                <?php print render($primary_nav); ?>
 	                                <?php endif; ?>
-	                            
-                             
+
+
 	                        <?php endif ?>
-                         
+
                         </div>
                     </div>
-    
-    
+
+
                 </div>
             </div>
             <div class="info-box-03">
@@ -110,10 +110,10 @@ global $user;
                 </div>
             </div>
         </header>
-    
+
         <!-- Content -->
-    
-    
+
+
         <main class="content-row">
             <div class="content-box-01 padding-top-100 padding-sm-top-50" id="front-info">
                 <div class="container">
@@ -171,8 +171,8 @@ global $user;
                     </div>
                 </div>
             </div>
-    
-    
+
+
             <div class="content-box-02">
                 <div class="wrapp-box-01">
                     <div class="service-video">
@@ -217,7 +217,7 @@ global $user;
                                                 <p class="stat_count" data-count="<?php print $teachers_count ?>">0</p>
                                                 <p class="counter_title">Õppejõudu</p>
                                             </div>
-    
+
                                             <div class="stat_temp"></div>
                                         </div>
                                     </div>
@@ -559,9 +559,9 @@ global $user;
 <!--                    </div>-->
 <!--                </div>-->
 <!--            </div>-->
-    
-    
-    
+
+
+
             <div class="content-box-02 padding-top-96 padding-bottom-67">
                 <div class="container">
                     <div class="row">
@@ -626,116 +626,9 @@ global $user;
                 </div>
             </div>
         </main>
-    
-    
-    
+
+
+
         <!-- Footer -->
-        <footer class="wrapp-footer">
-            <div class="footer-box-01">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-3 col-md-3 col-lg-3">
-                            <h4 style="color:#fff;">eDidaktikum</h4>
-                            <ul class="widget-contact">
-
-
-                                <li>
-                                    <h4 class="widget-contact__title">Priit Tammets</h4>
-                                    <p class="widget-contact__text">+372 640 9355</p>
-                                </li>
-                                <li>
-                                    <h4 class="widget-contact__title">Email:</h4>
-                                    <p class="widget-contact__text">
-                                        <a class="widget-contact__text-email" href="mailto:edidaktikum@tlu.ee">edidaktikum@tlu.ee</a>
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-3 col-md-3 col-lg-3">
-                            <div class="widget-link">
-                                <h3 class="widget-title">Töölaud</h3>
-                                <ul class="widget-list">
-                                    <li>
-                                        <a href="<?php print url('dashboard'); ?>">Minu töölaud</a>
-                                    </li>
-<!--                                    <li>-->
-<!--                                        <a href="--><?php //print url('dashboard/qualification_portfolio'); ?><!--">Kutseomistamise portfoolio</a>-->
-<!--                                    </li>-->
-
-
-                                    <li>
-                                        <a href="<?php print url('dashboard/blogs'); ?>">Ajaveeb</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php print url('dashboard/shared'); ?>">Minuga jagatud</a>
-                                    </li>
-
-
-
-                                </ul>
-                            </div>
-                        </div>
-                        <!--                <div class="col-sm-3 col-md-3 col-lg-3">-->
-                        <!--                    <div class="widget-link">-->
-                        <!--                        <h3 class="widget-title">Kollektsioonid</h3>-->
-                        <!--                        <ul class="widget-list">-->
-                        <!--                            <li>-->
-                        <!--                                <a href="#">Uusimad</a>-->
-                        <!--                            </li>-->
-                        <!--                            <li>-->
-                        <!--                                <a href="#">Lisa uus</a>-->
-                        <!--                            </li>-->
-                        <!--                            <li>-->
-                        <!--                                <a href="#">Liitu</a>-->
-                        <!--                            </li>-->
-                        <!--                            <li>-->
-                        <!--                                <a href="#">Leia ja avasta</a>-->
-                        <!--                            </li>-->
-                        <!--                        </ul>-->
-                        <!--                    </div>-->
-                        <!--                </div>-->
-                        <div class="col-sm-3 col-md-3 col-lg-3">
-                            <div class="widget-link">
-                                <h3 class="widget-title">Grupid</h3>
-                                <ul class="widget-list">
-                                    <li>
-                                        <a href="<?php print url('clusters/mygroups'); ?>">Minu grupid</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php print url('clusters'); ?>">Kõik grupid</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php print url('clusters/inactivegroups'); ?>">Mitteaktiivsed grupid</a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php print url('clusters/searchgroup'); ?>">Otsi gruppi</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-box-02">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 col-md-4 col-lg-4">
-                            <p class="copy-info">&copy; <?php echo date("Y"); ?> eDidaktikum. Kõik õigused kaitstud.</p>
-                        </div>
-                        <div class="col-sm-4 col-md-4 col-lg-4 text-center">
-    
-                        </div>
-                        <div class="col-sm-4 col-md-4 col-lg-4">
-                            <div class="footer-info">
-                                <a class="footer-info__01" href="<?php print url('user'); ?>">Minu konto</a>
-                                <a class="footer-info__02" href="<?php print url('faq'); ?>">KKK</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="back2top" title="Back to Top">Tagasi üles</a>
-        </footer>
+        <?php include(__DIR__ . '/includes/footer.php'); ?>
     </div>
-
