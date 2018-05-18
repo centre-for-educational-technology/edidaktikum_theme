@@ -8,15 +8,21 @@
 // load scripts
 function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 
-	
+
 	//$variables['page']['header']['menu_ed-dashboard-menu'];
-	
+
 	if (drupal_is_front_page()) {
 		$variables['classes_array'][] = 'home-02 home';
 	}else{
 		$variables['classes_array'][] = 'page';
 	}
-	
+
+	if (in_array('page-schools', $variables['classes_array'])) {
+		$variables['classes_array'][] = 'makings';
+		$variables['classes_array'][] = 'page';
+		$variables['classes_array'][] = 'school';
+	}
+
 	$options = array(
 			'group' => JS_THEME,
 	);
@@ -24,12 +30,12 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 	//drupal_add_js(drupal_get_path('theme', 'edidaktikum_theme_bs3') . '/scripts/main.js', array('type'=>'file', 'group'=>JS_THEME));
 
  drupal_add_js(drupal_get_path('theme', 'edidaktikum_theme_bs3') . '/scripts/main.js', array('type' => 'file', 'scope' => 'footer'));
-	
+
  drupal_add_js('jQuery(document).ready(function(){
       jQuery(".owl-theme-01__item").matchHeight();
       });','inline');
-	
-	
+
+
 	$_meta_shortcut_icon = array(
 			'#tag' => 'link',
 			'#attributes' => array(
@@ -39,7 +45,7 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 			),
 	);
 	drupal_add_html_head($_meta_shortcut_icon,'my_meta_shortcut_icon');
-	
+
 	$_meta_apple_web_app_capable = array(
 			'#tag' => 'meta',
 			'#attributes' => array(
@@ -48,7 +54,7 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 			),
 	);
 	drupal_add_html_head($_meta_apple_web_app_capable,'my_meta_apple_web_app_capable');
-	
+
 	$_meta_mobile_web_app_capable = array(
 			'#tag' => 'meta',
 			'#attributes' => array(
@@ -57,26 +63,26 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 			),
 	);
 	drupal_add_html_head($_meta_mobile_web_app_capable,'my_meta_mobile_web_app_capable');
-	
+
 	/**
 	 * Add default icon
 	 */
 	$apple_icon =  array(
-			
+
 			'#tag' => 'link',
 			'#attributes' => array(
 					'href' => path_to_theme() .'/favicons/apple-touch-icon.png',
 					'rel' => 'apple-touch-icon',
 			),
 	);
-	
+
 	drupal_add_html_head($apple_icon, 'apple-touch-icon');
-	
+
 	/**
 	 * Loop through to add various sizes
 	 */
 	$apple_icon_sizes = array(57,60,72,76,114,120,144,152,180);
-	
+
 	foreach($apple_icon_sizes as $size){
 		$apple = array(
 				'#tag' => 'link',
@@ -88,10 +94,10 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 		);
 		drupal_add_html_head($apple, 'apple-touch-icon-'.$size);
 	}
-	
-	
+
+
 	$favicon_32 = array(
-			
+
 			'#tag' => 'link',
 			'#attributes' => array(
 					'rel' => 'icon',
@@ -99,13 +105,13 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 					'type' => 'image/png',
 					'href' => path_to_theme() .'/favicons/favicon-32x32.png',
 			),
-	
+
 	);
 	drupal_add_html_head($favicon_32, 'favicon-32x32');
-	
-	
+
+
 	$favicon_16 = array(
-			
+
 			'#tag' => 'link',
 			'#attributes' => array(
 					'rel' => 'icon',
@@ -113,13 +119,13 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 					'type' => 'image/png',
 					'href' => path_to_theme() .'/favicons/favicon-16x16.png',
 			),
-	
+
 	);
 	drupal_add_html_head($favicon_16, 'favicon-16x16');
-	
-	
+
+
 	$favicon_android_chrome = array(
-			
+
 			'#tag' => 'link',
 			'#attributes' => array(
 					'rel' => 'icon',
@@ -127,13 +133,13 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 					'type' => 'image/png',
 					'href' => path_to_theme() .'/favicons/android-chrome-192x192.png',
 			),
-	
+
 	);
 	drupal_add_html_head($favicon_android_chrome, 'favicon-16x16');
-	
-	
+
+
 	$manifest = array(
-			
+
 			'#tag' => 'link',
 			'#attributes' => array(
 					'rel' => 'manifest',
@@ -141,10 +147,10 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 			),
 	);
 	drupal_add_html_head($manifest, 'manifest');
-	
-	
+
+
 	$safari_pinned_tab = array(
-			
+
 			'#tag' => 'link',
 			'#attributes' => array(
 					'rel' => 'mask-icon',
@@ -162,17 +168,17 @@ function edidaktikum_theme_bs3_menu_tree__ed_dashboard_menu($variables){
 }
 
 function edidaktikum_theme_bs3_menu_tree__primary($variables) {
-	
-	
+
+
 	return '<ul class="main-nav__list">' . $variables['tree'] . '</ul>';
-	
+
 }
 
 function edidaktikum_theme_bs3_menu_tree__secondary($variables) {
 
-	
+
 	return $variables['tree'] ;
-	
+
 }
 
 function edidaktikum_theme_bs3_pager($variables){
@@ -182,9 +188,9 @@ function edidaktikum_theme_bs3_pager($variables){
 	$element = $variables['element'];
 	$parameters = $variables['parameters'];
 	$quantity = $variables['quantity'];
-	
+
 	global $pager_page_array, $pager_total;
-	
+
 	// Calculate various markers within this pager piece:
 	// Middle is used to "center" pages around the current page.
 	$pager_middle = ceil($quantity / 2);
@@ -196,7 +202,7 @@ function edidaktikum_theme_bs3_pager($variables){
 	$pager_last = $pager_current + $quantity - $pager_middle;
 	// Max is the maximum page number.
 	$pager_max = $pager_total[$element];
-	
+
 	// Prepare for generation loop.
 	$i = $pager_first;
 	if ($pager_last > $pager_max) {
@@ -209,7 +215,7 @@ function edidaktikum_theme_bs3_pager($variables){
 		$pager_last = $pager_last + (1 - $i);
 		$i = 1;
 	}
-	
+
 	// End of generation loop preparation.
 	$li_first = theme('pager_first', array(
 			'text' => (isset($tags[0]) ? $tags[0] : t('first')),
@@ -234,7 +240,7 @@ function edidaktikum_theme_bs3_pager($variables){
 			'parameters' => $parameters,
 	));
 	if ($pager_total[$element] > 1) {
-		
+
 		// Only show "first" link if set on components' theme setting
 		if ($li_first && bootstrap_setting('pager_first_and_last')) {
 			$items[] = array(
@@ -308,7 +314,7 @@ function edidaktikum_theme_bs3_pager($variables){
 					'data' => $li_last,
 			);
 		}
-		
+
 		$build = array(
 				'#theme_wrappers' => array('container__pager'),
 				'#attributes' => array(
@@ -338,7 +344,7 @@ function edidaktikum_theme_bs3_menu_link(array $variables) {
 	$element = $variables['element'];
 
 	if($element['#original_link']['menu_name'] == 'user-menu'){
-		
+
 		if($element['#href'] == 'faq'){
 			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => array('contact-block-01__email', 'faq'))));
 		}else if($element['#href'] == 'user'){
@@ -350,25 +356,25 @@ function edidaktikum_theme_bs3_menu_link(array $variables) {
 		}else if($element['#href'] == 'privacy'){
 			$output = l($element['#title'], $element['#href'], array('attributes' => array('class' => array('contact-block-01__email', 'privacy'))));
 		}
-	
+
 		return $output;
 
 	}elseif ($element['#original_link']['menu_name'] == 'ed-dashboard-menu'){
-		
+
 		$element['#localized_options']['attributes'] = array('class' => array('list-group-item'));
 		$output = l($element['#title'], $element['#href'], $element['#localized_options']);
-		
+
 		return $output;
 	}
 	else{
-		
+
 		$sub_menu = '';
-		
+
 		if ($element['#below']) {
 			$sub_menu = drupal_render($element['#below']);
 		}
 		$output = l($element['#title'], $element['#href'], $element['#localized_options']);
-		
+
 		return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 	}
 }
@@ -395,95 +401,95 @@ function get_current_search_terms() {
  * Implements hook_preprocess_page().
  */
 function edidaktikum_theme_bs3_preprocess_page(&$vars) {
-	
+
 	$page = $vars['page'];
 	$vars['navbar_languages'] = FALSE;
 	if (module_exists('locale')) {
 		$languages_block = module_invoke('locale', 'block_view', 'language');
 		$vars['navbar_languages'] = $languages_block['content'];
 	}
-	
-	
+
+
 	$system_languages = locale_language_list();
-	
+
 	$other_languages = array();
-	
+
 	foreach($system_languages as $key => $system_language){
 		if($vars['language']->language != $key){
 			if(!in_array([$key => $system_language], $other_languages)){
 				array_push($other_languages, ['name' => $key,'value' => $system_language]);
 			}
-			
+
 		}
 	}
-	
+
 	$vars['other_languages'] = $other_languages;
 	//kpr($other_languages);
-	
-	
+
+
 
 
 	//With detailed search
 	//$search_form = drupal_get_form('search_form', NULL, get_current_search_terms(), 'node');
-	
+
 	$search_form = drupal_get_form('search_form', NULL, get_current_search_terms());
 	$search_box = drupal_render($search_form);
-	
-	
+
+
 	$vars['search_box'] = $search_box;
-	
-	
+
+
 	// Breadcrumbs are not displayed
 	$vars['breadcrumb'] = FALSE;
-	
-	
+
+
 	$site_frontpage = variable_get('site_frontpage', 'node');
-	
+
 	$vars['site_frontpage'] = $site_frontpage;
-	
-	
+
+
 	$contacts_text = variable_get('ed_contact_page_contacts_text', '');
 	if (is_array($contacts_text)) {
 		$contacts_text = check_markup($contacts_text['value'], $contacts_text['format']);
 	}
-	
+
 	$vars['contacts_text'] = $contacts_text;
-	
-	
+
+
 	$logos_text = variable_get('ed_contact_page_logos_text', '');
 	if (is_array($logos_text)) {
 		$logos_text = check_markup($logos_text['value'], $logos_text['format']);
 	}
-	
-	
-	
+
+
+
 	if (drupal_is_front_page()) {
 		$vars['logos_text'] = $logos_text;
-		
-		
-		
+
+
+
 		$vars['students_count'] = get_student_qt();
-		
+
 		$vars['teachers_count'] = get_teacher_qt();
-		
+
 		$vars['groups_count'] = get_cluster_qt();
-		
+
 		$vars['res_count'] = get_lr_qt();
-		
+
 		$vars['tasks_count'] = get_task_qt();
-		
-		
+
+
 		$vars['what_text'] = variable_get('ed_home_page_what_text')? variable_get('ed_home_page_what_text') : 'No text found';
-		
+
 		$vars['dashboard_text'] = variable_get('ed_home_page_dashboard_text')? variable_get('ed_home_page_dashboard_text') : 'No text found';
-		
+
 		$vars['groups_text'] = variable_get('ed_home_page_groups_text')? variable_get('ed_home_page_groups_text') : 'No text found';
-		
+
 		$vars['collections_text'] = variable_get('ed_home_page_collections_text')? variable_get('ed_home_page_collections_text') : 'No text found';
-		
+
 	}
 
-	
+
 }
 
 
@@ -499,10 +505,10 @@ function edidaktikum_theme_bs3_form_alter(&$form, &$form_state, $form_id) {
 
 
 function edidaktikum_theme_bs3_bootstrap_search_form_wrapper($variables) {
-	
-	
+
+
 	$output = $variables['element']['#children'];
-	
+
 	return $output;
 }
 
@@ -514,7 +520,7 @@ function get_student_qt(){
 	$query->fields('u', array('uid'))
 			->condition('u.uid', 0, '!=')
 			->isNull('r.name');
-	
+
 	return $query->countQuery()->execute()->fetchField();
 }
 
@@ -524,7 +530,7 @@ function get_teacher_qt(){
 	$query->join('role', 'r', 'r.rid = ur.rid');
 	$query->condition('r.name' , 'teacher');
 	$query->fields('u',array('uid'));
-	
+
 	return $query->countQuery()->execute()->fetchField();
 }
 
@@ -532,7 +538,7 @@ function get_task_qt(){
 	$query = db_select('node', 'n')
 			->fields('n', array('nid'))
 			->condition('type', 'ed_task');
-	
+
 	return $query->countQuery()->execute()->fetchField();
 }
 
@@ -540,7 +546,7 @@ function get_lr_qt(){
 	$query = db_select('node', 'n')
 			->fields('n', array('nid'))
 			->condition('type', 'ed_learning_resource');
-	
+
 	return $query->countQuery()->execute()->fetchField();
 }
 
@@ -548,12 +554,12 @@ function get_cluster_qt(){
 	$query = db_select('node', 'n')
 			->fields('n', array('nid'))
 			->condition('type', 'ed_cluster');
-	
+
 	return $query->countQuery()->execute()->fetchField();
 }
 
 function edidaktikum_theme_bs3_menu_link_alter(&$link) {
-	
+
 	if ($link['link_path'] == 'contact') {
 		$link['hidden'] = 1;
 	}
@@ -581,11 +587,11 @@ function edidaktikum_theme_bs3_textarea($variables) {
 	$element = $variables ['element'];
 	element_set_attributes($element, array('id', 'name', 'cols', 'rows'));
 	_form_set_class($element, array('form-textarea'));
-	
+
 	$wrapper_attributes = array(
 			'class' => array('form-textarea-wrapper'),
 	);
-	
+
 	$output = '<div' . drupal_attributes($wrapper_attributes) . '>';
 	$output .= '<textarea' . drupal_attributes($element ['#attributes']) . '>' . check_plain($element ['#value']) . '</textarea>';
 	$output .= '</div>';
@@ -594,32 +600,32 @@ function edidaktikum_theme_bs3_textarea($variables) {
 
 function edidaktikum_theme_bs3_form_comment_form_alter(&$form, &$form_state) {
 
-	
+
 	$form['comment_body'][LANGUAGE_NONE][0]['#attributes']['class'][] = 'reply-form__message';
 	$form['subject']['#access'] = false;
 	$form['subject']['#attributes']['class'][] = 'reply-form__topic';
-	
+
 
 }
 
 
 function edidaktikum_theme_bs3_menu_local_tasks(&$variables) {
 	$output = '';
-	
+
 	if (!empty($variables['primary'])) {
 		$variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
 		$variables['primary']['#prefix'] .= '<div class="list-group tabs">';
 		$variables['primary']['#suffix'] = '</div>';
 		$output .= drupal_render($variables['primary']);
 	}
-	
+
 	if (!empty($variables['secondary'])) {
 		$variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
 		$variables['secondary']['#prefix'] .= '<ul class="tabs--secondary pagination pagination-sm">';
 		$variables['secondary']['#suffix'] = '</ul>';
 		$output .= drupal_render($variables['secondary']);
 	}
-	
+
 	return $output;
 }
 
@@ -628,23 +634,23 @@ function edidaktikum_theme_bs3_menu_local_task($variables) {
 	$link = $variables['element']['#link'];
 	$link_text = $link['title'];
 	if (!empty($variables['element']['#active'])) {
-		
+
 		// Add text to indicate active tab for non-visual users.
 		$active = '<span class="element-invisible">' . t('(active tab)') . '</span>';
-		
+
 		// If the link does not contain HTML already, check_plain() it now.
 		// After we set 'html'=TRUE the link will not be sanitized by l().
 		if (empty($link['localized_options']['html'])) {
 			$link['title'] = check_plain($link['title']);
 		}
 		$link['localized_options']['html'] = TRUE;
-		
+
 		$link_text = t('!local-task-title!active', array(
 				'!local-task-title' => $link['title'],
 				'!active' => $active,
 		));
 	}
-	
+
 	$link['localized_options']['attributes'] = array('class' => array('list-group-item'));
 	return l($link_text, $link['href'], $link['localized_options']);
 }
