@@ -656,7 +656,31 @@ function edidaktikum_theme_bs3_menu_local_task($variables) {
 }
 
 
+function edidaktikum_theme_bs3_preprocess_hybridauth_provider_icon(&$vars, $hook) {
+  drupal_add_js(drupal_get_path('theme', 'edidaktikum_theme_bs3') . '/scripts/facebook-sdk.js', array('type' => 'file'));
 
+  $icon_pack_classes = array(
+      'hybridauth-icon',
+      drupal_html_class($vars['provider_id']),
+      drupal_html_class('hybridauth-icon-' . $vars['icon_pack']),
+      drupal_html_class('hybridauth-' . $vars['provider_id']),
+      drupal_html_class('hybridauth-' . $vars['provider_id'] . '-' . $vars['icon_pack']),
+  );
+
+  ctools_include('plugins');
+  // Icon pack modifications.
+  if ($function = ctools_plugin_load_function('hybridauth', 'icon_pack', $vars['icon_pack'], 'icon_classes_callback')) {
+    $function($icon_pack_classes, $vars['provider_id']);
+  }
+  // Provider modifications.
+  if ($provider = hybridauth_get_provider($vars['provider_id'])) {
+    if ($function = ctools_plugin_get_function($provider, 'icon_classes_callback')) {
+      $function($icon_pack_classes);
+    }
+  }
+
+  $vars['icon_pack_classes'] = implode(' ', $icon_pack_classes);
+}
 
 //
 //function edidaktikum_theme_bs3_preprocess_comment_wrapper(&$variables) {

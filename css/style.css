@@ -16945,4 +16945,22 @@ body.home h3.logo {
 fieldset .panel-body.collapsed {
   display: none; }
 
+.hybridauth-facebook-hybridauth-32 {
+  width: 0;
+  height: 42px;
+  opacity: 1; }
+
+.hybridauth-google-hybridauth-32 {
+  background: transparent url(../img/hybridauth_icons/btn_google_signin_light_normal_web.png) 0px 0px no-repeat;
+  width: 191px;
+  height: 46px;
+  opacity: 1; }
+
+.hybridauth-google-hybridauth-32:focus {
+  background: transparent url(../img/hybridauth_icons/btn_google_signin_light_focus_web.png) 0px 0px no-repeat;
+  outline: none; }
+
+.hybridauth-google-hybridauth-32:active {
+  background: transparent url(../img/hybridauth_icons/btn_google_signin_light_pressed_web.png) 0px 0px no-repeat; }
+
 /*# sourceMappingURL=style.css.map */
