@@ -657,7 +657,6 @@ function edidaktikum_theme_bs3_menu_local_task($variables) {
 
 
 function edidaktikum_theme_bs3_preprocess_hybridauth_provider_icon(&$vars, $hook) {
-  drupal_add_js(drupal_get_path('theme', 'edidaktikum_theme_bs3') . '/scripts/facebook-sdk.js', array('type' => 'file'));
 
   $icon_pack_classes = array(
       'hybridauth-icon',

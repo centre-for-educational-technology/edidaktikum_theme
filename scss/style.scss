@@ -694,8 +694,9 @@ fieldset .panel-body.collapsed{
 
 
 .hybridauth-facebook-hybridauth-32 {
-  width: 0;
+  background: transparent url(../img/hybridauth_icons/facebook.png) 0px 0px no-repeat;
   height: 42px;
+  width: 247px;
   opacity: 1;
 }
 .hybridauth-google-hybridauth-32 {
@@ -713,3 +714,4 @@ fieldset .panel-body.collapsed{
 .hybridauth-google-hybridauth-32:active {
   background: transparent url(../img/hybridauth_icons/btn_google_signin_light_pressed_web.png) 0px 0px no-repeat;
 }
+
