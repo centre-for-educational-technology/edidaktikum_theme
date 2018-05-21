@@ -16946,8 +16946,9 @@ fieldset .panel-body.collapsed {
   display: none; }
 
 .hybridauth-facebook-hybridauth-32 {
-  width: 0;
+  background: transparent url(../img/hybridauth_icons/facebook.png) 0px 0px no-repeat;
   height: 42px;
+  width: 247px;
   opacity: 1; }
 
 .hybridauth-google-hybridauth-32 {
