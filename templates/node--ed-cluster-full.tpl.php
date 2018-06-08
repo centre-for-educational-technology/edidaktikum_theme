@@ -31,9 +31,9 @@ global $user;
 	<div class="col-lg-12">
 		<div class="blog-listing right group-single">
 			<article class="blog-post single">
-				
+
 				<div class="blog-post__meta">
-				
+
 				</div>
 <!--				<h3 class="blog-post__title">-->
 <!--					--><?php //print $node->title; ?>
@@ -56,7 +56,7 @@ global $user;
 <!--						<p class="blog-post__meta-comments">3 Kommentaari</p>-->
 <!--					</li>-->
 				</ul>
-    
+
 				<div class="tabs single-course-tabs">
 					<ul class="tabs__caption">
 						<li class="active"><?php print t('Info'); ?></li>
@@ -100,7 +100,7 @@ global $user;
                             <?php foreach($node->ed_g_drive_file[LANGUAGE_NONE] as $drive_file): ?>
                                 <p><a href="<?php print $drive_file['url']; ?>" target="_blank"><?php print $drive_file['name']; ?></a> <img src="<?php print $drive_file['mime']; ?>"></p>
 	                        <?php endforeach; ?>
-                         
+
                         <?php endif; ?>
 					</div>
 					<?php if(!empty( $tasks)): ?>
@@ -110,7 +110,7 @@ global $user;
 <!--								<h5 class="curriculum-list__title-01">Osa 1</h5>-->
 								<ul>
 									<?php foreach($tasks as $task): ?>
-									
+
 										<li>
 											<div class="curriculum-list__box">
 												<a href="<?php print url('/node/'.$task['nid'])?>">
@@ -119,7 +119,7 @@ global $user;
 <!--											<span class="curriculum-list__time">Vastamata</span>-->
 										</li>
 									<?php endforeach; ?>
-									
+
 								</ul>
 							</li>
 						</ul>
@@ -141,7 +141,7 @@ global $user;
 														<span class="curriculum-list__time"><?php print l(check_plain($bookmark['url']), check_plain($bookmark['url'])) ?></span>
 											</li>
 										<?php endforeach; ?>
-									
+
 									</ul>
 								</li>
 							</ul>
@@ -184,7 +184,7 @@ global $user;
 <!--												<span class="curriculum-list__time">--><?php //print t($file['title']) ?><!--</span>-->
 											</li>
 										<?php endforeach; ?>
-									
+
 									</ul>
 								</li>
 							</ul>
@@ -252,7 +252,7 @@ global $user;
 <!--						</div>-->
 <!--					</div>-->
 				</div>
-				
+
 				<div class="blog-post__btn-wrapp ed-node-statistics">
 <!--					<ul class="post-tag-list">-->
 <!--						<li>-->
@@ -300,21 +300,21 @@ global $user;
                 <p><?php print $node->ed_field_course_aim['und'][0]['value']; ?></p>
             </div>
             <?php endif; ?>
-			
+
 			<div class="widget tags-cloud">
 				<h3 class="widget-title"><?php print check_plain($node->title).' '.t('members') ?></h3>
 				<ul class="tags-cloud__list">
 					<?php
-					
+
 						foreach(array_values($group_members) as $index => $member){
 							print '<li>'.l(edidaktikum_get_full_name_for_user_account($member), 'user/'.$member->uid).'</li>';
 						}
-					
+
 					?>
 				</ul>
 			</div>
-		
-		
+
+
 		</aside>
 	</div>
 </div>

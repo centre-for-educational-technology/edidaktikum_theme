@@ -440,7 +440,7 @@ function edidaktikum_theme_bs3_preprocess_page(&$vars) {
 
 
 	// Breadcrumbs are not displayed
-	$vars['breadcrumb'] = FALSE;
+//	$vars['breadcrumb'] = FALSE;
 
 
 	$site_frontpage = variable_get('site_frontpage', 'node');
@@ -501,6 +501,32 @@ function edidaktikum_theme_bs3_form_alter(&$form, &$form_state, $form_id) {
 	if ($form_id == 'search_form') {
 		$form['#attributes']['class'] = 'search-block__form';
 	}
+}
+
+
+function edidaktikum_theme_bs3_breadcrumb(array $variables) {
+  // Use the Path Breadcrumbs theme function if it should be used instead.
+  if (_bootstrap_use_path_breadcrumbs()) {
+    return path_breadcrumbs_breadcrumb($variables);
+  }
+
+  $output = '';
+  $breadcrumb = $variables['breadcrumb'];
+
+  // Determine if we are to display the breadcrumb.
+  $bootstrap_breadcrumb = bootstrap_setting('breadcrumb');
+  if (($bootstrap_breadcrumb == 1 || ($bootstrap_breadcrumb == 2 && arg(0) == 'admin')) && !empty($breadcrumb)) {
+    $build = array(
+        '#theme' => 'item_list__breadcrumb',
+        '#attributes' => array(
+            'class' => array('breadcrumbs'),
+        ),
+        '#items' => $breadcrumb,
+        '#type' => 'ul',
+    );
+    $output = drupal_render($build);
+  }
+  return $output;
 }
 
 

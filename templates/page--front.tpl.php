@@ -103,7 +103,7 @@ global $user;
                                     <br>et koguda ja jagada materjale ja arutada õppimise ning õpetamise üle.
                                     <br>Koos kavandades ja mõtestades on õppimine tõhusam!</p>
                             </div>
-                            <a href=" <?php print url('user'); ?>" class="btn-01">Logi sisse</a>
+                            <a href="<?php print url('user'); ?>" class="btn-01">Logi sisse</a>
                             <a href="#front-info" class="btn-03">Loe edasi</a>
                         </div>
                     </div>
@@ -118,56 +118,67 @@ global $user;
             <div class="content-box-01 padding-top-100 padding-sm-top-50" id="front-info">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-4 col-md-4 col-lg-4">
-                            <div class="servises-item serv-item-01 icon-gradient">
-                                <h3 class="servises-item__title">Personaalne töölaud</h3>
-                                <div class="servises-item__text">
-                                    <p>Kasutajale kuvatakse kõik viimased olulised uuendused, näiteks talle antud ülesanded koos tähtaegadega.</p>
+                        <a href="<?php print url('dashboard'); ?>">
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <div class="servises-item serv-item-01 icon-gradient">
+                                    <h3 class="servises-item__title">Personaalne töölaud</h3>
+                                    <div class="servises-item__text">
+                                        <p>Kasutajale kuvatakse kõik viimased olulised uuendused, näiteks talle antud ülesanded koos tähtaegadega.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4 col-lg-4">
-                            <div class="servises-item serv-item-02 icon-gradient">
-                                <h3 class="servises-item__title">Ülesannete staatus</h3>
-                                <div class="servises-item__text">
-                                    <p>Iga ülesanne sisaldab staatust (kas sooritatud või mitte), lisatud on failid ning ajaveebipostitused.</p>
+                        </a>
+                        <a href="<?php print url('dashboard/tasks'); ?>">
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <div class="servises-item serv-item-02 icon-gradient">
+                                    <h3 class="servises-item__title">Ülesannete staatus</h3>
+                                    <div class="servises-item__text">
+                                        <p>Iga ülesanne sisaldab staatust (kas sooritatud või mitte), lisatud on failid ning ajaveebipostitused.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4 col-lg-4">
-                            <div class="servises-item serv-item-03 icon-gradient">
-                                <h3 class="servises-item__title">Sobiv kõigile</h3>
-                                <div class="servises-item__text">
-                                    <p>Grupp võib olla formaalne õpetajakoolituse kursus, kui ka mitteformaalne grupp materjalide jagamiseks, ja koos õppimiseks.</p>
+                        </a>
+                        <a href="#">
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <div class="servises-item serv-item-03 icon-gradient">
+                                    <h3 class="servises-item__title">Sobiv kõigile</h3>
+                                    <div class="servises-item__text">
+                                        <p>Grupp võib olla formaalne õpetajakoolituse kursus, kui ka mitteformaalne grupp materjalide jagamiseks, ja koos õppimiseks.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="row">
-                        <div class="col-sm-4 col-md-4 col-lg-4">
-                            <div class="servises-item serv-item-04 icon-gradient">
-                                <h3 class="servises-item__title">Mitteformaalne grupp</h3>
-                                <div class="servises-item__text">
-                                    <p>Mitteformaalse grupi võivad luua nii projektimeeskonnad, aineõpetajad, ainedidaktikud ülikoolide üleselt, didaktikalaborite juhid jne.</p>
+                        <a href="<?php print url('clusters'); ?>">
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <div class="servises-item serv-item-04 icon-gradient">
+                                    <h3 class="servises-item__title">Mitteformaalne grupp</h3>
+                                    <div class="servises-item__text">
+                                        <p>Mitteformaalse grupi võivad luua nii projektimeeskonnad, aineõpetajad, ainedidaktikud ülikoolide üleselt, didaktikalaborite juhid jne.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4 col-lg-4">
-                            <div class="servises-item serv-item-05 icon-gradient">
-                                <h3 class="servises-item__title">Kollektsioonid</h3>
-                                <div class="servises-item__text">
-                                    <p>eDidaktikum sisaldab kollektsioone, mis on õppematerjalide kogumikud. </p>
+                        <a href="<?php print url('collections'); ?>">
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <div class="servises-item serv-item-05 icon-gradient">
+                                    <h3 class="servises-item__title">Kollektsioonid</h3>
+                                    <div class="servises-item__text">
+                                        <p>eDidaktikum sisaldab kollektsioone, mis on õppematerjalide kogumikud. </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4 col-lg-4">
-                            <div class="servises-item serv-item-06 icon-gradient">
-                                <h3 class="servises-item__title">Kogumikud</h3>
-                                <div class="servises-item__text">
-                                    <p>Personaalsed kogumikud on kasutamiseks kõikide kasutajatele, kureeritud kogumikud on koostatud valdkonna spetsialistide poolt</p>
+                        </a>
+                        <a href="<?php print url('video-bricks'); ?>">
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <div class="servises-item serv-item-06 icon-gradient">
+                                    <h3 class="servises-item__title">Videoklotsid</h3>
+                                    <div class="servises-item__text">
+                                        <p>Videoklots on esmane teejuht neile, kellel on huvi ja soovi katsetada.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
