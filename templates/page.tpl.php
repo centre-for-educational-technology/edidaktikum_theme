@@ -29,8 +29,6 @@ global $user;
 
 
 
-        <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
-
 
         <?php if (!empty($title)): ?>
             <div class="page-title-wrapp">
@@ -40,6 +38,13 @@ global $user;
                             <h1 class="page-title-01"><?php print render($title_prefix); ?> <?php print $title; ?></h1>
                         </div>
                     </div>
+                  <?php if (!empty($breadcrumb)): ?>
+                    <div class="row">
+                        <div class="col-lg-12">
+                          <?php print $breadcrumb; ?>
+                        </div>
+                    </div>
+                  <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>

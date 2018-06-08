@@ -105,7 +105,7 @@ if(!empty($node->ed_field_featured_image)){
 							<i class="fa fa fa-share-alt"></i>
 						</a>
 						<div class="preview_share_block">
-							<a class="share_facebook" href="#" data-image="<?php print $image ?>" data-title="<?php print check_plain($node->title); ?>" data-desc="<?php print check_plain( strlen( $node->ed_field_content['und'][0]['value']) > 50 ? substr( $node->ed_field_content['und'][0]['value'],0,50)."..." :  $node->ed_field_content['und'][0]['value']); ?>">
+							<a class="share_facebook" href="#" data-image="<?php print $image ?>" data-title="<?php print check_plain($node->title); ?>" data-desc="<?php print edidaktikum_get_short_content_or_excerpt($node); ?>">
 								<i class="fa fa-facebook"></i>
 							</a>
 							<a class="share_twitter" href="https://twitter.com/intent/tweet?text=eDidaktikum%20%22<?php print check_plain($node->title); ?>%22%20<?php print url(current_path(), array('absolute' => TRUE)) ?>">
