@@ -95,13 +95,6 @@ global $user;
 							<h3><?php print t('Content'); ?></h3>
 							<p><?php print $node->ed_field_content['und'][0]['safe_value']; ?></p>
 						<?php endif; ?>
-                        <?php if(!empty( $node->ed_g_drive_file )): ?>
-                            <h3><?php print t('Failid Google Drive-st'); ?></h3>
-                            <?php foreach($node->ed_g_drive_file[LANGUAGE_NONE] as $drive_file): ?>
-                                <p><a href="<?php print $drive_file['url']; ?>" target="_blank"><?php print $drive_file['name']; ?></a> <img src="<?php print $drive_file['mime']; ?>"></p>
-	                        <?php endforeach; ?>
-
-                        <?php endif; ?>
 					</div>
 					<?php if(!empty( $tasks)): ?>
 					<div class="tabs__content">
