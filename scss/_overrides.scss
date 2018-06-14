@@ -108,6 +108,10 @@ body {
     color: #000000;
     font-weight: 300;
   }
+
+  .product-list__title a {
+      word-wrap: break-word;
+  }
 }
 
 // Default navbar.
