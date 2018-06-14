@@ -118,7 +118,6 @@ if(!empty($related_resources)){
                 <div class="panel-group res" id="methodical-res-accordion" role="tablist" aria-multiselectable="true">
               <?php foreach($methodical_res as $res): ?>
 
-
                         <div class="panel panel-primary">
                             <div class="panel-heading" role="tab" id="heading_<?php print $res['nid']; ?>">
                                 <h4 class="panel-title">
@@ -129,7 +128,10 @@ if(!empty($related_resources)){
                             </div>
                             <div id="collapse_<?php print $res['nid']; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_<?php print $res['nid']; ?>">
                                 <div class="panel-body">
-                                  <?php print $res['content']['safe_value']; ?>
+                                    <?php print $res['content']['safe_value']; ?>
+                                      <?php if(!empty( $res['url'] )): ?>
+                                        <a href="<?php print  $res['url']; ?>" target="_blank" class="news-box-01__btn">Mine lehele</a>
+                                      <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -159,6 +161,9 @@ if(!empty($related_resources)){
                           <div id="collapse_<?php print $res['nid']; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_<?php print $res['nid']; ?>">
                               <div class="panel-body">
                                 <?php print $res['content']['safe_value']; ?>
+                                <?php if(!empty( $res['url'] )): ?>
+                                    <a href="<?php print  $res['url']; ?>" target="_blank" class="news-box-01__btn">Mine lehele</a>
+                                <?php endif; ?>
                               </div>
                           </div>
                       </div>
