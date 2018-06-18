@@ -51,7 +51,7 @@ if(!empty($node->ed_field_featured_image)){
                         <img src="<?php print $image ?>" alt="">
                     </figure>
                 <?php endif; ?>
-				
+
 				<div class="blog-post__meta">
 					<ul class="blog-post__meta-list">
 						<li>
@@ -83,7 +83,7 @@ if(!empty($node->ed_field_featured_image)){
                   <?php foreach($node->ed_g_drive_file[LANGUAGE_NONE] as $drive_file): ?>
                       <p><a href="<?php print $drive_file['url']; ?>" target="_blank"><?php print $drive_file['name']; ?></a> <img src="<?php print $drive_file['mime']; ?>"></p>
                   <?php endforeach; ?>
-							
+
                 <?php endif; ?>
 				<div class="blog-post__btn-wrapp ed-node-statistics">
 					<?php if(!empty( $node->field_tags )): ?>
@@ -95,11 +95,11 @@ if(!empty($node->ed_field_featured_image)){
 						<?php endforeach; ?>
 						</ul>
 					<?php endif; ?>
-					
+
 					<div class="ed-node-statistics-likes">
 						<a href="#" data-id="<?php print $node->nid; ?>" class="blog-post__likes"><span class="count"><?php print ed_get_likes($node->nid); ?></span><?php print ' '.t('Likes'); ?></a>
 					</div>
-					
+
 					<div class="preview_share_wrapper">
 						<a href="#" class="preview_share_toggler">
 							<i class="fa fa fa-share-alt"></i>
@@ -204,7 +204,7 @@ if(!empty($node->ed_field_featured_image)){
 <!--					</li>-->
 <!--				</ul>-->
 <!--			</div>-->
-					
+
             <?php print render($content['comments']); ?>
 <!--			<div class="reply-form">-->
 <!--				<h3 class="reply-form__title">Kommenteeri</h3>-->
@@ -252,7 +252,7 @@ if(!empty($node->ed_field_featured_image)){
                   </ul>
               </div>
             <?php endif; ?>
-					
+
 			<?php if(!empty( $study_area )): ?>
             <div class="widget tags-cloud">
                 <h3 class="widget-title"><?php print t('Valdkond'); ?></h3>
@@ -279,8 +279,8 @@ if(!empty($node->ed_field_featured_image)){
 	            <?php print render($ed_field_category); ?>
             </div>
             <?php endif; ?>
-			
-            
+
+
 <!--				<h3 class="widget-title">Kategooriad</h3>-->
 <!--				<ul class="categories-list">-->
 <!--					<li>-->
@@ -392,6 +392,22 @@ if(!empty($node->ed_field_featured_image)){
 				</ul>
 			</div>
 			<?php endif; ?>
+
+			<?php if (!empty($add_to_collections_modal) || !empty($remove_from_collection_modal)): ?>
+				<div class="widget widget-collections">
+					<h3 class="widget-title"><?php print t('Collection'); ?></h3>
+			    <?php if(!empty($add_to_collections_modal)): ?>
+						<div>
+				      <?php print $add_to_collections_modal; ?>
+					  </div>
+			    <?php endif; ?>
+			    <?php if (!empty($remove_from_collection_modal)): ?>
+						<div>
+				      <?php print $remove_from_collection_modal; ?>
+						</div>
+			    <?php endif; ?>
+		    </div>
+		  <?php endif; ?>
 		</aside>
 	</div>
 </div>
