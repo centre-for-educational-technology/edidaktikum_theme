@@ -17072,4 +17072,7 @@ iframe.video_frame.embed-responsive-item {
 .video-bricks {
   padding-bottom: 44px; }
 
+.widget.widget-collections .modal-with-btn:not(:last-child) {
+  margin-bottom: 10px; }
+
 /*# sourceMappingURL=style.css.map */

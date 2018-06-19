@@ -397,12 +397,12 @@ if(!empty($node->ed_field_featured_image)){
 				<div class="widget widget-collections">
 					<h3 class="widget-title"><?php print t('Collection'); ?></h3>
 			    <?php if(!empty($add_to_collections_modal)): ?>
-						<div>
+						<div class="modal-with-btn">
 				      <?php print $add_to_collections_modal; ?>
 					  </div>
 			    <?php endif; ?>
 			    <?php if (!empty($remove_from_collection_modal)): ?>
-						<div>
+						<div class="modal-with-btn">
 				      <?php print $remove_from_collection_modal; ?>
 						</div>
 			    <?php endif; ?>

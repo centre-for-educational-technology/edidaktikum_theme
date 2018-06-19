@@ -845,5 +845,8 @@ iframe.video_frame.embed-responsive-item{
   padding-bottom: 44px;
 }
 
-
-
+.widget.widget-collections {
+  .modal-with-btn:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
