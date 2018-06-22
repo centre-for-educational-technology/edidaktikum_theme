@@ -8,8 +8,15 @@ foreach ($nodes as $node) : ?>
     <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
    
             <div class="product-list__item">
+              <?php
+              if(!empty($node->ed_field_featured_image)){
+                $image = image_style_url('large', $node->ed_field_featured_image[LANGUAGE_NONE][0]['uri']);
+              }else{
+                $image = $GLOBALS['base_url'].'/'.drupal_get_path('theme', $GLOBALS['theme']).'/img/kollektsioon/kollektsioon_img-07.jpg';
+              }
+              ?>
                 <a href="<?php print url('node/'. $node->nid); ?>">
-                    <figure class="product-list__img collection-img" style="background-image: url(<?php print image_style_url('large', $node->ed_field_featured_image[LANGUAGE_NONE][0]['uri']) ?>);">
+                    <figure class="product-list__img collection-img" style="background-image: url(<?php print $image; ?>);">
                     </figure>
                 </a>
                 <div class="product-list__content collection">
