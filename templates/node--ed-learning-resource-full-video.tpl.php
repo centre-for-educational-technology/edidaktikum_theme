@@ -75,7 +75,7 @@ if(!empty($related_resources)){
           <!--						</li>-->
           <!--					</ul>-->
           <div class="ed-node-statistics-likes">
-            <a href="#" data-id="369" class="blog-post__likes"><span class="count">1</span> Meeldimised</a>
+            <a href="#" data-id="369" class="blog-post__likes"><span class="ed-likes-count">1 Meeldimised</a></span>
           </div>
           <div class="preview_share_wrapper">
             <a href="#" class="preview_share_toggler">

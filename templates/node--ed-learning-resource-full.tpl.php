@@ -97,7 +97,7 @@ if(!empty($node->ed_field_featured_image)){
 					<?php endif; ?>
 
 					<div class="ed-node-statistics-likes">
-						<a href="#" data-id="<?php print $node->nid; ?>" class="blog-post__likes"><span class="count"><?php print ed_get_likes($node->nid); ?></span><?php print ' '.t('Likes'); ?></a>
+						<a href="#" data-id="<?php print $node->nid; ?>" class="blog-post__likes"><span class="ed-likes-count"><?php print ed_get_likes($node->nid); ?></span><?php print ' '.t('likes'); ?></a>
 					</div>
 
 					<div class="preview_share_wrapper">

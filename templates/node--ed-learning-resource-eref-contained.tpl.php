@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="node-<?php print $node->nid ?>">
 
   <?php if(node_access('create', 'ed_learning_resource') && og_is_member('node', $gnode->nid)): ?>
 
@@ -10,56 +10,54 @@
     <?php print render($add_buttons); ?>
   <?php endif; ?>
 
-    <?php
-  foreach ($nodes as $node) : ?>
-
-    <?php
-
-      $author = user_load($node->uid);
-      $userfullname = edidaktikum_get_full_name_for_user_account($author);
 
 
+  <?php
 
-      if(!empty($node->ed_field_featured_image)){
+  $author = user_load($node->uid);
+  $userfullname = edidaktikum_get_full_name_for_user_account($author);
 
-        $image = image_style_url('large', $node->ed_field_featured_image[LANGUAGE_NONE][0]['uri']);
 
 
-      }else{
-        $image = null;
-      }
+  if(!empty($node->ed_field_featured_image)){
 
-        if(!empty($node->ed_field_video_url)){
+    $image = image_style_url('large', $node->ed_field_featured_image[LANGUAGE_NONE][0]['uri']);
 
-          $video = ed_learning_resource_generate_youtube_iframe($node->ed_field_video_url[LANGUAGE_NONE][0]['value']);
 
-        }else{
-          $video = null;
-        }
+  }else{
+    $image = null;
+  }
 
-      if(!empty($node->ed_field_study_area)){
-        $study_areas = _ed_learning_resource_study_areas_options_list();
-        $study_area = $study_areas[$node->ed_field_study_area[LANGUAGE_NONE][0]['value']];
-      }
+  if(!empty($node->ed_field_video_url)){
 
-    ?>
+    $video = ed_learning_resource_generate_youtube_iframe($node->ed_field_video_url[LANGUAGE_NONE][0]['value']);
 
-<div class="col-lg-8">
+  }else{
+    $video = null;
+  }
+
+  if(!empty($node->ed_field_study_area)){
+    $study_areas = _ed_learning_resource_study_areas_options_list();
+    $study_area = $study_areas[$node->ed_field_study_area[LANGUAGE_NONE][0]['value']];
+  }
+
+  ?>
+
     <article class="blog-post">
       <?php if(!empty( $image )): ?>
-      <figure class="blog-post__img">
-        <a href="<?php print url('node/'.$node->nid); ?>">
-          <img src="<?php print $image ?>" alt="">
-        </a>
-      </figure>
+        <figure class="blog-post__img">
+          <a href="<?php print url('node/'.$node->nid); ?>">
+            <img src="<?php print $image ?>" alt="">
+          </a>
+        </figure>
       <?php endif; ?>
 
       <?php if(!empty( $video )): ?>
-            <?php print $video ?>
+        <?php print $video ?>
 
       <?php endif; ?>
 
-        <div class="blog-post__meta">
+      <div class="blog-post__meta">
         <ul class="blog-post__meta-list">
           <li>
             <p class="blog-post__meta-date"><?php print format_date($node->created, 'full'); ?></p>
@@ -70,9 +68,9 @@
             </p>
           </li>
           <?php if(!empty( $study_area )): ?>
-          <li>
-            <p class="blog-post__meta-category"><?php print $study_area; ?></p>
-          </li>
+            <li>
+              <p class="blog-post__meta-category"><?php print $study_area; ?></p>
+            </li>
           <?php endif; ?>
 
           <li>
@@ -92,10 +90,13 @@
           <a href="#" data-id="<?php print $node->nid; ?>" class="blog-post__likes"><span class="ed-likes-count"><?php print ed_get_likes($node->nid); ?><?php print ' '.t('likes'); ?></span></a>
         </div>
       </div>
+
+        <div style="margin-top: 10px">
+          <?php if(node_access('update', $node)): ?>
+            <a href="#" class="single-remove-from-collection btn btn-success btn-sm" style="display:none;" data-nid="<?php print $node->nid; ?>"><i class="fa fa-minus-square-o"></i> <?php print t('Remove from Collection'); ?></a>
+          <?php endif; ?>
+        </div>
     </article>
-</div>
 
 
-
-  <?php endforeach; ?>
 </div>

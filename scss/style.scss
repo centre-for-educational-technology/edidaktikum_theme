@@ -850,3 +850,33 @@ iframe.video_frame.embed-responsive-item{
     margin-bottom: 10px;
   }
 }
+
+
+.node-type-ed-collection .pane-node-ed-field-excerpt{
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.ed-node-statistics-views::before{
+
+  font-family: 'FontAwesome';
+  content: '\f06e';
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 9px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.ed-node-statistics-views{
+  font-size: 14px;
+  line-height: 21px;
+  color: #727e85;
+  font-weight: 200;
+  margin-bottom: 5px;
+}
+
+
+
