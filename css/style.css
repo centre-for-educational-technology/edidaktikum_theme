@@ -17097,4 +17097,14 @@ iframe.video_frame.embed-responsive-item {
   font-weight: 200;
   margin-bottom: 5px; }
 
+.ed-node-statistics {
+  margin-bottom: 20px; }
+
+.pane-node-ed-task-due-date {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #fcf8e3;
+  border-radius: 4px; }
+
 /*# sourceMappingURL=style.css.map */
