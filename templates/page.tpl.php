@@ -6,6 +6,13 @@
  */
 
 global $user;
+
+
+if(!empty($node->type) && in_array($node->type, array('ed_news', 'ed_learning_resource', 'ed_event', 'ed_page', 'ed_bookmark', 'ed_forum', 'ed_blog', 'ed_file'))){
+
+  $breadcrumb = _ed_cluster_node_group_greadcrumbs($node);
+}
+
 ?>
 
 <div class="wrapp-content">
@@ -41,7 +48,7 @@ global $user;
                   <?php if (!empty($breadcrumb)): ?>
                     <div class="row">
                         <div class="col-lg-12">
-                          <?php print $breadcrumb; ?>
+                          <?php print render($breadcrumb); ?>
                         </div>
                     </div>
                   <?php endif; ?>
