@@ -8,7 +8,7 @@
 global $user;
 
 
-if(!empty($node->type) && in_array($node->type, array('ed_news', 'ed_learning_resource', 'ed_event', 'ed_page', 'ed_bookmark', 'ed_forum', 'ed_blog', 'ed_file'))){
+if(!empty($node->type) && in_array($node->type, array('ed_news', 'ed_learning_resource', 'ed_event', 'ed_page', 'ed_bookmark', 'ed_forum', 'ed_blog', 'ed_file', 'ed_task'))){
 
   $breadcrumb = _ed_cluster_node_group_greadcrumbs($node);
 }
