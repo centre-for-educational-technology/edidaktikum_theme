@@ -17110,4 +17110,10 @@ iframe.video_frame.embed-responsive-item {
 #-ed-get-sorting-by-group {
   margin-bottom: 10px; }
 
+.blog-post {
+  padding-bottom: 0px; }
+
+.btn.single-remove-from-collection, .ed-add-new-node a.single-remove-from-collection {
+  margin-bottom: 10px; }
+
 /*# sourceMappingURL=style.css.map */
