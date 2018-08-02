@@ -1,15 +1,4 @@
-<div class="row" id="node-<?php print $node->nid ?>">
-
-  <?php if(node_access('create', 'ed_learning_resource') && og_is_member('node', $gnode->nid)): ?>
-
-    <?php
-    $destination = _ed_cluster_destination_for_group_node_type($gnode, 'ed_learning_resource');
-    $content = array();
-    $add_buttons = ed_generate_resource_create_buttons($content, $gnode, $destination); ?>
-
-    <?php print render($add_buttons); ?>
-  <?php endif; ?>
-
+<div class="row" id="node-<?php print $node->nid; ?>">
 
 
   <?php
