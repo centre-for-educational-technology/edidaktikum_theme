@@ -10495,7 +10495,7 @@ ol li::before {
 
 .comments__user-wrapp {
   float: left;
-  width: 13%; }
+  width: auto; }
 
 .comments__user-img {
   -webkit-border-radius: 50%;
@@ -10546,7 +10546,7 @@ ol li::before {
   padding-left: 111px; }
 
 .comments__child-list .comments__user-wrapp {
-  width: 15%; }
+  width: auto; }
 
 .comments__child-list .comments__content {
   width: 85%; }
@@ -13829,17 +13829,11 @@ ol li::before {
     margin-right: 20px;
     max-width: 200px; }
 
-  .comments__user-wrapp {
-    width: 20%; }
-
   .comments__content {
     width: 80%; }
 
   .comments__child-list {
     padding-left: 50px; }
-
-  .comments__child-list .comments__user-wrapp {
-    width: 20%; }
 
   .comments__child-list .comments__content {
     width: 80%; }
@@ -14062,17 +14056,11 @@ ol li::before {
   .single-related-posts__list li {
     max-width: 225px; }
 
-  .comments__user-wrapp {
-    width: 25%; }
-
   .comments__content {
     width: 75%; }
 
   .comments__child-list {
     padding-left: 30px; }
-
-  .comments__child-list .comments__user-wrapp {
-    width: 25%; }
 
   .comments__child-list .comments__content {
     width: 75%; }
@@ -14641,7 +14629,7 @@ ol li::before {
     width: 31%; }
 
   .comments__user-wrapp {
-    width: 20%; }
+    width: auto; }
 
   .comments__content {
     width: 80%; }
@@ -14650,7 +14638,7 @@ ol li::before {
     padding-left: 30px; }
 
   .comments__child-list .comments__user-wrapp {
-    width: 20%; }
+    width: auto; }
 
   .comments__child-list .comments__content {
     width: 80%; }
@@ -15097,17 +15085,11 @@ ol li::before {
   .single-related-posts__list li {
     width: 30%; }
 
-  .comments__user-wrapp {
-    width: 25%; }
-
   .comments__content {
     width: 75%; }
 
   .comments__child-list {
     padding-left: 30px; }
-
-  .comments__child-list .comments__user-wrapp {
-    width: 25%; }
 
   .comments__child-list .comments__content {
     width: 75%; }
@@ -15514,17 +15496,11 @@ ol li::before {
   .search-bg__text:-ms-input-placeholder {
     font-size: 11px; } }
 @media only screen and (max-width: 420px) {
-  .comments__user-wrapp {
-    width: 35%; }
-
   .comments__content {
     width: 65%; }
 
   .comments__child-list {
     padding-left: 20px; }
-
-  .comments__child-list .comments__user-wrapp {
-    width: 35%; }
 
   .comments__child-list .comments__content {
     width: 65%; }
@@ -16748,7 +16724,7 @@ style.scss
   border: 1px solid #eeeeee; }
 
 .comments__content {
-  padding-left: 30px;
+  padding-left: 15px;
   padding-bottom: 40px; }
 
 .product-list__img img {
@@ -17109,5 +17085,24 @@ iframe.video_frame.embed-responsive-item {
 
 #-ed-get-sorting-by-group {
   margin-bottom: 10px; }
+
+.blog-post {
+  padding-bottom: 0px; }
+
+.btn.single-remove-from-collection, .ed-add-new-node a.single-remove-from-collection {
+  margin-bottom: 10px; }
+
+.comments__user-wrapp {
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block; }
+
+.comments__user-wrapp span.badge {
+  position: absolute;
+  right: -10px;
+  top: 5px; }
+
+.badge-success {
+  background-color: #5cb85c; }
 
 /*# sourceMappingURL=style.css.map */

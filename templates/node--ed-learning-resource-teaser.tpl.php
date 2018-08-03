@@ -71,13 +71,13 @@
         </ul>
       </div>
       <h3 class="blog-post__title">
-        <a href="single-materjal.html"><?php print l($node->title, 'node/'.$node->nid) ; ?></a>
+        <?php print l($node->title, 'node/'.$node->nid); ?>
       </h3>
       <div class="blog-post__text">
         <p class="margin-bottom-40"><?php print edidaktikum_get_short_content_or_excerpt($node); ?></p>
       </div>
       <div class="blog-post__btn-wrapp ed-node-statistics">
-        <a href="single-materjal.html" class="blog-post__btn"><?php print t('View'); ?></a>
+        <?php print l(t('View'), 'node/'.$node->nid, ['attributes' => ['class' => ['blog-post__btn',],],]); ?>
         <div class="ed-node-statistics-likes">
           <a href="#" data-id="<?php print $node->nid; ?>" class="blog-post__likes"><span class="ed-likes-count"><?php print ed_get_likes($node->nid); ?><?php print ' '.t('likes'); ?></span></a>
         </div>
