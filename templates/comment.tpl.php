@@ -66,13 +66,13 @@
     <div class="comments__user-wrapp">
       
         <?php print $picture ?>
-      
+          <?php if ($new): ?>
+              <span class="badge badge-success"><?php print $new ?></span>
+          <?php endif; ?>
     </div>
 
     
-  <?php if ($new): ?>
-    <span class="badge"><?php print $new ?></span>
-  <?php endif; ?>
+
 
 
     <div class="comments__content">

@@ -116,7 +116,7 @@ style.scss
 
 .price-btn:hover {
   background: transparent;
-  color: #1abc9c;
+  color: $ed-green;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
   border-color: initial;
@@ -129,7 +129,7 @@ style.scss
 
 .new-group.price-btn:active, .new-group.price-btn:focus{
   background: transparent;
-  color: #1abc9c;
+  color: $ed-green;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
   border-color: initial;
@@ -203,7 +203,7 @@ style.scss
 .btn-success{
   color: #fff;
   text-transform: uppercase;
-  background-color: #1abc9c;
+  background-color: $ed-green;
   -webkit-border-radius: 25px;
   border-radius: 25px;
   -webkit-transition: 0.5s all;
@@ -211,36 +211,36 @@ style.scss
   letter-spacing: 1px;
   display: inline-block;
   vertical-align: top;
-  border: 1px solid #1abc9c;
+  border: 1px solid $ed-green;
 }
 
 .btn-success:hover {
   background-color: transparent;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
-  color: #1abc9c;
-  border: 1px solid #1abc9c;
+  color: $ed-green;
+  border: 1px solid $ed-green;
 }
 
 .btn-success:focus {
-  background-color: #1abc9c;
-  border: 1px solid #1abc9c;
+  background-color: $ed-green;
+  border: 1px solid $ed-green;
 }
 
 .btn-success:active:hover, .btn-success:active:focus, .btn-success:active.focus, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active.focus, .open > .btn-success.dropdown-toggle:hover, .open > .btn-success.dropdown-toggle:focus, .open > .btn-success.dropdown-toggle.focus{
-  background-color: #1abc9c;
-  border: 1px solid #1abc9c;
+  background-color: $ed-green;
+  border: 1px solid $ed-green;
   color: #fff;
 }
 
 .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle{
-  background-color: #1abc9c;
-  border: 1px solid #1abc9c;
+  background-color: $ed-green;
+  border: 1px solid $ed-green;
   color: #fff;
 }
 .btn-success:focus, .btn-success.focus {
-  background-color: #1abc9c;
-  border: 1px solid #1abc9c;
+  background-color: $ed-green;
+  border: 1px solid $ed-green;
   color: #fff;
 }
 
@@ -287,15 +287,15 @@ style.scss
 
 .list-group.tabs a.list-group-item.active{
   color: #fff;
-  background-color: #1abc9c;
-  border: 1px solid #1abc9c;
+  background-color: $ed-green;
+  border: 1px solid $ed-green;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 .list-group.tabs a.list-group-item:hover {
   color: #fff;
-  background-color: #1abc9c;
-  border: 1px solid #1abc9c;
+  background-color: $ed-green;
+  border: 1px solid $ed-green;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
@@ -303,7 +303,7 @@ style.scss
 .single-course-tabs ul.tabs__caption li{
   color: #fff;
   text-transform: uppercase;
-  background-color: #1abc9c;
+  background-color: $ed-green;
   -webkit-border-radius: 25px;
   border-radius: 25px;
   -webkit-transition: 0.5s all;
@@ -311,19 +311,19 @@ style.scss
   letter-spacing: 1px;
   display: inline-block;
   vertical-align: top;
-  border: 1px solid #1abc9c;
+  border: 1px solid $ed-green;
   padding: 6px 12px;
 }
 
 .single-course-tabs .tabs__caption li.active, .single-course-tabs .tabs__caption li:hover {
-  color: #1abc9c;
+  color: $ed-green;
   background-color: #fff;
   border: 1px solid #eeeeee;
 }
 
 
 .comments__content{
-  padding-left: 30px;
+  padding-left: 15px;
   padding-bottom: 40px;
 }
 
@@ -462,7 +462,7 @@ input[type="text"]:focus, input[type="search"]:focus, input[type="url"]:focus, i
 
 
 // Radio buttons to smiles conversion, used in Answer
-$icon-color: #1abc9c;
+$icon-color: $ed-green;
 
 #edit-ed-field-satisf-feedb-und {
     input[type="radio"] {
@@ -579,7 +579,7 @@ Dashboard circles
 }
 
 #animated-chart-success circle {
-  fill: #1abc9c;
+  fill: $ed-green;
 }
 
 
@@ -753,8 +753,8 @@ article.blog-post iframe{
 
 .single-course-tabs.video-bit ul.tabs__caption li.active {
   color: #fff;
-  background-color: #1abc9c;
-  border: 1px solid #1abc9c;
+  background-color: $ed-green;
+  border: 1px solid $ed-green;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
@@ -762,8 +762,8 @@ article.blog-post iframe{
 
 .single-course-tabs.video-bit ul.tabs__caption li:hover {
   color: #fff;
-  background-color: #1abc9c;
-  border: 1px solid #1abc9c;
+  background-color: $ed-green;
+  border: 1px solid $ed-green;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
@@ -783,23 +783,23 @@ iframe.video_frame.embed-responsive-item{
 
 
 .panel-group.res .panel-primary {
-  border-color: #1abc9c;
+  border-color: $ed-green;
 }
 
 .panel-group.res .panel-primary > .panel-heading {
-  color: #1abc9c;
+  color: $ed-green;
   background-color: #fff;
   border-color: #fff;
 }
 
 .panel-group.res .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #1abc9c;
+  border-top-color: $ed-green;
 }
 
 .panel-group.res .panel-primary > .panel-heading:hover {
   color: #fff;
-  background-color: #1abc9c;
-  border-color: #1abc9c;
+  background-color: $ed-green;
+  border-color: $ed-green;
 }
 
 .panel-group.res .panel-primary > .panel-heading:hover a {
@@ -815,7 +815,7 @@ iframe.video_frame.embed-responsive-item{
 
 
 .panel-group.res .panel-title > a, .panel-title > small, .panel-title > .small, .panel-title > small > a, .panel-title > .small > a {
-  color: #1abc9c;
+  color: $ed-green;
 }
 
 .breadcrumbs li a {
@@ -828,7 +828,7 @@ iframe.video_frame.embed-responsive-item{
 .breadcrumbs li a::after {
   font-family: 'FontAwesome';
   content: '\f105';
-  color: #1abc9c;
+  color: $ed-green;
   display: inline-block;
   vertical-align: middle;
   position: absolute;
@@ -900,4 +900,21 @@ iframe.video_frame.embed-responsive-item{
 
 .btn.single-remove-from-collection {
   margin-bottom: 10px;
+}
+
+
+.comments__user-wrapp{
+  margin-bottom: 15px;
+  position:relative;
+  display:inline-block;
+}
+
+.comments__user-wrapp span.badge{
+  position: absolute;
+  right: -10px;
+  top: 5px;
+}
+
+.badge-success{
+  background-color: $brand-success;
 }
