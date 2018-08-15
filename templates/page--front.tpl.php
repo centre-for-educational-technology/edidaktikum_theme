@@ -67,7 +67,7 @@ global $user;
 
 
                                 <div class="search-block">
-                                    <button class="search-btn">Search</button>
+                                    <button class="search-btn"><?php print t('Search'); ?></button>
                                     <?php print $search_box; ?>
                                 </div>
 
@@ -103,8 +103,8 @@ global $user;
                                     <br>et koguda ja jagada materjale ja arutada õppimise ning õpetamise üle.
                                     <br>Koos kavandades ja mõtestades on õppimine tõhusam!</p>
                             </div>
-                            <a href="<?php print url('user'); ?>" class="btn-01">Logi sisse</a>
-                            <a href="#front-info" class="btn-03">Loe edasi</a>
+                            <a href="<?php print url('user'); ?>" class="btn-01"><?php print t('Log in'); ?></a>
+                            <a href="#front-info" class="btn-03"><?php print t('Read on'); ?></a>
                         </div>
                     </div>
                 </div>
@@ -630,9 +630,9 @@ global $user;
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-7">
-                            <h3>Partnerid</h3><img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/partners_logos-1.png" class="img-responsive"></div>
+                            <h3><?php print t('Partners'); ?></h3><img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/partners_logos-1.png" class="img-responsive"></div>
                         <div class="col-sm-5">
-                            <h3 style="padding-bottom: 12px;">Toetajad</h3><img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/eduko_ESF-1.jpg" class="img-responsive"></div>
+                            <h3 style="padding-bottom: 12px;"><?php print t('Supporters'); ?></h3><img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/eduko_ESF-1.jpg" class="img-responsive"></div>
                     </div>
                 </div>
             </div>
