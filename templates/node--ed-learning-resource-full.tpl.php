@@ -79,7 +79,7 @@ if(!empty($node->ed_field_featured_image)){
 					<p><?php print $node->ed_field_content['und'][0]['safe_value']; ?></p>
 				</div>
 				<?php if(!empty( $node->ed_g_drive_file )): ?>
-                  <h3><?php print t('Failid Google Drive-st'); ?></h3>
+                  <h3><?php print t('Files from Google Drive'); ?></h3>
                   <?php foreach($node->ed_g_drive_file[LANGUAGE_NONE] as $drive_file): ?>
                       <p><a href="<?php print $drive_file['url']; ?>" target="_blank"><?php print $drive_file['name']; ?></a> <img src="<?php print $drive_file['mime']; ?>"></p>
                   <?php endforeach; ?>
@@ -90,14 +90,14 @@ if(!empty($node->ed_field_featured_image)){
 						<ul class="post-tag-list">
 						<?php foreach($node->field_tags[LANGUAGE_NONE] as $tag): ?>
 								<li>
-									<?php print l($tag['taxonomy_term']->name,$tag['taxonomy_term']->vocabulary_machine_name.'/'.$tag['taxonomy_term']->name) ; ?>
+									<?php print l($tag['taxonomy_term']->name,$tag['taxonomy_term']->vocabulary_machine_name.'/'.$tag['taxonomy_term']->name); ?>
 								</li>
 						<?php endforeach; ?>
 						</ul>
 					<?php endif; ?>
 
 					<div class="ed-node-statistics-likes">
-						<a href="#" data-id="<?php print $node->nid; ?>" class="blog-post__likes"><span class="ed-likes-count"><?php print ed_get_likes($node->nid); ?></span><?php print ' '.t('likes'); ?></a>
+						<a href="#" data-id="<?php print $node->nid; ?>" class="blog-post__likes"><span class="ed-likes-count"><?php print ed_get_likes($node->nid); ?><?php print ' '.t('likes'); ?></span></a>
 					</div>
 
 					<div class="preview_share_wrapper">
@@ -255,13 +255,13 @@ if(!empty($node->ed_field_featured_image)){
 
 			<?php if(!empty( $study_area )): ?>
             <div class="widget tags-cloud">
-                <h3 class="widget-title"><?php print t('Valdkond'); ?></h3>
+                <h3 class="widget-title"><?php print t('Study area'); ?></h3>
                 <p><?php print t($study_area); ?></p>
             </div>
 			<?php endif; ?>
 			<?php if(!empty( $assets_distribution )): ?>
             <div class="widget tags-cloud">
-                <h3 class="widget-title"><?php print t('Õppevara jaotus'); ?></h3>
+                <h3 class="widget-title"><?php print t('Distribution of study assets'); ?></h3>
                 <p><?php print t($assets_distribution); ?></p>
             </div>
 			<?php endif; ?>
@@ -380,18 +380,6 @@ if(!empty($node->ed_field_featured_image)){
                       </li>
                 </ul>
             </div>
-			<?php if(!empty( $node->ed_learning_resource_authors )): ?>
-			<div class="widget tags-cloud">
-				<h3 class="widget-title"><?php print t('Authors'); ?></h3>
-				<ul class="tags-cloud__list">
-					<?php foreach($node->ed_learning_resource_authors[LANGUAGE_NONE] as $author): ?>
-						<li>
-							<?php print l($author['taxonomy_term']->name,'/taxonomy/term/'.$author['taxonomy_term']->tid) ; ?>
-						</li>
-					<?php endforeach; ?>
-				</ul>
-			</div>
-			<?php endif; ?>
 
 			<?php if (!empty($add_to_collections_modal) || !empty($remove_from_collection_modal)): ?>
 				<div class="widget widget-collections">
