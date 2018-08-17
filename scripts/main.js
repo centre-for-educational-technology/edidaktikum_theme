@@ -590,8 +590,13 @@
 
   // Typed
   if ($('.info-box-subtitle').size() > 0) {
+    var currentLocale = (Drupal && Drupal.settings && Drupal.settings.edidaktikum && Drupal.settings.edidaktikum.locale) ? Drupal.settings.edidaktikum.locale : 'en';
+    var localeSpecificStrings = ['Student`<br>here I can design and interpret learning`', 'Lecturer`<br>here i can track my studies`', 'Teacher`<br>here I find fellows, recommendations and support`', 'Education manager`<br>here i find compass for school development`'];
+    if ( currentLocale === 'et' ) {
+      localeSpecificStrings = ['Tudeng`<br>siin saan kavandada ja mõtestada oma õppimist`', 'Õppejõud`<br>siin hoian kätt õppetöö pulsil`', 'Õpetaja`<br>siit leian mõttekaaslasi, soovitusi ja tuge`', 'Haridusjuht`<br>siit leian kooliarenduse kompassi`'];
+    }
     var typed_top = new Typed('.info-box-title__text', {
-      strings: ['Tudeng`<br>siin saan kavandada ja mõtestada oma õppimist`', 'Õppejõud`<br>siin hoian kätt õppetöö pulsil`', 'Õpetaja`<br>siit leian mõttekaaslasi, soovitusi ja tuge`', 'Haridusjuht`<br>siit leian kooliarenduse kompassi`'],
+      strings: localeSpecificStrings,
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 2000,
