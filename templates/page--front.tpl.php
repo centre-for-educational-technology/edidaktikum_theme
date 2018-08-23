@@ -44,7 +44,7 @@ global $user;
                         <div class="col-lg-12">
                             <a href="<?php print url('/'.$site_frontpage); ?>" class="logo">
                                 <h3 class="logo">eDidaktikum</h3>
-                                <p class="tagline">Õppimise ja õpetamise ruum</p>
+                                <p class="tagline"><?php print t('Learning and teaching space'); ?></p>
                             </a>
                             <div class="main-nav__btn text-center info-nav-wrap">
                                 <div class="icon-left"></div>
@@ -67,7 +67,7 @@ global $user;
 
 
                                 <div class="search-block">
-                                    <button class="search-btn">Search</button>
+                                    <button class="search-btn"><?php print t('Search'); ?></button>
                                     <?php print $search_box; ?>
                                 </div>
 
@@ -98,13 +98,12 @@ global $user;
                                 <span class="info-box-title__text"></span>
                             </p>
                             <div class="info-box-text">
-                                <p> eDidaktikum pakub värsket pilti haridusmaailmas toimuvast.
-                                    <br><?php print $teachers_count+$students_count ?> tudengit, õpetajat, haridusjuhti ja õppejõudu kasutab igapäevaselt eDidaktikumi,
-                                    <br>et koguda ja jagada materjale ja arutada õppimise ning õpetamise üle.
-                                    <br>Koos kavandades ja mõtestades on õppimine tõhusam!</p>
+                                <p>
+                                  <?php print t('eDidaktikum provides a fresh picture of the world of education.<br>Daily <strong>@count</strong> students, teachers, educators and lecturers are using eDidaktikum<br>to collect and share materials, to discuss on learning and teaching.<br>Planning and giving sense to learning together is more effective!', [ '@count' => $teachers_count+$students_count, ]); ?>
+                                </p>
                             </div>
-                            <a href="<?php print url('user'); ?>" class="btn-01">Logi sisse</a>
-                            <a href="#front-info" class="btn-03">Loe edasi</a>
+                            <a href="<?php print url('user'); ?>" class="btn-01"><?php print t('Log in'); ?></a>
+                            <a href="#front-info" class="btn-03"><?php print t('Read on'); ?></a>
                         </div>
                     </div>
                 </div>
@@ -121,9 +120,9 @@ global $user;
                         <a href="<?php print url('dashboard'); ?>">
                             <div class="col-sm-4 col-md-4 col-lg-4">
                                 <div class="servises-item serv-item-01 icon-gradient">
-                                    <h3 class="servises-item__title">Personaalne töölaud</h3>
+                                    <h3 class="servises-item__title"><?php print t('Personal dashboard'); ?></h3>
                                     <div class="servises-item__text">
-                                        <p>Kasutajale kuvatakse kõik viimased olulised uuendused, näiteks talle antud ülesanded koos tähtaegadega.</p>
+                                        <p><?php print t('All latest updates and tasks with upcoming deadlines.'); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -131,9 +130,9 @@ global $user;
                         <a href="<?php print url('dashboard/tasks'); ?>">
                             <div class="col-sm-4 col-md-4 col-lg-4">
                                 <div class="servises-item serv-item-02 icon-gradient">
-                                    <h3 class="servises-item__title">Ülesannete staatus</h3>
+                                    <h3 class="servises-item__title"><?php print t('Task manager'); ?></h3>
                                     <div class="servises-item__text">
-                                        <p>Iga ülesanne sisaldab staatust (kas sooritatud või mitte), lisatud on failid ning ajaveebipostitused.</p>
+                                        <p><?php print t('Is my answer accepted or rejected? What is my overall progress?'); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -141,9 +140,9 @@ global $user;
                         <a href="#">
                             <div class="col-sm-4 col-md-4 col-lg-4">
                                 <div class="servises-item serv-item-03 icon-gradient">
-                                    <h3 class="servises-item__title">Sobiv kõigile</h3>
+                                    <h3 class="servises-item__title"><?php print t('One size for all'); ?></h3>
                                     <div class="servises-item__text">
-                                        <p>Grupp võib olla formaalne õpetajakoolituse kursus, kui ka mitteformaalne grupp materjalide jagamiseks, ja koos õppimiseks.</p>
+                                        <p><?php print t('Group can be formal (teacher training) or non-formal (as a co-working space for sharing materials).'); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -153,18 +152,18 @@ global $user;
                         <a href="<?php print url('clusters'); ?>">
                             <div class="col-sm-4 col-md-4 col-lg-4">
                                 <div class="servises-item serv-item-04 icon-gradient">
-                                    <h3 class="servises-item__title">Mitteformaalne grupp</h3>
+                                    <h3 class="servises-item__title"><?php print t('Non-formal group'); ?></h3>
                                     <div class="servises-item__text">
-                                        <p>Mitteformaalse grupi võivad luua nii projektimeeskonnad, aineõpetajad, ainedidaktikud ülikoolide üleselt, didaktikalaborite juhid jne.</p>
+                                        <p><?php print t('Can be used also for project management, trainings or other purposes.'); ?></p>
                                     </div>
                                 </div>
                             </div>
                         <a href="<?php print url('collections'); ?>">
                             <div class="col-sm-4 col-md-4 col-lg-4">
                                 <div class="servises-item serv-item-05 icon-gradient">
-                                    <h3 class="servises-item__title">Kollektsioonid</h3>
+                                    <h3 class="servises-item__title"><?php print t('Collections'); ?></h3>
                                     <div class="servises-item__text">
-                                        <p>eDidaktikum sisaldab kollektsioone, mis on õppematerjalide kogumikud. </p>
+                                        <p><?php print t('Curated collections of learning materials'); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -172,9 +171,9 @@ global $user;
                         <a href="<?php print url('video-bricks'); ?>">
                             <div class="col-sm-4 col-md-4 col-lg-4">
                                 <div class="servises-item serv-item-06 icon-gradient">
-                                    <h3 class="servises-item__title">Videoklotsid</h3>
+                                    <h3 class="servises-item__title"><?php print t('Videoblocks'); ?></h3>
                                     <div class="servises-item__text">
-                                        <p>Videoklots on esmane teejuht neile, kellel on huvi ja soovi katsetada.</p>
+                                        <p><?php print t('Need some inspiration? Check out our videos on different school-related activities.'); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -196,20 +195,20 @@ global $user;
                 </div>
                 <div class="wrapp-box-02">
                     <div class="services-box-01">
-                        <h3 class="title-02 services-box-01__title">Kuidas eDidaktikum
-                            <span>töötab?</span>
+                        <h3 class="title-02 services-box-01__title">
+                          <?php print t('How does eDidaktikum <span>work?</span>'); ?>
                         </h3>
                         <ol class="ol-list-01">
                             <li>
-                                <h4 class="ol-list-01__title">Registreeri kasutajaks</h4>
+                                <h4 class="ol-list-01__title"><?php print t('Register user'); ?></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                             </li>
                             <li>
-                                <h4 class="ol-list-01__title">Liitu huvipakkuva grupiga</h4>
+                                <h4 class="ol-list-01__title"><?php print t('Join a group'); ?></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                             </li>
                             <li>
-                                <h4 class="ol-list-01__title">Õpi ja jaga materjale</h4>
+                                <h4 class="ol-list-01__title"><?php print t('Learn and share materials'); ?></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                             </li>
                         </ol>
@@ -226,7 +225,7 @@ global $user;
                                         <div class="counter_content">
                                             <div class="stat_count_wrapper">
                                                 <p class="stat_count" data-count="<?php print $teachers_count ?>">0</p>
-                                                <p class="counter_title">Õppejõudu</p>
+                                                <p class="counter_title"><?php print t('Teachers', [], [ 'context' => 'front page', ]); ?></p>
                                             </div>
 
                                             <div class="stat_temp"></div>
@@ -238,7 +237,7 @@ global $user;
                                         <div class="counter_content">
                                             <div class="stat_count_wrapper">
                                                 <p class="stat_count" data-count="<?php print $students_count ?>">0</p>
-                                                <p class="counter_title">Tudengit</p>
+                                                <p class="counter_title"><?php print t('Students', [], [ 'context' => 'front page', ]); ?></p>
                                             </div>
                                             <div class="stat_temp"></div>
                                         </div>
@@ -249,7 +248,7 @@ global $user;
                                         <div class="counter_content">
                                             <div class="stat_count_wrapper">
                                                 <p class="stat_count" data-count="<?php print $res_count ?>">0</p>
-                                                <p class="counter_title">Õppematerjali</p>
+                                                <p class="counter_title"><?php print t('Learning resources', [], [ 'context' => 'front page', ]); ?></p>
                                             </div>
                                             <div class="stat_temp"></div>
                                         </div>
@@ -260,7 +259,7 @@ global $user;
                                         <div class="counter_content">
                                             <div class="stat_count_wrapper">
                                                 <p class="stat_count" data-count="<?php print $tasks_count ?>">0</p>
-                                                <p class="counter_title">Antud ülesannet</p>
+                                                <p class="counter_title"><?php print t('Tasks', [], [ 'context' => 'front page', ]); ?></p>
                                             </div>
                                             <div class="stat_temp"></div>
                                         </div>
@@ -577,10 +576,10 @@ global $user;
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 text-center">
-                            <h3 class="title-02">Õppejõud ja õppijad
-                                <span>arvavad</span>
+                            <h3 class="title-02">
+                              <?php print t('What students and lectures are <span>saying</span>'); ?>
                             </h3>
-                            <p class="subtitle-01 margin-bottom-34">eDidaktikum on väga innovaatiline ja praktiline. Loe õppejõudude, õpetajate ja tudengite arvamust.
+                            <p class="subtitle-01 margin-bottom-34">We think that eDidakikum is very innovative and practival. Read lecturers, teachers and student opinions.
                             </p>
                         </div>
                     </div>
@@ -592,10 +591,10 @@ global $user;
                                 </figure>
                                 <div class="owl-theme-01__item-header">
                                     <h3 class="owl-theme-01__item-title">Kairit Tammets</h3>
-                                    <p class="owl-theme-01__item-subtitle">Õppejõud ülikoolis</p>
+                                    <p class="owl-theme-01__item-subtitle"><?php print t('Lecturer'); ?></p>
                                 </div>
                                 <div class="owl-theme-01__item-content">
-                                    <p>“eDidaktikum võimaldab mul planeerida oma kursuseid pädevuspõhiselt ning hoida silma peal, mida üliõpilased minu erinevatel kursustel teevad, kuidas edenevad ja õppeprotsessis osalevad.”</p>
+                                    <p>“<?php print t('eDidaktikum helps me to plan my courses based on competences and to keep on eye my students in different courses - how they really progress and participate.'); ?>”</p>
                                 </div>
                             </div>
                             <div class="owl-theme-01__item">
@@ -604,10 +603,10 @@ global $user;
                                 </figure>
                                 <div class="owl-theme-01__item-header">
                                     <h3 class="owl-theme-01__item-title">Katrin Poom-Valickis</h3>
-                                    <p class="owl-theme-01__item-subtitle">Ülddidaktika dotsent</p>
+                                    <p class="owl-theme-01__item-subtitle"><?php print t('Associate Professor of General Didactics'); ?></p>
                                 </div>
                                 <div class="owl-theme-01__item-content">
-                                    <p>“Valgusfoori põhimõttel toimiv tagasisidesüsteem eDidaktikumis annnab hea ülevaate õppijate edenemisest õppeprotsessis.”</p>
+                                    <p>“<?php print t('I really like the idea of feedback system and task manager. It gives good over- view of the learning process of my students.'); ?>”</p>
                                 </div>
                             </div>
                             <div class="owl-theme-01__item">
@@ -616,10 +615,10 @@ global $user;
                                 </figure>
                                 <div class="owl-theme-01__item-header">
                                     <h3 class="owl-theme-01__item-title">Kai Pata</h3>
-                                    <p class="owl-theme-01__item-subtitle">Haridustehnoloogia vanemteadur</p>
+                                    <p class="owl-theme-01__item-subtitle"><?php print t('Senior Research Fellow in Educational Technology'); ?></p>
                                 </div>
                                 <div class="owl-theme-01__item-content">
-                                    <p>“Saan eDidaktikumiga ülesanded siduda pädevusmudeliga ja seeläbi kogunevad hindamisel õppijate portfooliosse pädevused. Mulle meeldib eDidaktikumis võimalus taaskasutada kursusi ja nende osi, ning jagada samu materjale erinevatel kursustel.”</p>
+                                    <p>“<?php print t('I’m able to connect tasks with competency model which will eventually trans- forms into competency based student portfolios. I do like the way materials can be used for different courses.'); ?>”</p>
                                 </div>
                             </div>
                         </div>
@@ -630,9 +629,9 @@ global $user;
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-7">
-                            <h3>Partnerid</h3><img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/partners_logos-1.png" class="img-responsive"></div>
+                            <h3><?php print t('Partners'); ?></h3><img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/partners_logos-1.png" class="img-responsive"></div>
                         <div class="col-sm-5">
-                            <h3 style="padding-bottom: 12px;">Toetajad</h3><img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/eduko_ESF-1.jpg" class="img-responsive"></div>
+                            <h3 style="padding-bottom: 12px;"><?php print t('Supporters'); ?></h3><img src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/img/eduko_ESF-1.jpg" class="img-responsive"></div>
                     </div>
                 </div>
             </div>

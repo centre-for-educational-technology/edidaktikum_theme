@@ -15,6 +15,12 @@ if(!empty($node->ed_field_trailer_url)){
   $trailer_video = null;
 }
 
+if(!empty($node->ed_field_featured_image)){
+	$image = image_style_url('large', $node->ed_field_featured_image[LANGUAGE_NONE][0]['uri']);
+}else{
+	$image = $GLOBALS['base_url'].'/'.drupal_get_path('theme', $GLOBALS['theme']).'/images/icons/ed_group_icon_default.png';
+}
+
 $related_resources = ed_learning_resource_get_related_res($node);
 
 $methodical_res = null;
@@ -38,8 +44,8 @@ if(!empty($related_resources)){
 
       <div class="tabs single-course-tabs video-bit">
         <ul class="tabs__caption">
-          <li class="active">Treiler</li>
-          <li class="">Põhivideo</li>
+          <li class="active"><?php print t('Trailer'); ?></li>
+          <li class=""><?php print t('Video'); ?></li>
         </ul>
         <div class="tabs__content active">
           <article class="video-post">
@@ -75,45 +81,43 @@ if(!empty($related_resources)){
           <!--						</li>-->
           <!--					</ul>-->
           <div class="ed-node-statistics-likes">
-            <a href="#" data-id="369" class="blog-post__likes"><span class="ed-likes-count">1 Meeldimised</a></span>
+            <a href="#" data-id="<?php print $node->nid; ?>" class="blog-post__likes"><span class="ed-likes-count"><?php print ed_get_likes($node->nid); ?><?php print ' '.t('likes'); ?></span></a>
           </div>
           <div class="preview_share_wrapper">
-            <a href="#" class="preview_share_toggler">
-              <i class="fa fa fa-share-alt"></i>
-            </a>
-            <div class="preview_share_block">
-              <a class="share_facebook" href="#" data-image="http://localhost:8888/edidaktikum/sites/default/files/styles/large/public/ed_cluster_featured_images/aviationabstraction-1-L.jpg?itok=Vj4qeis2" data-title="asticky" data-desc="Kokkuvõte">
-                <i class="fa fa-facebook"></i>
-              </a>
-              <a class="share_twitter" href="https://twitter.com/intent/tweet?text=eDidaktikum%20%22asticky%22%20http://localhost:8888/edidaktikum/et/content/asticky">
-                <i class="fa fa-twitter"></i>
-              </a>
-              <a class="share_gplus" href="https://plus.google.com/share?url=http://localhost:8888/edidaktikum/et/content/asticky" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                <i class="fa fa-google-plus"></i>
-              </a>
-              <a class="share_pinterest" href="#" data-media="http://localhost:8888/edidaktikum/sites/default/files/styles/large/public/ed_cluster_featured_images/aviationabstraction-1-L.jpg?itok=Vj4qeis2">
-                <i class="fa fa-pinterest-p"></i>
-              </a>
-            </div>
-          </div>
+						<a href="#" class="preview_share_toggler">
+							<i class="fa fa fa-share-alt"></i>
+						</a>
+						<div class="preview_share_block">
+							<a class="share_facebook" href="#" data-image="<?php print $image ?>" data-title="<?php print check_plain($node->title); ?>" data-desc="<?php print edidaktikum_get_short_content_or_excerpt($node); ?>">
+								<i class="fa fa-facebook"></i>
+							</a>
+							<a class="share_twitter" href="https://twitter.com/intent/tweet?text=eDidaktikum%20%22<?php print check_plain($node->title); ?>%22%20<?php print url(current_path(), array('absolute' => TRUE)) ?>">
+								<i class="fa fa-twitter"></i>
+							</a>
+							<a class="share_gplus" href="https://plus.google.com/share?url=<?php print url(current_path(), array('absolute' => TRUE)) ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+								<i class="fa fa-google-plus"></i>
+							</a>
+							<a class="share_pinterest" href="#" data-media="<?php print $image ?>">
+								<i class="fa fa-pinterest-p"></i>
+							</a>
+						</div>
+					</div>
         </div>
       </div>
       <?php if(!empty( $node->ed_field_training_url )): ?>
           <div class="single-related-posts">
-              <a target="_blank" href="<?php print $node->ed_field_training_url[LANGUAGE_NONE][0]['value']; ?>" class="btn-01">Tule koolitusele</a>
+              <a target="_blank" href="<?php print $node->ed_field_training_url[LANGUAGE_NONE][0]['value']; ?>" class="btn-01"><?php print t('Come to training'); ?></a>
           </div>
       <?php endif; ?>
 
 
       <?php if(!empty( $related_resources )): ?>
           <div class="single-related-posts">
-              <h3 class="single-related__title">Vaata lisaks</h3>
+              <h3 class="single-related__title"><?php print t('See more'); ?></h3>
 
 
             <?php if(!empty( $methodical_res )): ?>
-                <h3 class="single-related-posts__title" style="height: 40px;">
-                    Metoodilised leheküljed
-                </h3>
+                <h3 class="single-related-posts__title" style="height: 40px;"><?php print t('Methodical pages'); ?></h3>
 
                 <div class="panel-group res" id="methodical-res-accordion" role="tablist" aria-multiselectable="true">
               <?php foreach($methodical_res as $res): ?>
@@ -130,7 +134,7 @@ if(!empty($related_resources)){
                                 <div class="panel-body">
                                     <?php print $res['content']['safe_value']; ?>
                                       <?php if(!empty( $res['url'] )): ?>
-                                        <a href="<?php print  $res['url']; ?>" target="_blank" class="news-box-01__btn">Mine lehele</a>
+                                        <a href="<?php print  $res['url']; ?>" target="_blank" class="news-box-01__btn"><?php print t('Go to page'); ?></a>
                                       <?php endif; ?>
                                 </div>
                             </div>
@@ -142,9 +146,7 @@ if(!empty($related_resources)){
 
 
             <?php if(!empty( $best_practice )): ?>
-                <h3 class="single-related-posts__title" style="height: 40px;">
-                    Muu maailma kogemus
-                </h3>
+                <h3 class="single-related-posts__title" style="height: 40px;"><?php print t('Other world experience'); ?></h3>
 
                 <div class="panel-group res" id="best-res-accordion" role="tablist" aria-multiselectable="true">
                   <?php foreach($best_practice as $res): ?>
@@ -162,7 +164,7 @@ if(!empty($related_resources)){
                               <div class="panel-body">
                                 <?php print $res['content']['safe_value']; ?>
                                 <?php if(!empty( $res['url'] )): ?>
-                                    <a href="<?php print  $res['url']; ?>" target="_blank" class="news-box-01__btn">Mine lehele</a>
+                                    <a href="<?php print  $res['url']; ?>" target="_blank" class="news-box-01__btn"><?php print t('Go to page'); ?></a>
                                 <?php endif; ?>
                               </div>
                           </div>

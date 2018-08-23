@@ -53,7 +53,7 @@
 
 
                             <div class="search-block">
-                                <button class="search-btn">Search</button>
+                                <button class="search-btn"><?php print t('Search'); ?></button>
                               <?php print $search_box; ?>
                             </div>
 
