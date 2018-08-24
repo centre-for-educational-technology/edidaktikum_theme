@@ -579,7 +579,7 @@ global $user;
                             <h3 class="title-02">
                               <?php print t('What students and lectures are <span>saying</span>'); ?>
                             </h3>
-                            <p class="subtitle-01 margin-bottom-34"><?php print t('We think that eDidakikum is very innovative and practival. Read lecturers, teachers and student opinions.'); ?>
+                            <p class="subtitle-01 margin-bottom-34"><?php print t('We think that eDidakikum is very innovative and practical. Read lecturers, teachers and student opinions.'); ?>
                             </p>
                         </div>
                     </div>
