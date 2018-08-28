@@ -35,11 +35,12 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
       jQuery(".owl-theme-01__item").matchHeight();
       });','inline');
 
+  $full_path_to_theme = base_path() . path_to_theme();
 
 	$_meta_shortcut_icon = array(
 			'#tag' => 'link',
 			'#attributes' => array(
-					'href' => path_to_theme() .'/favicon.ico',
+					'href' => $full_path_to_theme .'/favicon.ico',
 					'rel' => 'shortcut icon',
 					'type'=> 'image/vnd.microsoft.icon'
 			),
@@ -71,7 +72,7 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 
 			'#tag' => 'link',
 			'#attributes' => array(
-					'href' => path_to_theme() .'/favicons/apple-touch-icon.png',
+					'href' => $full_path_to_theme .'/favicons/apple-touch-icon.png',
 					'rel' => 'apple-touch-icon',
 			),
 	);
@@ -87,7 +88,7 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 		$apple = array(
 				'#tag' => 'link',
 				'#attributes' => array(
-						'href' => path_to_theme().'/favicons/apple-touch-icon-'.$size.'x'.$size.'.png',
+						'href' => $full_path_to_theme.'/favicons/apple-touch-icon-'.$size.'x'.$size.'.png',
 						'rel' => 'apple-touch-icon',
 						'sizes' => $size . 'x' . $size,
 				),
@@ -103,7 +104,7 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 					'rel' => 'icon',
 					'sizes' => '32x32',
 					'type' => 'image/png',
-					'href' => path_to_theme() .'/favicons/favicon-32x32.png',
+					'href' => $full_path_to_theme .'/favicons/favicon-32x32.png',
 			),
 
 	);
@@ -117,7 +118,7 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 					'rel' => 'icon',
 					'sizes' => '16x16',
 					'type' => 'image/png',
-					'href' => path_to_theme() .'/favicons/favicon-16x16.png',
+					'href' => $full_path_to_theme .'/favicons/favicon-16x16.png',
 			),
 
 	);
@@ -131,7 +132,7 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 					'rel' => 'icon',
 					'sizes' => '192x192',
 					'type' => 'image/png',
-					'href' => path_to_theme() .'/favicons/android-chrome-192x192.png',
+					'href' => $full_path_to_theme .'/favicons/android-chrome-192x192.png',
 			),
 
 	);
@@ -143,7 +144,7 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 			'#tag' => 'link',
 			'#attributes' => array(
 					'rel' => 'manifest',
-					'href' => path_to_theme() .'/favicons/manifest.json',
+					'href' => $full_path_to_theme .'/favicons/manifest.json',
 			),
 	);
 	drupal_add_html_head($manifest, 'manifest');
@@ -155,7 +156,7 @@ function edidaktikum_theme_bs3_preprocess_html(&$variables) {
 			'#attributes' => array(
 					'rel' => 'mask-icon',
 					'color' => '#74b238',
-					'href' => path_to_theme() .'/favicons/safari-pinned-tab.svg',
+					'href' => $full_path_to_theme .'/favicons/safari-pinned-tab.svg',
 			),
 	);
 	drupal_add_html_head($safari_pinned_tab, 'safari-pinned-tab');
