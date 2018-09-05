@@ -15,6 +15,11 @@ $bookmarks = ed_get_group_bookmarks($node->nid);
 $files = ed_get_group_files($node->nid);
 $learning_resources = ed_get_group_learning_resources($node->nid);
 
+$unseen_counts = [];
+if (user_is_logged_in()) {
+	$unseen_counts = ed_cluster_unseen_counts_by_type($node->nid, $GLOBALS['user']->uid);
+}
+
 
 
 if(!empty($node->ed_field_featured_image)){
@@ -23,7 +28,6 @@ if(!empty($node->ed_field_featured_image)){
 	$image = $GLOBALS['base_url'].'/'.drupal_get_path('theme', $GLOBALS['theme']).'/images/icons/ed_group_icon_default.png';
 }
 
-global $user;
 
 
 ?>
@@ -61,16 +65,28 @@ global $user;
 					<ul class="tabs__caption">
 						<li class="active"><?php print t('Info'); ?></li>
 						<?php if(!empty( $tasks)): ?>
-						<li><?php print t('Tasks'); ?></li>
-                        <?php endif; ?>
+						  <li>
+								<?php print t('Tasks'); ?>
+								<?php print array_key_exists('ed_task', $unseen_counts) ? ' (' . $unseen_counts['ed_task'] . ')' : ''; ?>
+							</li>
+            <?php endif; ?>
 						<?php if(!empty( $bookmarks)): ?>
-                        <li><?php print t('Bookmarks'); ?></li>
+              <li>
+								<?php print t('Bookmarks'); ?>
+								<?php print array_key_exists('ed_bookmark', $unseen_counts) ? ' (' . $unseen_counts['ed_bookmark'] . ')' : ''; ?>
+							</li>
 						<?php endif; ?>
 						<?php if(!empty( $learning_resources)): ?>
-						<li><?php print t('Learning Resources'); ?></li>
+						  <li>
+								<?php print t('Learning Resources'); ?>
+								<?php print array_key_exists('ed_learning_resource', $unseen_counts) ? ' (' . $unseen_counts['ed_learning_resource'] . ')' : ''; ?>
+							</li>
 						<?php endif; ?>
 						<?php if(!empty( $files)): ?>
-						<li><?php print t('Files'); ?></li>
+						  <li>
+								<?php print t('Files'); ?>
+								<?php print array_key_exists('ed_file', $unseen_counts) ? ' (' . $unseen_counts['ed_file'] . ')' : ''; ?>
+							</li>
 						<?php endif; ?>
 					</ul>
 <!--                    <div class="list-group tabs">-->
