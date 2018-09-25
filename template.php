@@ -637,14 +637,23 @@ function edidaktikum_theme_bs3_form_comment_form_alter(&$form, &$form_state) {
 
 
 function edidaktikum_theme_bs3_menu_local_tasks(&$variables) {
+
 	$output = '';
 
 	if (!empty($variables['primary'])) {
 		$variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
 		$variables['primary']['#prefix'] .= '<div class="list-group tabs">';
 		$variables['primary']['#suffix'] = '</div>';
-		$output .= drupal_render($variables['primary']);
-	}
+
+		//This is user profile menu
+    if (drupal_match_path($variables['primary'][0]['#link']['path'], 'user/*')) {
+      $variables['primary']['#prefix'] = '<div class="tabbable tabs-left"><ul class="nav nav-tabs">';
+      $variables['primary']['#suffix'] = '</ul>';
+    }
+    $output .= drupal_render($variables['primary']);
+
+
+  }
 
 	if (!empty($variables['secondary'])) {
 		$variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
@@ -653,13 +662,16 @@ function edidaktikum_theme_bs3_menu_local_tasks(&$variables) {
 		$output .= drupal_render($variables['secondary']);
 	}
 
+
 	return $output;
 }
 
 
-function edidaktikum_theme_bs3_menu_local_task($variables) {
+function edidaktikum_theme_bs3_menu_local_task(&$variables) {
+
 	$link = $variables['element']['#link'];
 	$link_text = $link['title'];
+
 	if (!empty($variables['element']['#active'])) {
 
 		// Add text to indicate active tab for non-visual users.
@@ -678,8 +690,15 @@ function edidaktikum_theme_bs3_menu_local_task($variables) {
 		));
 	}
 
-	$link['localized_options']['attributes'] = array('class' => array('list-group-item'));
-	return l($link_text, $link['href'], $link['localized_options']);
+
+
+  if (drupal_match_path($link['path'], 'user/*')) {
+    return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l($link_text, $link['href'], $link['localized_options']) . "</li>\n";
+
+  }
+
+  $link['localized_options']['attributes'] = array('class' => array('list-group-item'));
+  return l($link_text, $link['href'], $link['localized_options']);
 }
 
 
