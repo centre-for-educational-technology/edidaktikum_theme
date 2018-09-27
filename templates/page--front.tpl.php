@@ -102,7 +102,11 @@ global $user;
                                   <?php print t('eDidaktikum provides a fresh picture of the world of education.<br>Daily <strong>@count</strong> students, teachers, educators and lecturers are using eDidaktikum<br>to collect and share materials, to discuss on learning and teaching.<br>Planning and giving sense to learning together is more effective!', [ '@count' => $teachers_count+$students_count, ]); ?>
                                 </p>
                             </div>
-                            <a href="<?php print url('user'); ?>" class="btn-01"><?php print t('Log in'); ?></a>
+                            <?php if (!user_is_logged_in()): ?>
+                              <a href="<?php print url('user'); ?>" class="btn-01"><?php print t('Log in'); ?></a>
+                            <?php else: ?>
+                              <a href="<?php print url('dashboard'); ?>" class="btn-01"><?php print t('Dashboard'); ?></a>
+                            <?php endif; ?>
                             <a href="#front-info" class="btn-03"><?php print t('Read on'); ?></a>
                         </div>
                     </div>
