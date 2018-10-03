@@ -62,7 +62,6 @@ style.scss
 }
 
 
-
 .content-box-03.support{
   background-color: #ffffff;
   background: none;
@@ -210,7 +209,6 @@ style.scss
   transition: 0.5s all;
   letter-spacing: 1px;
   display: inline-block;
-  vertical-align: top;
   border: 1px solid $ed-green;
 }
 
@@ -394,6 +392,10 @@ input[type="text"]:focus, input[type="search"]:focus, input[type="url"]:focus, i
 
 .ed-add-new-node{
   margin-bottom: 15px;
+}
+
+.new-group.price-btn, .ed-add-new-node a{
+  white-space: normal;
 }
 
 
@@ -657,6 +659,7 @@ Dashboard circles
   .home-02 .info-box-title {
     height: 25vw;
   }
+
 }
 
 @media only screen and (max-width: 640px){
@@ -664,6 +667,7 @@ Dashboard circles
     height: 42vw;
   }
 }
+
 
 
 @media only screen and (max-width: 420px){
@@ -791,6 +795,11 @@ iframe.video_frame.embed-responsive-item{
   font-weight: 200;
 }
 
+
+.price-box-01{
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
 
 .panel-group.res .panel-primary {
   border-color: $ed-green;
@@ -928,3 +937,364 @@ iframe.video_frame.embed-responsive-item{
 .badge-success{
   background-color: $brand-success;
 }
+
+
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  display: block;
+}
+
+.tabs-left > .nav-tabs > li {
+  float: none;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+  width: 200px;
+}
+
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}
+
+
+@media only screen and (max-width: 767px){
+
+  .tabs-left > .nav-tabs{
+    float: initial;
+  }
+
+}
+
+
+
+/* USER PROFILE EDIT WIZARD */
+.wizard {
+  background: #fff;
+  width: 40vw;
+}
+
+.wizard .nav-tabs {
+  position: relative;
+  margin-bottom: 0;
+  border-bottom-color: #e0e0e0;
+}
+
+.wizard > div.wizard-inner {
+  position: relative;
+}
+
+.connecting-line {
+  height: 2px;
+  background: #e0e0e0;
+  position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 1;
+}
+
+.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+  color: #555555;
+  cursor: default;
+  border: 0;
+  border-bottom-color: transparent;
+}
+
+
+
+span.round-tab {
+  width: 70px;
+  height: 70px;
+  line-height: 65px;
+  display: inline-block;
+  border-radius: 100px;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  font-size: 25px;
+}
+span.round-tab i{
+  color:#555555;
+}
+.wizard li.active span.round-tab {
+  background: #fff;
+  border: 2px solid $ed-green;
+
+}
+.wizard li.active span.round-tab i{
+  color: $ed-green;
+}
+
+span.round-tab:hover {
+  color: #333;
+  border: 2px solid #333;
+}
+
+.wizard .nav-tabs > li {
+  width: 25%;
+}
+
+.wizard .nav-tabs > li a {
+  width: 70px;
+  height: 70px;
+  margin: 20px auto;
+  border-radius: 100%;
+  padding: 0;
+}
+
+.wizard .nav-tabs > li a:hover {
+  background: transparent;
+}
+
+.wizard .tab-pane {
+  position: relative;
+  padding-top: 50px;
+}
+
+.wizard h3 {
+  margin-top: 0;
+}
+
+@media( max-width : 585px ) {
+
+  .wizard {
+    width: 90%;
+    height: auto !important;
+  }
+
+  span.round-tab {
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .wizard .nav-tabs > li a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .wizard li.active:after {
+    content: " ";
+    position: absolute;
+    left: 35%;
+  }
+}
+
+@media( max-width : 497px ) {
+
+  .wizard{
+    width: 100%;
+  }
+}
+
+.user-edit-form{
+  float: left;
+}
+
+
+body.page-user-groups .region.region-content{
+  margin-left: 240px;
+}
+
+.comments__user-img .useravatar{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-size: cover;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+
+
+/* USER PROFILE PAGE */
+.icon-background {
+  color: #2c3e50;
+}
+
+.nav.nav-tabs .fa-stack{
+  margin-right: 5px;
+}
+
+.nav-tabs > li.active > a i.stack-icon, .nav-tabs > li.active > a:hover i.stack-icon, .nav-tabs > li.active > a:focus i.stack-icon{
+  color: #ffffff;
+}
+
+.card {
+  padding: 30px;
+  background-color: rgba(214, 224, 226, 0.2);
+  -webkit-border-top-left-radius:10px;
+  border-top-left-radius:10px;
+  -webkit-border-top-right-radius:10px;
+  border-top-right-radius:10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.card.hovercard {
+  position: relative;
+  padding-top: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: #2c3e50;
+}
+
+.card.hovercard .card-background {
+  height: 190px;
+}
+
+.card-background img {
+  -webkit-filter: blur(25px);
+  -moz-filter: blur(25px);
+  -o-filter: blur(25px);
+  -ms-filter: blur(25px);
+  filter: blur(25px);
+  margin-left: -100px;
+  margin-top: -140px;
+  min-width: 130%;
+}
+
+.card.hovercard .useravatar {
+  position: absolute;
+  top: 30px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid #1abc9c;
+  background-size: cover;
+  display: inline-block;
+  margin-left: -65px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.card.hovercard .card-info {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+}
+.card.hovercard .card-info .card-title {
+  padding:0 5px;
+  font-size: 2.5em;
+  line-height: 1;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.card.hovercard .card-info {
+  line-height: 20px;
+  color: #737373;
+  text-overflow: ellipsis;
+}
+
+@media( max-width : 585px ) {
+
+  .card.hovercard .card-info .card-title {
+    font-size: 1.6em;
+  }
+}
+
+
+
+.card.hovercard .bottom {
+  padding: 0 20px;
+  margin-bottom: 17px;
+}
+.btn-pref .btn {
+  -webkit-border-radius:0 !important;
+}
+
+.user-profile .well{
+  border-radius: 0 0 10px 10px;
+  border: solid #eeeeee;
+  border-width: 0 1px 1px 1px;
+  background-color: #fff;
+
+}
+
+
+.user-profile .nav-tabs{
+  margin-bottom: 0px;
+}
+
+.user-profile .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  border: 1px solid #eeeeee;
+  border-bottom-color: transparent;
+  cursor: default;
+  color: $ed-green;
+}
+
+.user-profile .nav-tabs > li > a {
+  border-radius: 0;
+  margin-right: 0px;
+  color: #fff;
+}
+
+
+.user-profile .nav-tabs {
+  border-bottom: none;
+  background-color: $ed-green;
+}
+
+.user-profile .nav-tabs > li {
+
+  margin-bottom: 0px;
+}
+
+.user-profile .nav-tabs > li > a:hover {
+  color: $ed-green;
+  border-color: $ed-green;
+}
+
+.user-profile .nav > li > a:hover, .nav > li > a:focus {
+  background-color: #fff;
+}
+
+
