@@ -425,9 +425,6 @@ function edidaktikum_theme_bs3_preprocess_page(&$vars) {
 	}
 
 	$vars['other_languages'] = $other_languages;
-	//kpr($other_languages);
-
-
 
 
 	//With detailed search
@@ -646,7 +643,7 @@ function edidaktikum_theme_bs3_menu_local_tasks(&$variables) {
 		$variables['primary']['#suffix'] = '</div>';
 
 		//This is user profile menu
-    if (drupal_match_path($variables['primary'][0]['#link']['path'], 'user/*')) {
+    if (user_is_logged_in() && drupal_match_path($variables['primary'][0]['#link']['path'], 'user/*')) {
       $variables['primary']['#prefix'] = '<div class="tabbable tabs-left"><ul class="nav nav-tabs">';
       $variables['primary']['#suffix'] = '</ul>';
     }
@@ -667,10 +664,12 @@ function edidaktikum_theme_bs3_menu_local_tasks(&$variables) {
 }
 
 
+
 function edidaktikum_theme_bs3_menu_local_task(&$variables) {
 
 	$link = $variables['element']['#link'];
 	$link_text = $link['title'];
+  $link['localized_options']['html'] = TRUE;
 
 	if (!empty($variables['element']['#active'])) {
 
@@ -682,7 +681,7 @@ function edidaktikum_theme_bs3_menu_local_task(&$variables) {
 		if (empty($link['localized_options']['html'])) {
 			$link['title'] = check_plain($link['title']);
 		}
-		$link['localized_options']['html'] = TRUE;
+
 
 		$link_text = t('!local-task-title!active', array(
 				'!local-task-title' => $link['title'],
@@ -692,13 +691,73 @@ function edidaktikum_theme_bs3_menu_local_task(&$variables) {
 
 
 
-  if (drupal_match_path($link['path'], 'user/*')) {
+  if (user_is_logged_in() && drupal_match_path($link['path'], 'user/*')) {
+
+    if(drupal_match_path($link['path'], 'user/%/view')){
+      return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l('<span class="fa-stack fa-2x"><i class="fa fa-circle fa-stack-2x icon-background"></i><i class="fa fa-user fa-stack-1x stack-icon"></i></span>' . $link_text, $link['href'], $link['localized_options']) . "</li>\n";
+    } elseif (drupal_match_path($link['path'], 'user/%/edit')){
+      $link['localized_options']['attributes'] = array('class' => array('user-block', 'edit'));
+      return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l('<span class="fa-stack fa-2x"><i class="fa fa-circle fa-stack-2x icon-background"></i><i class="fa fa-pencil fa-stack-1x stack-icon"></i></span>' .$link_text, $link['href'], $link['localized_options']) . "</li>\n";
+
+    } elseif (drupal_match_path($link['path'], 'user/%/hybridauth')){
+      return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l('<span class="fa-stack fa-2x"><i class="fa fa-circle fa-stack-2x icon-background"></i><i class="fa fa-key fa-stack-1x stack-icon"></i></span>' .$link_text, $link['href'], $link['localized_options']) . "</li>\n";
+    } elseif (drupal_match_path($link['path'], 'user/%/groups')){
+      return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l('<span class="fa-stack fa-2x"><i class="fa fa-circle fa-stack-2x icon-background"></i><i class="fa fa-users fa-stack-1x stack-icon"></i></span>' .$link_text, $link['href'], $link['localized_options']) . "</li>\n";
+    }
+    elseif (drupal_match_path($link['path'], 'user/%/scheduler')){
+      return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l('<span class="fa-stack fa-2x"><i class="fa fa-circle fa-stack-2x icon-background"></i><i class="fa fa-clock-o fa-stack-1x stack-icon"></i></span>' .$link_text, $link['href'], $link['localized_options']) . "</li>\n";
+    }
+    elseif (drupal_match_path($link['path'], 'user/%/devel')){
+      return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l('<span class="fa-stack fa-2x"><i class="fa fa-circle fa-stack-2x icon-background"></i><i class="fa fa-cog fa-stack-1x stack-icon"></i></span>' .$link_text, $link['href'], $link['localized_options']) . "</li>\n";
+    }
+
     return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l($link_text, $link['href'], $link['localized_options']) . "</li>\n";
 
   }
 
   $link['localized_options']['attributes'] = array('class' => array('list-group-item'));
   return l($link_text, $link['href'], $link['localized_options']);
+}
+
+
+function edidaktikum_theme_bs3_preprocess_user_picture(&$variables) {
+  $variables['user_picture'] = '';
+  if (variable_get('user_pictures', 0)) {
+    $account = $variables['account'];
+    if (!empty($account->picture)) {
+      // @TODO: Ideally this function would only be passed file objects, but
+      // since there's a lot of legacy code that JOINs the {users} table to
+      // {node} or {comments} and passes the results into this function if we
+      // a numeric value in the picture field we'll assume it's a file id
+      // and load it for them. Once we've got user_load_multiple() and
+      // comment_load_multiple() functions the user module will be able to load
+      // the picture files in mass during the object's load process.
+      if (is_numeric($account->picture)) {
+        $account->picture = file_load($account->picture);
+      }
+      if (!empty($account->picture->uri)) {
+        $filepath = $account->picture->uri;
+      }
+    }
+    elseif (variable_get('user_picture_default', '')) {
+      $filepath = variable_get('user_picture_default', '');
+    }
+    if (isset($filepath)) {
+      $alt = t("@user's picture", array('@user' => format_username($account)));
+      // If the image does not have a valid Drupal scheme (for eg. HTTP),
+      // don't load image styles.
+      if (module_exists('image') && file_valid_uri($filepath) && $style = variable_get('user_picture_style', '')) {
+        $variables['user_picture'] = theme('image_style', array('style_name' => $style, 'path' => $filepath, 'alt' => $alt, 'title' => $alt));
+      }
+      else {
+        $variables['user_picture'] = theme('image', array('path' => $filepath, 'alt' => $alt, 'title' => $alt));
+      }
+      if (!empty($account->uid) && user_access('access user profiles')) {
+        $attributes = array('attributes' => array('title' => t('View user profile.')), 'html' => TRUE);
+        $variables['user_picture'] = array('filepath' => $filepath, 'uid' => $account->uid);
+      }
+    }
+  }
 }
 
 
@@ -727,36 +786,3 @@ function edidaktikum_theme_bs3_preprocess_hybridauth_provider_icon(&$vars, $hook
   $vars['icon_pack_classes'] = implode(' ', $icon_pack_classes);
 }
 
-//
-//function edidaktikum_theme_bs3_preprocess_comment_wrapper(&$variables) {
-//
-//
-////	$variables['classes_array'][] = 'reply-form';
-////	$variables['content']['comment_form']['comment_body']['#attributes']['class'][] = 'reply-form__message';
-////
-//	kpr($variables);
-//
-////	$comment_form = drupal_render_children($variables['form']);
-////
-////	return $comment_form;
-//
-////	if ($variables['content']) {
-////		$variables['content'] = '<div id="comment-head"><div  id="postnew"><a href="#commentform" name="commentlist" title="Post  a comment"></a></div></div>'.  $vars['content'];
-////	}
-//
-//}
-
-//function edidaktikum_theme_bs3_comment_block() {
-//	kpr('hello');
-//	$items = array();
-//	$number = variable_get('comment_block_count', 10);
-//	foreach (comment_get_recent($number) as $comment) {
-//		$items[] = l($comment->subject, 'comment/' . $comment->cid, array('fragment' => 'comment-' . $comment->cid)) . '&nbsp;<span>' . t('@time ago', array('@time' => format_interval(REQUEST_TIME - $comment->changed))) . '</span>';
-//	}
-//	if ($items) {
-//		return theme('item_list', array('items' => $items));
-//	}
-//	else {
-//		return t('No comments available.');
-//	}
-//}

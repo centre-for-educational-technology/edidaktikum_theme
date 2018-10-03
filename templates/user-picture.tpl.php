@@ -16,9 +16,29 @@
  * @ingroup themeable
  */
 ?>
-<?php if ($user_picture): ?>
+
+<?php if ($user_picture) : ?>
+
+
     <figure class="comments__user-img">
-        <?php print $user_picture; ?>
+        <div class="useravatar profile-pic" id="<?php print $user_picture['uid']; ?>" data-image="<?php print file_create_url($user_picture['filepath']); ?>"></div>
     </figure>
+
+    <script>
+      (function ($){
+
+        $(document).ready(function () {
+
+          if ( $( ".useravatar.profile-pic#<?php print $user_picture['uid']; ?>" ).length ) {
+            var picture = $(".useravatar.profile-pic#<?php print $user_picture['uid']; ?>" );
+
+            picture.css('background-image', 'url(' + picture.data("image") + ')');
+          }
+
+        });
+
+
+      })(jQuery)
+    </script>
 <?php endif; ?>
 

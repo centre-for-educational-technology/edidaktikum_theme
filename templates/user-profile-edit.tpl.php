@@ -10,33 +10,33 @@
         <ul class="nav nav-tabs" role="tablist">
 
           <li role="presentation" class="active">
-            <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Account Information">
-                                <span class="round-tab">
-                                    <i class="glyphicon glyphicon-folder-open"></i>
-                                </span>
+            <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="<?php print t('Account Information'); ?>">
+                <span class="round-tab">
+                    <i class="fa fa-user"></i>
+                </span>
             </a>
           </li>
 
           <li role="presentation" class="disabled">
-            <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Change Password">
-                                <span class="round-tab">
-                                    <i class="glyphicon glyphicon-pencil"></i>
-                                </span>
+            <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="<?php print t('Change Password'); ?>">
+                <span class="round-tab">
+                    <i class="fa fa-key"></i>
+                </span>
             </a>
           </li>
           <li role="presentation" class="disabled">
-            <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Profile Information">
-                                <span class="round-tab">
-                                    <i class="glyphicon glyphicon-picture"></i>
-                                </span>
+            <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="<?php print t('Profile Information'); ?>">
+                <span class="round-tab">
+                    <i class="fa fa-image"></i>
+                </span>
             </a>
           </li>
 
           <li role="presentation" class="disabled">
-            <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
-                                <span class="round-tab">
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                </span>
+            <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="<?php print t('Save changes'); ?>">
+                <span class="round-tab">
+                    <i class="fa fa-save"></i>
+                </span>
             </a>
           </li>
         </ul>
@@ -45,25 +45,26 @@
       <form role="form">
         <div class="tab-content">
           <div class="tab-pane active" role="tabpanel" id="step1">
-            <h3>Account Information</h3>
+            <h3><?php print t('Account Information'); ?></h3>
             <?php print render($form['account']['name']); ?>
             <?php print render($form['ed_field_full_name']); ?>
             <?php print render($form['account']['mail']); ?>
+            <?php print render($form['account']['mail']); ?>
             <ul class="list-inline pull-right">
-              <li><button type="button" class="btn btn-primary next-step">Next</button></li>
+              <li><button type="button" class="btn btn-success next-step"><?php print t('Next'); ?></button></li>
             </ul>
           </div>
           <div class="tab-pane" role="tabpanel" id="step2">
-            <h3>Change Password</h3>
+            <h3><?php print t('Change Password'); ?></h3>
             <?php print render($form['account']['current_pass']); ?>
             <?php print render($form['account']['pass']); ?>
             <ul class="list-inline pull-right">
-              <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-              <li><button type="button" class="btn btn-primary next-step">Next</button></li>
+              <li><button type="button" class="btn btn-default prev-step"><?php print t('Previous'); ?></button></li>
+              <li><button type="button" class="btn btn-success next-step"><?php print t('Next'); ?></button></li>
             </ul>
           </div>
           <div class="tab-pane" role="tabpanel" id="step3">
-            <h3>Profile Information</h3>
+            <h3><?php print t('Profile Information'); ?></h3>
             <div style="min-height:135px; margin-bottom: 20px">
               <?php print render($form['picture']['picture_current']); ?>
               <?php print render($form['picture']['picture_upload']); ?>
@@ -78,14 +79,13 @@
             <?php print render($form['account']['status']); ?>
             <?php print render($form['account']['roles']); ?>
             <ul class="list-inline pull-right">
-              <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-              <li><button type="button" class="btn btn-default next-step">Skip</button></li>
-              <li><button type="button" class="btn btn-primary btn-info-full next-step">Next</button></li>
+              <li><button type="button" class="btn btn-default prev-step"><?php print t('Previous'); ?></button></li>
+              <li><button type="button" class="btn btn-success btn-info-full next-step"><?php print t('Next'); ?></button></li>
             </ul>
           </div>
           <div class="tab-pane" role="tabpanel" id="complete">
-            <h3>Save changes</h3>
-            <p>You have successfully completed all steps.</p>
+            <h3><?php print t('Save changes'); ?></h3>
+            <p><?php print t('You have successfully completed all steps'); ?></p>
             <?php print render($form['actions']); ?>
           </div>
           <div class="clearfix"></div>

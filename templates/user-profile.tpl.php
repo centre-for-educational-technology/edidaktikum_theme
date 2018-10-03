@@ -1,15 +1,12 @@
  <div class="tab-content">
     <div class="tab-pane active">
 
-        <div class="col-lg-6 col-sm-6 user-profile">
+        <div class="col-lg-8 col-sm-8 user-profile">
             <div class="card hovercard">
                 <div class="card-background">
                     <img class="card-bkimg" alt="" src="<?php print file_create_url($user_profile['og_user_node']['#object']->picture->uri); ?>">
-                    <!-- http://lorempixel.com/850/280/people/9/ -->
-                </div>
-                <div class="useravatar">
-                    <img alt="" src="<?php print file_create_url($user_profile['og_user_node']['#object']->picture->uri); ?>">
-                </div>
+            </div>
+                <?php print render($user_profile['user_picture']); ?>
                 <div class="card-info"> <span class="card-title"><?php print ($user_profile['ed_field_full_name']['#items'][0]['safe_value']); ?></span>
 
                 </div>
@@ -30,15 +27,15 @@
 
                 <div class="tab-content">
                     <div id="groups" class="tab-pane fade in active">
-                        <h4><?php print t('Groups'); ?></h4>
+                        <h3><?php print t('Groups'); ?></h3>
                         <p><?php print render($user_profile['og_user_node']); ?></p>
                     </div>
                     <div id="study_groups" class="tab-pane fade">
-                        <h4><?php print t('Study groups'); ?></h4>
+                        <h3><?php print t('Study groups'); ?></h3>
                         <p><?php print render($user_profile['ed_field_study_group']); ?></p>
                     </div>
                     <div id="email" class="tab-pane fade">
-                        <h4><?php print t('More info'); ?></h4>
+                        <h3><?php print t('More info'); ?></h3>
                         <p><?php print render($user_profile['og_user_node']['#object']->mail); ?></p>
                         <p><?php print render($user_profile['summary']); ?></p>
                     </div>
@@ -60,3 +57,4 @@
 
 
   </div>
+
