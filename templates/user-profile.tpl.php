@@ -1,7 +1,7 @@
  <div class="tab-content">
     <div class="tab-pane active">
 
-        <div class="col-lg-8 col-sm-8 user-profile">
+        <div class="col-lg-8 col-sm-8 user-profile" id="user-profile-card">
             <div class="card hovercard">
                 <div class="card-background">
                     <img class="card-bkimg" alt="" src="<?php print file_create_url($user_profile['og_user_node']['#object']->picture->uri); ?>">
@@ -36,7 +36,11 @@
                     </div>
                     <div id="email" class="tab-pane fade">
                         <h3><?php print t('More info'); ?></h3>
-                        <p><?php print render($user_profile['og_user_node']['#object']->mail); ?></p>
+                        <h4><?php print t('E-mail'); ?></h4>
+                        <p><?php print render($user_profile['email']); ?></p>
+                        <h4><?php print t('Institution'); ?></h4>
+                        <p><?php print render($user_profile['field_institution']); ?></p>
+                        <h4><?php print t('Liikmeks oldud aeg'); ?></h4>
                         <p><?php print render($user_profile['summary']); ?></p>
                     </div>
 
@@ -54,7 +58,19 @@
   </div>
 
 
+<script>
+
+  (function ($){
+
+    if ( !$( "#user-profile-tabs" ).length ) {
+      $( "#user-profile-card" ).addClass('col-lg-offset-2 col-sm-offset-2');
+    }
+
+  })(jQuery)
 
 
-  </div>
+</script>
+
+
+ </div>
 

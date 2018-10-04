@@ -644,7 +644,7 @@ function edidaktikum_theme_bs3_menu_local_tasks(&$variables) {
 
 		//This is user profile menu
     if (user_is_logged_in() && drupal_match_path($variables['primary'][0]['#link']['path'], 'user/*')) {
-      $variables['primary']['#prefix'] = '<div class="tabbable tabs-left"><ul class="nav nav-tabs">';
+      $variables['primary']['#prefix'] = '<div class="tabbable tabs-left" id="user-profile-tabs"><ul class="nav nav-tabs">';
       $variables['primary']['#suffix'] = '</ul>';
     }
     $output .= drupal_render($variables['primary']);
