@@ -38,8 +38,10 @@
                         <h3><?php print t('More info'); ?></h3>
                         <h4><?php print t('E-mail'); ?></h4>
                         <p><?php print render($user_profile['email']); ?></p>
-                        <h4><?php print t('Institution'); ?></h4>
-                        <p><?php print render($user_profile['field_institution']); ?></p>
+                          <?php if(!empty($user_profile['field_institution'])) : ?>
+                                <h4><?php print t('Institution'); ?></h4>
+                                <p><?php print render($user_profile['field_institution']); ?></p>
+                          <?php endif; ?>
                         <h4><?php print t('Liikmeks oldud aeg'); ?></h4>
                         <p><?php print render($user_profile['summary']); ?></p>
                     </div>
