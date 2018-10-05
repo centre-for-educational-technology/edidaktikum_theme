@@ -17398,4 +17398,10 @@ body.page-user-groups .region.region-content {
 .user-profile .nav > li > a:hover, .nav > li > a:focus {
   background-color: #fff; }
 
+.swal2-popup .swal2-styled:focus {
+  box-shadow: none !important; }
+
+.swal2-popup .swal2-styled.swal2-confirm {
+  border-radius: 25px !important; }
+
 /*# sourceMappingURL=style.css.map */
