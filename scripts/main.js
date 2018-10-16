@@ -862,6 +862,10 @@
     });
   }
 
+  if ( $('.comments__content > .comments__text a').length ) {
+    $('.comments__content > .comments__text a').attr('target', '_blank');
+  }
+
 })(jQuery);
 
 function smart_content_update() {
