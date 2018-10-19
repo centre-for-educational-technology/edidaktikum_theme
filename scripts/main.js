@@ -855,6 +855,17 @@
     $('#swipebox-close').trigger('click');
   });
 
+  if ( $( ".useravatar.profile-pic" ).length ) {
+    $( ".useravatar.profile-pic" ).each(function(index, element) {
+      var picture = $(element);
+      picture.css('background-image', 'url(' + picture.data("image") + ')');
+    });
+  }
+
+  if ( $('.comments__content > .comments__text a').length ) {
+    $('.comments__content > .comments__text a').attr('target', '_blank');
+  }
+
 })(jQuery);
 
 function smart_content_update() {
