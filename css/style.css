@@ -17405,6 +17405,7 @@ body.page-user-groups .region.region-content {
   border-radius: 25px !important; }
 
 .ed_field_competence-label label.control-label.my-helper-processed {
-  cursor: pointer; }
+  cursor: pointer;
+  font-weight: normal; }
 
 /*# sourceMappingURL=style.css.map */
