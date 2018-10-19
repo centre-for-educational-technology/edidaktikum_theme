@@ -1306,6 +1306,15 @@ body.page-user-groups .region.region-content{
 }
 
 
+.ed_field_competence-label label.control-label.my-helper-processed {
+  cursor: pointer;
+  @extend .new-group, .price-btn;
+}
+
+
+
+
+
 
 
 

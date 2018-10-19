@@ -11914,7 +11914,7 @@ ol li::before {
   color: #fff;
   font-weight: 400; }
 
-.price-btn, .ed-add-new-node a {
+.price-btn, .ed-add-new-node a, .ed_field_competence-label label.control-label.my-helper-processed {
   font-size: 14px;
   line-height: 16px;
   color: #fff;
@@ -11931,7 +11931,7 @@ ol li::before {
   -webkit-transition: 0.5s all;
   transition: 0.5s all; }
 
-.price-btn:hover, .ed-add-new-node a:hover {
+.price-btn:hover, .ed-add-new-node a:hover, .ed_field_competence-label label.control-label.my-helper-processed:hover {
   background: transparent;
   color: #1abc9c;
   -webkit-transition: 0.5s all;
@@ -15847,7 +15847,7 @@ body.makings .col-sm-4.col-md-4.col-lg-4.text-center {
   color: #fff;
   background: #1abc9c; }
 
-.groups .price-btn, .groups .ed-add-new-node a, .ed-add-new-node .groups a {
+.groups .price-btn, .groups .ed-add-new-node a, .ed-add-new-node .groups a, .groups .ed_field_competence-label label.control-label.my-helper-processed, .ed_field_competence-label .groups label.control-label.my-helper-processed {
   padding: 12px 28px;
   font-size: 13px; }
 
@@ -16522,7 +16522,7 @@ style.scss
 .new-group-buttons {
   display: inline-flex; }
 
-.btn.new-group, .ed-add-new-node a.new-group {
+.btn.new-group, .ed-add-new-node a.new-group, .ed_field_competence-label label.btn.control-label.my-helper-processed {
   margin-right: 10px; }
 
 .page-clusters .item-info__text-01::before {
@@ -16538,7 +16538,7 @@ style.scss
 .product-list__item-info {
   text-align: center; }
 
-.new-group.price-btn, .ed-add-new-node a {
+.new-group.price-btn, .ed-add-new-node a, .ed_field_competence-label label.control-label.my-helper-processed {
   padding: 6px 12px; }
 
 .product-list__content.admins {
@@ -16550,18 +16550,18 @@ style.scss
   border-radius: 20px;
   margin: 1px; }
 
-.price-btn:hover, .ed-add-new-node a:hover {
+.price-btn:hover, .ed-add-new-node a:hover, .ed_field_competence-label label.control-label.my-helper-processed:hover {
   background: transparent;
   color: #1abc9c;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
   border-color: initial; }
 
-.price-btn.leave-group, .ed-add-new-node a.leave-group {
+.price-btn.leave-group, .ed-add-new-node a.leave-group, .ed_field_competence-label label.leave-group.control-label.my-helper-processed {
   background-color: #f0ad4e;
   border-color: #eea236; }
 
-.new-group.price-btn:active, .ed-add-new-node a:active, .new-group.price-btn:focus, .ed-add-new-node a:focus {
+.new-group.price-btn:active, .ed-add-new-node a:active, .ed_field_competence-label label.control-label.my-helper-processed:active, .new-group.price-btn:focus, .ed-add-new-node a:focus, .ed_field_competence-label label.control-label.my-helper-processed:focus {
   background: transparent;
   color: #1abc9c;
   -webkit-transition: 0.5s all;
@@ -16764,7 +16764,7 @@ input[type="text"]:focus, input[type="search"]:focus, input[type="url"]:focus, i
 .ed-add-new-node {
   margin-bottom: 15px; }
 
-.new-group.price-btn, .ed-add-new-node a, .ed-add-new-node a {
+.new-group.price-btn, .ed-add-new-node a, .ed_field_competence-label label.control-label.my-helper-processed, .ed-add-new-node a {
   white-space: normal; }
 
 #slider label {
@@ -17403,5 +17403,8 @@ body.page-user-groups .region.region-content {
 
 .swal2-popup .swal2-styled.swal2-confirm {
   border-radius: 25px !important; }
+
+.ed_field_competence-label label.control-label.my-helper-processed {
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
