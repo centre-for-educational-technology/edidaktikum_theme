@@ -4,8 +4,10 @@
         <div class="col-lg-8 col-sm-8 user-profile" id="user-profile-card">
             <div class="card hovercard">
                 <div class="card-background">
-                    <img class="card-bkimg" alt="" src="<?php print file_create_url($user_profile['og_user_node']['#object']->picture->uri); ?>">
-            </div>
+                  <?php if(!empty($user_profile['og_user_node']['#object']->picture->uri)) : ?>
+                      <img class="card-bkimg" alt="" src="<?php print file_create_url($user_profile['og_user_node']['#object']->picture->uri); ?>">
+                  <?php endif; ?>
+                </div>
                 <?php print render($user_profile['user_picture']); ?>
                 <div class="card-info"> <span class="card-title"><?php print ($user_profile['ed_field_full_name']['#items'][0]['safe_value']); ?></span>
 

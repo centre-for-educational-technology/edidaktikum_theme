@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 $group_members_uids = _get_users_in_group($node->nid);
 $group_members = user_load_multiple($group_members_uids);
 sort($group_members);
@@ -105,12 +103,15 @@ if(!empty($node->ed_field_featured_image)){
 <!--	                    --><?php //endif; ?>
 <!--                    </div>-->
 					<div class="tabs__content active">
-						<h3><?php print t('Excerpt'); ?></h3>
-						<p><?php print $node->ed_field_excerpt['und'][0]['safe_value']; ?></p>
-						<?php if(!empty( $node->ed_field_content )): ?>
-							<h3><?php print t('Content'); ?></h3>
-							<p><?php print $node->ed_field_content['und'][0]['safe_value']; ?></p>
-						<?php endif; ?>
+                          <?php if(!empty( $node->ed_field_excerpt )): ?>
+                              <h3><?php print t('Excerpt'); ?></h3>
+                              <p><?php print $node->ed_field_excerpt['und'][0]['safe_value']; ?></p>
+                          <?php endif; ?>
+
+                            <?php if(!empty( $node->ed_field_content )): ?>
+                                <h3><?php print t('Content'); ?></h3>
+                                <p><?php print $node->ed_field_content['und'][0]['safe_value']; ?></p>
+                            <?php endif; ?>
 					</div>
 					<?php if(!empty( $tasks)): ?>
 					<div class="tabs__content">
@@ -282,7 +283,7 @@ if(!empty($node->ed_field_featured_image)){
 							<i class="fa fa fa-share-alt"></i>
 						</a>
 						<div class="preview_share_block">
-							<a class="share_facebook" href="#" data-image="<?php print $image ?>" data-title="<?php print check_plain($node->title); ?>" data-desc="<?php print $node->ed_field_excerpt['und'][0]['safe_value']; ?>">
+							<a class="share_facebook" href="#" data-image="<?php print $image ?>" data-title="<?php print check_plain($node->title); ?>" data-desc="<?php print edidaktikum_get_short_content_or_excerpt($node); ?>">
 								<i class="fa fa-facebook"></i>
 							</a>
 							<a class="share_twitter" href="https://twitter.com/intent/tweet?text=eDidaktikum%20%22<?php print check_plain($node->title); ?>%22%20<?php print url(current_path(), array('absolute' => TRUE)) ?>">
