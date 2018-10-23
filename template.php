@@ -638,8 +638,18 @@ function edidaktikum_theme_bs3_menu_local_tasks(&$variables) {
 	$output = '';
 
 	if (!empty($variables['primary'])) {
+		$node = menu_get_object();
+		$isGroup = ($node && isset($node->type) && $node->type === 'ed_cluster');
+		if (!$node) {
+			// A special case for 'node/%/group' as the router does not have load the
+			// node for this view as the loading function is not defined for it.
+			if (drupal_match_path(menu_get_item()['path'], 'node/%/group')) {
+				$isGroup = true;
+			}
+		}
+
 		$variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-		$variables['primary']['#prefix'] .= '<div class="list-group tabs">';
+		$variables['primary']['#prefix'] .= $isGroup ? '<div class="list-group tabs group-nav">' : '<div class="list-group tabs">';
 		$variables['primary']['#suffix'] = '</div>';
 
 		//This is user profile menu
@@ -716,6 +726,11 @@ function edidaktikum_theme_bs3_menu_local_task(&$variables) {
   }
 
   $link['localized_options']['attributes'] = array('class' => array('list-group-item'));
+
+	if (drupal_match_path($link['path'], implode("\n", ['node/%/track', 'node/%/bookmark', 'node/%/forum', 'node/%/event', 'node/%/pages', 'node/%/subgroups', 'node/%/devel',]))) {
+		$link['localized_options']['attributes']['data-move-to-dropdown'] = 'true';
+	}
+
   return l($link_text, $link['href'], $link['localized_options']);
 }
 
@@ -785,4 +800,3 @@ function edidaktikum_theme_bs3_preprocess_hybridauth_provider_icon(&$vars, $hook
 
   $vars['icon_pack_classes'] = implode(' ', $icon_pack_classes);
 }
-

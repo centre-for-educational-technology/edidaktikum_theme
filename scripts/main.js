@@ -866,6 +866,35 @@
     $('.comments__content > .comments__text a').attr('target', '_blank');
   }
 
+  if ($('.list-group.tabs.group-nav').length) {
+    if ($('.list-group.tabs.group-nav').find('a[data-move-to-dropdown="true"]').length) {
+      var $container = $('<div/>', {
+        style: 'position:relative;display:inline-block;'
+      });
+      $container.append('<a href="#" class="list-group-item dropdown-toggle group-nav" data-toggle="dropdown" role="button" id="groupNavDropdown" aria-haspopup="true" aria-expanded="false">...</a>');
+      $container.append('<ul class="dropdown-menu" aria-labelledby="groupNavDropdown"></ul>');
+
+      var hasActiveElement = false;
+      $('.list-group.tabs.group-nav').find('a[data-move-to-dropdown="true"]').each(function(index, element) {
+        var $element = $(element);
+        $element.detach();
+        $element.removeClass('list-group-item');
+        $container.find('ul').append($('<li/>', {
+          class: $element.hasClass('active') ? 'active' : ''
+        }).append($element));
+        if ($element.hasClass('active')) {
+          hasActiveElement = true;
+        }
+      });
+
+      $('.list-group.tabs.group-nav').append($container);
+
+      if (hasActiveElement) {
+        $container.find('.dropdown-toggle').trigger('click');
+      }
+    }
+  }
+
 })(jQuery);
 
 function smart_content_update() {
