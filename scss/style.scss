@@ -1305,18 +1305,20 @@ body.page-user-groups .region.region-content{
   border-radius: 25px !important;
 }
 
-
 .ed_field_competence-label label.control-label.my-helper-processed {
   cursor: pointer;
   font-weight: normal;
   @extend .new-group, .price-btn;
 }
 
+.dropdown-menu {
+  .active {
+    a {
+      background-color: $ed-green;
 
-
-
-
-
-
-
-
+      &:focus, &:hover {
+        background-color: #00847a;
+      }
+    }
+  }
+}

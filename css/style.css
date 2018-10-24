@@ -17408,4 +17408,9 @@ body.page-user-groups .region.region-content {
   cursor: pointer;
   font-weight: normal; }
 
+.dropdown-menu .active a {
+  background-color: #1abc9c; }
+  .dropdown-menu .active a:focus, .dropdown-menu .active a:hover {
+    background-color: #00847a; }
+
 /*# sourceMappingURL=style.css.map */
