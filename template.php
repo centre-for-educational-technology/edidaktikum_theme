@@ -681,6 +681,11 @@ function edidaktikum_theme_bs3_menu_local_task(&$variables) {
 	$link_text = $link['title'];
   $link['localized_options']['html'] = TRUE;
 
+	$pattern = '/\((\d+)\)$/i';
+	$replacement = '<span class="badge top-right">$1</span>';
+	// Replace (NUMBER) at the end of the $link_text with badge HTML
+	$link_text = preg_replace($pattern, $replacement, $link_text);
+
 	if (!empty($variables['element']['#active'])) {
 
 		// Add text to indicate active tab for non-visual users.
@@ -693,8 +698,9 @@ function edidaktikum_theme_bs3_menu_local_task(&$variables) {
 		}
 
 
+		// Replace (NUMBER) at the end of the $link_text with badge HTML
 		$link_text = t('!local-task-title!active', array(
-				'!local-task-title' => $link['title'],
+				'!local-task-title' => preg_replace($pattern, $replacement, $link['title']),
 				'!active' => $active,
 		));
 	}

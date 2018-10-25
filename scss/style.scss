@@ -311,6 +311,7 @@ style.scss
   vertical-align: top;
   border: 1px solid $ed-green;
   padding: 6px 12px;
+  position: relative;
 }
 
 .single-course-tabs .tabs__caption li.active, .single-course-tabs .tabs__caption li:hover {
@@ -1321,4 +1322,27 @@ body.page-user-groups .region.region-content{
       }
     }
   }
+
+  &.relative-list-items {
+    li {
+      position: relative;
+    }
+  }
+}
+
+.single-course-tabs ul.tabs__caption, .list-group.tabs a {
+    span.badge.top-right {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      color: #fff;
+      background-color: $ed-green;
+    }
+}
+
+.list-group.tabs a.active, .list-group.tabs a:hover, .dropdown-menu li.active, .single-course-tabs ul.tabs__caption li:not(.active):not(:hover) {
+    span.badge.top-right {
+      color: $ed-green;
+      background-color: #fff;
+    }
 }

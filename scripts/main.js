@@ -872,9 +872,8 @@
         style: 'position:relative;display:inline-block;'
       });
       $container.append('<a href="#" class="list-group-item dropdown-toggle group-nav" data-toggle="dropdown" role="button" id="groupNavDropdown" aria-haspopup="true" aria-expanded="false">...</a>');
-      $container.append('<ul class="dropdown-menu" aria-labelledby="groupNavDropdown"></ul>');
+      $container.append('<ul class="dropdown-menu relative-list-items" aria-labelledby="groupNavDropdown"></ul>');
 
-      var hasActiveElement = false;
       $('.list-group.tabs.group-nav').find('a[data-move-to-dropdown="true"]').each(function(index, element) {
         var $element = $(element);
         $element.detach();
@@ -882,15 +881,19 @@
         $container.find('ul').append($('<li/>', {
           class: $element.hasClass('active') ? 'active' : ''
         }).append($element));
-        if ($element.hasClass('active')) {
-          hasActiveElement = true;
-        }
       });
+
+      if ($container.find('.badge').length) {
+        $container.find('.list-group-item.dropdown-toggle.group-nav').append($('<span/>', {
+          class: 'badge top-right',
+          html: '<i class="fa fa-exclamation" aria-hidden="true"></i>'
+        }));
+      }
 
       $('.list-group.tabs.group-nav').append($container);
 
-      if (hasActiveElement) {
-        $container.find('.dropdown-toggle').trigger('click');
+      if ($container.find('.active').length) {
+         $container.find('.dropdown-toggle').trigger('click');
       }
     }
   }

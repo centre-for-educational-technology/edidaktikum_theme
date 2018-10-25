@@ -65,25 +65,25 @@ if(!empty($node->ed_field_featured_image)){
 						<?php if(!empty( $tasks)): ?>
 						  <li>
 								<?php print t('Tasks'); ?>
-								<?php print array_key_exists('ed_task', $unseen_counts) ? ' (' . $unseen_counts['ed_task'] . ')' : ''; ?>
+								<?php print array_key_exists('ed_task', $unseen_counts) ? ' <span class="badge top-right">' . $unseen_counts['ed_task'] . '</span>' : ''; ?>
 							</li>
             <?php endif; ?>
 						<?php if(!empty( $bookmarks)): ?>
               <li>
 								<?php print t('Bookmarks'); ?>
-								<?php print array_key_exists('ed_bookmark', $unseen_counts) ? ' (' . $unseen_counts['ed_bookmark'] . ')' : ''; ?>
+								<?php print array_key_exists('ed_bookmark', $unseen_counts) ? ' <span class="badge top-right">' . $unseen_counts['ed_bookmark'] . '</span>' : ''; ?>
 							</li>
 						<?php endif; ?>
 						<?php if(!empty( $learning_resources)): ?>
 						  <li>
 								<?php print t('Learning Resources'); ?>
-								<?php print array_key_exists('ed_learning_resource', $unseen_counts) ? ' (' . $unseen_counts['ed_learning_resource'] . ')' : ''; ?>
+								<?php print array_key_exists('ed_learning_resource', $unseen_counts) ? ' <span class="badge top-right">' . $unseen_counts['ed_learning_resource'] . '</span>' : ''; ?>
 							</li>
 						<?php endif; ?>
 						<?php if(!empty( $files)): ?>
 						  <li>
 								<?php print t('Files'); ?>
-								<?php print array_key_exists('ed_file', $unseen_counts) ? ' (' . $unseen_counts['ed_file'] . ')' : ''; ?>
+								<?php print array_key_exists('ed_file', $unseen_counts) ? ' <span class="badge top-right">' . $unseen_counts['ed_file'] . '</span>' : ''; ?>
 							</li>
 						<?php endif; ?>
 					</ul>
