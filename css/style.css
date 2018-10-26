@@ -16715,7 +16715,8 @@ style.scss
   display: inline-block;
   vertical-align: top;
   border: 1px solid #1abc9c;
-  padding: 6px 12px; }
+  padding: 6px 12px;
+  position: relative; }
 
 .single-course-tabs .tabs__caption li.active, .single-course-tabs .tabs__caption li:hover {
   color: #1abc9c;
@@ -17407,5 +17408,23 @@ body.page-user-groups .region.region-content {
 .ed_field_competence-label label.control-label.my-helper-processed {
   cursor: pointer;
   font-weight: normal; }
+
+.dropdown-menu .active a {
+  background-color: #1abc9c; }
+  .dropdown-menu .active a:focus, .dropdown-menu .active a:hover {
+    background-color: #00847a; }
+.dropdown-menu.relative-list-items li {
+  position: relative; }
+
+.single-course-tabs ul.tabs__caption span.badge.top-right, .list-group.tabs a span.badge.top-right {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  color: #fff;
+  background-color: #1abc9c; }
+
+.list-group.tabs a.active span.badge.top-right, .list-group.tabs a:hover span.badge.top-right, .dropdown-menu li.active span.badge.top-right, .single-course-tabs ul.tabs__caption li:not(.active):not(:hover) span.badge.top-right {
+  color: #1abc9c;
+  background-color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
