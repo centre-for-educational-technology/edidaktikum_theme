@@ -29,8 +29,14 @@
 
                 <div class="tab-content">
                     <div id="groups" class="tab-pane fade in active">
-                        <h3><?php print t('Groups'); ?></h3>
-                        <p><?php print render($user_profile['og_user_node']); ?></p>
+                        <h3><?php print t('Active Groups'); ?></h3>
+                        <?php if (isset($user_profile['og_user_node_active'])): ?>
+                          <p><?php print render($user_profile['og_user_node_active']); ?></p>
+                        <?php endif; ?>
+                        <h3><?php print t('Inactive Groups'); ?></h3>
+                        <?php if (isset($user_profile['og_user_node_inactive'])): ?>
+                          <p><?php print render($user_profile['og_user_node_inactive']); ?></p>
+                        <?php endif; ?>
                     </div>
                     <div id="study_groups" class="tab-pane fade">
                         <h3><?php print t('Study groups'); ?></h3>
@@ -77,4 +83,3 @@
 
 
  </div>
-
