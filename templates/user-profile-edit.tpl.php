@@ -49,7 +49,6 @@
             <?php print render($form['account']['name']); ?>
             <?php print render($form['ed_field_full_name']); ?>
             <?php print render($form['account']['mail']); ?>
-            <?php print render($form['account']['mail']); ?>
             <ul class="list-inline pull-right">
               <li><button type="button" class="btn btn-success next-step"><?php print t('Next'); ?></button></li>
             </ul>

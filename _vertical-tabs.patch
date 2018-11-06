@@ -1,0 +1,11 @@
+--- _vertical-tabs.js	2018-10-26 16:34:17.000000000 +0300
++++ _vertical-tabs_copy.js	2018-10-26 16:22:26.000000000 +0300
+@@ -44,7 +44,7 @@
+           .addClass('tab-pane vertical-tabs-pane')
+           .data('verticalTab', vertical_tab)
+           .find('> legend').remove();
+-        $(this).find('> div').removeClass('panel-collapse collapse').addClass('fade');
++        $(this).find('> div').removeClass('panel-collapse collapsed').addClass('fade');
+         if (this.id === focusID) {
+           tab_focus = $(this);
+         }
