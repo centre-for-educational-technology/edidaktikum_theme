@@ -1346,3 +1346,55 @@ body.page-user-groups .region.region-content{
       background-color: #fff;
     }
 }
+
+/**
+  Task manager table with fixed top header and left column
+ */
+table.scroll {
+  width: 100%;
+  border-spacing: 0;
+}
+table.scroll tbody,
+table.scroll thead { display: block; }
+
+
+table.scroll tbody {
+  height: 700px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+tbody td:last-child, thead th:last-child {
+  border-right: none;
+}
+
+table.scroll th, td {
+  min-width: 200px;
+  max-width: 200px;
+  word-break: break-word;
+}
+
+table.scroll thead {
+
+  display: block;
+
+}
+table.scroll thead th:nth-child(1) {
+  background-color: $gray-lighter;
+}
+
+table.scroll tbody {
+  position: relative;
+  display: block;
+}
+
+table.scroll tbody tr td:nth-child(1) {
+  position: relative;
+  display: block;
+  background-color: $gray-lighter;
+}
+
+
+
+
+
