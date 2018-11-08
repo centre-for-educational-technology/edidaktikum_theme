@@ -1368,10 +1368,12 @@ tbody td:last-child, thead th:last-child {
   border-right: none;
 }
 
-table.scroll th, td {
-  min-width: 200px;
-  max-width: 200px;
-  word-break: break-word;
+table.scroll {
+  th, td {
+    min-width: 200px;
+    max-width: 200px;
+    word-break: break-word;
+  }
 }
 
 table.scroll thead {
@@ -1393,8 +1395,3 @@ table.scroll tbody tr td:nth-child(1) {
   display: block;
   background-color: $gray-lighter;
 }
-
-
-
-
-

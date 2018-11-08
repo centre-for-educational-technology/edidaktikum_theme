@@ -17446,7 +17446,7 @@ table.scroll tbody {
 tbody td:last-child, thead th:last-child {
   border-right: none; }
 
-table.scroll th, td {
+table.scroll th, table.scroll td {
   min-width: 200px;
   max-width: 200px;
   word-break: break-word; }
