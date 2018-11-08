@@ -344,6 +344,10 @@ function edidaktikum_theme_bs3_menu_link(array $variables) {
 
 	$element = $variables['element'];
 
+	if (user_is_logged_in() && $element['#original_link']['menu_name'] == 'main-menu' && $element['#href'] == 'clusters') {
+		$element['#href'] = 'clusters/mygroups';
+	}
+
 	if($element['#original_link']['menu_name'] == 'user-menu'){
 
 		if($element['#href'] == 'faq'){
@@ -733,7 +737,7 @@ function edidaktikum_theme_bs3_menu_local_task(&$variables) {
 
   $link['localized_options']['attributes'] = array('class' => array('list-group-item'));
 
-	if (drupal_match_path($link['path'], implode("\n", ['node/%/track', 'node/%/bookmark', 'node/%/forum', 'node/%/event', 'node/%/pages', 'node/%/subgroups', 'node/%/devel', 'node/%/blog',]))) {
+	if (drupal_match_path($link['path'], implode("\n", ['node/%/track', 'node/%/bookmark', 'node/%/forum', 'node/%/event', 'node/%/pages', 'node/%/subgroups', 'node/%/devel', 'node/%/blog', 'node/%/q_portfolio',]))) {
 		$link['localized_options']['attributes']['data-move-to-dropdown'] = 'true';
 	}
 
