@@ -6697,7 +6697,7 @@ ol {
   margin: 0 0 40px;
   padding: 0; }
 
-ol li {
+ol > li {
   font-size: 16px;
   line-height: 18px;
   font-weight: 300;
@@ -6708,7 +6708,7 @@ ol li {
   margin-bottom: 17px;
   counter-increment: li; }
 
-ol li::before {
+ol > li::before {
   content: "." counter(li);
   font-size: inherit;
   display: inline-block;
@@ -6718,6 +6718,10 @@ ol li::before {
   color: #1abc9c;
   top: 0;
   left: 0; }
+
+li > ul,
+li > ol {
+  padding-top: 0.75em; }
 
 .ol-list-01 {
   margin: 0;
