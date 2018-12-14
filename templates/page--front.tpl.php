@@ -13,10 +13,13 @@ global $user;
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+<script src=""></script>
     <div class="wrapp-content">
 
-
-
+        <!-- Snowflakes in december-->
+      <?php if (date("m") == 12 ): ?>
+        <script src="<?php echo base_path().drupal_get_path('theme',$GLOBALS['theme']); ?>/scripts/snowstorm-min.js"></script>
+      <?php endif; ?>
 
         <!-- Header -->
         <header class="wrapp-header parallax">
@@ -640,7 +643,6 @@ global $user;
                 </div>
             </div>
         </main>
-
 
 
         <!-- Footer -->
