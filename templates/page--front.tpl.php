@@ -13,7 +13,7 @@ global $user;
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-<script src=""></script>
+
     <div class="wrapp-content">
 
         <!-- Snowflakes in december-->
