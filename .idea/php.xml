@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpInterpreters">
+    <interpreters>
+      <interpreter home="php" id="0e846205-89ca-4e90-8bdf-1ef6bf5dc1fd" name="Interpreter for Composer" debugger_id="php.debugger.XDebug" />
+    </interpreters>
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings load_method="CUSTOM_LOADER" custom_loader_path="$PROJECT_DIR$/../../../../../labelling-game/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+</project>
