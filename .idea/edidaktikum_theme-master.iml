@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP Runtime" type="php">
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+        </CLASSES>
+        <SOURCES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/barryvdh/laravel-debugbar" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/classpreloader/classpreloader" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/composer" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/dnoegel/php-xdg-base-dir" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/doctrine/inflector" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/doctrine/instantiator" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/fzaninotto/faker" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/hamcrest/hamcrest-php" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/intervention/image" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/jakub-onderka/php-console-color" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/jakub-onderka/php-console-highlighter" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/jeremeamia/SuperClosure" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/laracasts/flash" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/laravel/framework" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/laravelcollective/html" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/league/flysystem" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/maximebf/debugbar" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/mockery/mockery" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/monolog/monolog" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/mtdowling/cron-expression" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/nesbot/carbon" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/nikic/php-parser" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/paragonie/random_compat" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpspec/prophecy" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/phpunit-mock-objects" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/psr/http-message" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/psy/psysh" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/comparator" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/environment" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/exporter" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/global-state" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/recursion-context" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/swiftmailer/swiftmailer" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/console" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/css-selector" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/debug" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/dom-crawler" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/event-dispatcher" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/finder" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/http-foundation" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/http-kernel" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/polyfill-php56" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/polyfill-util" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/process" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/routing" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/translation" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/var-dumper" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/vlucas/phpdotenv" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/barryvdh/laravel-debugbar" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/classpreloader/classpreloader" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/composer" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/dnoegel/php-xdg-base-dir" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/doctrine/inflector" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/doctrine/instantiator" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/fzaninotto/faker" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/hamcrest/hamcrest-php" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/intervention/image" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/jakub-onderka/php-console-color" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/jakub-onderka/php-console-highlighter" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/jeremeamia/SuperClosure" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/laracasts/flash" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/laravel/framework" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/laravelcollective/html" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/league/flysystem" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/maximebf/debugbar" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/mockery/mockery" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/monolog/monolog" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/mtdowling/cron-expression" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/nesbot/carbon" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/nikic/php-parser" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/paragonie/random_compat" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpspec/prophecy" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/phpunit/phpunit-mock-objects" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/psr/http-message" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/psy/psysh" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/comparator" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/environment" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/exporter" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/global-state" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/recursion-context" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/swiftmailer/swiftmailer" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/console" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/css-selector" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/debug" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/dom-crawler" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/event-dispatcher" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/finder" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/http-foundation" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/http-kernel" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/polyfill-php56" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/polyfill-util" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/process" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/routing" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/translation" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/var-dumper" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/../../../../../labelling-game/vendor/vlucas/phpdotenv" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

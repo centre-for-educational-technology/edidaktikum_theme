@@ -1,0 +1,39 @@
+/*
+Error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 8 spaces.
+        on line 37 of /Applications/MAMP/htdocs/edidaktikum/sites/all/themes/edidaktikum_theme_bs3/scss--no-cache
+
+32: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/bin/sass:13:in `<top (required)>'
+33: /usr/local/bin/sass:22:in `load'
+34: /usr/local/bin/sass:22:in `<main>'
+35: *\/
+36: body:before {
+37:   white-space: pre;
+38:   font-family: monospace;
+39:   content: "Error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 8 spaces.\A         on line 41 of /Applications/MAMP/htdocs/edidaktikum/sites/all/themes/edidaktikum_theme_bs3/scss--no-cache\A \A 36: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/bin/sass:13:in `<top (required)>'\A 37: /usr/local/bin/sass:22:in `load'\A 38: /usr/local/bin/sass:22:in `<main>'\A 39: *\/\A 40: body:before {\A 41:   white-space: pre;\A 42:   font-family: monospace;\A 43:   content: \"Error: Invalid property: \\"Backtrace:\\" (no value).\A         on line 4 of /Applications/MAMP/htdocs/edidaktikum/sites/all/themes/edidaktikum_theme_bs3/scss--no-cache\A \A 1: /*\A 2: Errno::ENOENT: No such file or directory @ rb_sysopen - /Applications/MAMP/htdocs/edidaktikum/sites/all/themes/edidaktikum_theme_bs3/scss--no-cache\A 3: \A 4: Backtrace:\A 5: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:454:in `read'\A 6: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:454:in `update_stylesheet'\A 7: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'\A 8: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'\A 9: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'\"; }"; }
+
+Backtrace:
+/Applications/MAMP/htdocs/edidaktikum/sites/all/themes/edidaktikum_theme_bs3/scss--no-cache:37
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:494:in `block in tabulate'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:452:in `each'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:452:in `each_with_index'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:452:in `tabulate'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:417:in `_to_tree'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:22:in `load'
+/usr/local/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 8 spaces.\A         on line 37 of /Applications/MAMP/htdocs/edidaktikum/sites/all/themes/edidaktikum_theme_bs3/scss--no-cache\A \A 32: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/bin/sass:13:in `<top (required)>'\A 33: /usr/local/bin/sass:22:in `load'\A 34: /usr/local/bin/sass:22:in `<main>'\A 35: */\A 36: body:before {\A 37:   white-space: pre;\A 38:   font-family: monospace;\A 39:   content: \"Error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 8 spaces.\A         on line 41 of /Applications/MAMP/htdocs/edidaktikum/sites/all/themes/edidaktikum_theme_bs3/scss--no-cache\A \A 36: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/bin/sass:13:in `<top (required)>'\A 37: /usr/local/bin/sass:22:in `load'\A 38: /usr/local/bin/sass:22:in `<main>'\A 39: */\A 40: body:before {\A 41:   white-space: pre;\A 42:   font-family: monospace;\A 43:   content: \\"Error: Invalid property: \\\"Backtrace:\\\" (no value).\A         on line 4 of /Applications/MAMP/htdocs/edidaktikum/sites/all/themes/edidaktikum_theme_bs3/scss--no-cache\A \A 1: /*\A 2: Errno::ENOENT: No such file or directory @ rb_sysopen - /Applications/MAMP/htdocs/edidaktikum/sites/all/themes/edidaktikum_theme_bs3/scss--no-cache\A 3: \A 4: Backtrace:\A 5: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:454:in `read'\A 6: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:454:in `update_stylesheet'\A 7: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'\A 8: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'\A 9: /Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'\\"; }\"; }"; }
