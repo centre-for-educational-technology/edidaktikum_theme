@@ -17428,8 +17428,8 @@ tbody td:last-child, thead th:last-child {
   border-right: none; }
 
 table.scroll th, table.scroll td {
-  min-width: 200px;
-  max-width: 200px;
+  min-width: 100px;
+  max-width: 100px;
   word-break: break-word; }
 
 table.scroll thead {
