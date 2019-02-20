@@ -307,7 +307,7 @@ if(!empty($node->ed_field_featured_image)){
             <?php if(!empty( $node->ed_field_course_aim)): ?>
             <div class="widget text-widget">
                 <h3 class="widget-title"><?php print t('Aine eesmärk'); ?></h3>
-                <p><?php print $node->ed_field_course_aim['und'][0]['value']; ?></p>
+                <p><?php print strip_tags($node->ed_field_course_aim['und'][0]['value']); ?></p>
             </div>
             <?php endif; ?>
 
