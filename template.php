@@ -737,8 +737,12 @@ function edidaktikum_theme_bs3_menu_local_task(&$variables) {
 
   $link['localized_options']['attributes'] = array('class' => array('list-group-item'));
 
-	if (drupal_match_path($link['path'], implode("\n", ['node/%/track', 'node/%/bookmark', 'node/%/forum', 'node/%/event', 'node/%/pages', 'node/%/subgroups', 'node/%/devel', 'node/%/blog', 'node/%/q_portfolio',]))) {
+	if (drupal_match_path($link['path'], implode("\n", ['node/%/track', 'node/%/bookmark', 'node/%/forum', 'node/%/event', 'node/%/pages', 'node/%/subgroups', 'node/%/devel', 'node/%/blog', 'node/%/q_portfolio', 'clusters/add/*']))) {
 		$link['localized_options']['attributes']['data-move-to-dropdown'] = 'true';
+	}
+
+	if (drupal_match_path($link['path'], implode("\n", ['clusters/add/*']))) {
+		$link['localized_options']['attributes']['data-dropdown-text-add-new'] = 'true';
 	}
 
   return l($link_text, $link['href'], $link['localized_options']);
