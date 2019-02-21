@@ -866,15 +866,20 @@
     $('.comments__content > .comments__text a').attr('target', '_blank');
   }
 
-  if ($('.list-group.tabs.group-nav').length) {
-    if ($('.list-group.tabs.group-nav').find('a[data-move-to-dropdown="true"]').length) {
+  if ($('.list-group.tabs').length) {
+    if ($('.list-group.tabs').find('a[data-move-to-dropdown="true"]').length) {
       var $container = $('<div/>', {
         style: 'position:relative;display:inline-block;'
       });
-      $container.append('<a href="#" class="list-group-item dropdown-toggle group-nav" data-toggle="dropdown" role="button" id="groupNavDropdown" aria-haspopup="true" aria-expanded="false">...</a>');
+
+      var buttonText;
+      if ($('.list-group.tabs').find('a[data-dropdown-text-add-new="true"]').length) buttonText = '<i class="fa fa-plus" aria-hidden="true"></i>';
+      else buttonText = "...";
+
+      $container.append('<a href="#" class="list-group-item dropdown-toggle group-nav" data-toggle="dropdown" role="button" id="groupNavDropdown" aria-haspopup="true" aria-expanded="false">'+buttonText+'</a>');
       $container.append('<ul class="dropdown-menu relative-list-items" aria-labelledby="groupNavDropdown"></ul>');
 
-      $('.list-group.tabs.group-nav').find('a[data-move-to-dropdown="true"]').each(function(index, element) {
+      $('.list-group.tabs').find('a[data-move-to-dropdown="true"]').each(function(index, element) {
         var $element = $(element);
         $element.detach();
         $element.removeClass('list-group-item');
@@ -890,7 +895,7 @@
         }));
       }
 
-      $('.list-group.tabs.group-nav').append($container);
+      $('.list-group.tabs').append($container);
 
       if ($container.find('.active').length) {
          $container.find('.dropdown-toggle').trigger('click');
