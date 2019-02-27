@@ -1359,6 +1359,7 @@ table.scroll thead { display: block; }
 
 table.scroll tbody {
   height: 700px;
+  max-height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
