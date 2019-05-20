@@ -208,15 +208,15 @@ global $user;
                         <ol class="ol-list-01">
                             <li>
                                 <h4 class="ol-list-01__title"><?php print t('Register user'); ?></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                                <p>Everyone may become an eDidaktikum user. You don't have to be a student or a teacher at university or school.</p>
                             </li>
                             <li>
                                 <h4 class="ol-list-01__title"><?php print t('Join a group'); ?></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                                <p>One may find all different sorts of groups. Groups can be public or private.</p>
                             </li>
                             <li>
                                 <h4 class="ol-list-01__title"><?php print t('Learn and share materials'); ?></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                                <p>eDidaktikum is a platform that gives you an opportunity to teach and learn at the same time. You may share your learning materials with classmates, students or colleagues.</p>
                             </li>
                         </ol>
                     </div>
