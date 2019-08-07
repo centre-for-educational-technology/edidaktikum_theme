@@ -26,7 +26,7 @@ foreach ($nodes as $node) : ?>
                       print l($username, 'user/'.$node->uid,  array('attributes' => array('class' => 'product-list__category'))) ;
                   ?>
                     <h3 class="product-list__title">
-	                    <?php print l($node->title, $node->nid) ; ?>
+	                    <?php print l($node->title, 'node/'.$node->nid) ; ?>
                     </h3>
 <!--                    <ul class="product-list__star-list">-->
 <!--                        <li>-->
