@@ -9,6 +9,49 @@ $author = user_load($node->uid);
 $userfullname = edidaktikum_get_full_name_for_user_account($author);
 
 $tasks = ed_get_group_tasks($node->nid, true, true, true, true);
+$account = $GLOBALS['user'];
+
+if (!empty($tasks)) {
+  foreach ($tasks as $key => $task) {
+
+    $task_node = node_load($task['nid']);
+
+    if (ed_task_can_user_answer_task($task_node, $account)) {
+
+      $task = $task['nid'];
+
+          //Check if it is a study group case
+          $wrapper = entity_metadata_wrapper('node', $task);
+          $task_study_groups = $wrapper->ed_task_field_study_group->raw();
+
+          //Check if it is a to user case
+          $task_to_group_member = $wrapper->ed_field_to_group_member->raw();
+
+
+          if (empty($task_to_group_member)) {
+            if (!empty($task_study_groups)) {
+              //Get user study group field
+              $wrapper = entity_metadata_wrapper('user', $account->uid);
+              $user_study_group = $wrapper->ed_field_study_group->value();
+
+              if (isset($user_study_group)) {
+                if (!in_array($user_study_group, $task_study_groups)) {
+                  unset($tasks[$key]);
+                }
+              }else{
+                unset($tasks[$key]);
+              }
+            }
+          }
+
+
+    }else{
+      unset($tasks[$key]);
+    }
+  }
+}
+
+
 $bookmarks = ed_get_group_bookmarks($node->nid);
 $files = ed_get_group_files($node->nid);
 $learning_resources = ed_get_group_learning_resources($node->nid);
