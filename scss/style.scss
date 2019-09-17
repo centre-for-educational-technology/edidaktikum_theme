@@ -150,10 +150,10 @@ style.scss
 .categories-list .field-label{
   display: none;
 }
-
-.categories-list ul.term{
-  padding-left: 0px;
-}
+//
+//.categories-list ul.term{
+//  padding-left: 0px;
+//}
 
 
 .resizable-textarea textarea {
@@ -346,7 +346,7 @@ style.scss
 .ed-add-new-node a{
   @extend .btn;
   @extend .price-btn;
-  @extend .new-group.price-btn;
+  @extend .new-group, .price-btn;
   @extend .btn-success;
 
 }
@@ -1394,4 +1394,61 @@ table.scroll tbody tr td:nth-child(1) {
   position: relative;
   display: block;
   background-color: $gray-lighter;
+}
+
+.pane-node-ed-field-competence{
+  margin-top: 40px;
+}
+
+
+
+/* Inactive group ribbon */
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid darken($brand-danger, 10%);
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 15px 0;
+  background-color: $brand-danger;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* top left*/
+.ribbon-top-left {
+  top: -10px;
+  left: 5px;
+}
+.ribbon-top-left::before,
+.ribbon-top-left::after {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.ribbon-top-left::before {
+  top: 0;
+  right: 0;
+}
+.ribbon-top-left::after {
+  bottom: 0;
+  left: 0;
+}
+.ribbon-top-left span {
+  right: -25px;
+  top: 30px;
+  transform: rotate(-45deg);
 }

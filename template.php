@@ -606,7 +606,7 @@ function edidaktikum_theme_bs3_preprocess_search_result(&$variables) {
 
 
 function edidaktikum_theme_bs3_preprocess_field(&$variables) {
-	if($variables['element']['#field_name'] == 'ed_field_category') {
+	if($variables['element']['#field_name'] == 'ed_field_category' || $variables['element']['#field_name'] == 'ed_field_competence') {
 		$variables['classes_array'][] = 'categories-list';
 	}
 }
