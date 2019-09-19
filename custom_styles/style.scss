@@ -4554,19 +4554,15 @@ li {
 }
 
 .categories-list li a:hover {
-    color: #7eaa2f;
+    color: #ccc;
 }
 
 .categories-list li ul {
     padding: 12px 0 0;
 }
 
-.categories-list li ul li {
-    padding-left: 15px;
-}
 
-.categories-list li ul li::before {
-    left: -17px;
+.categories-list li ul li.selected::before {
     color: #1abc9c;
 }
 

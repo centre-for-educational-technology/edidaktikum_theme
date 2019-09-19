@@ -20,7 +20,7 @@
 
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#groups"><?php print t('Group membership'); ?></a></li>
-                <li><a data-toggle="tab" href="#study_groups"><?php print t('Study groups'); ?></a></li>
+                <li><a data-toggle="tab" href="#study_groups"><?php print t('Study group'); ?></a></li>
                 <li><a data-toggle="tab" href="#email"><?php print t('More info'); ?></a></li>
 
             </ul>
@@ -29,17 +29,17 @@
 
                 <div class="tab-content">
                     <div id="groups" class="tab-pane fade in active">
-                        <h3><?php print t('Active Groups'); ?></h3>
+                        <h3><?php print t('Active groups'); ?></h3>
                         <?php if (isset($user_profile['og_user_node_active'])): ?>
                           <p><?php print render($user_profile['og_user_node_active']); ?></p>
                         <?php endif; ?>
-                        <h3><?php print t('Inactive Groups'); ?></h3>
+                        <h3><?php print t('My inactive groups'); ?></h3>
                         <?php if (isset($user_profile['og_user_node_inactive'])): ?>
                           <p><?php print render($user_profile['og_user_node_inactive']); ?></p>
                         <?php endif; ?>
                     </div>
                     <div id="study_groups" class="tab-pane fade">
-                        <h3><?php print t('Study groups'); ?></h3>
+                        <h3><?php print t('Study group'); ?></h3>
                         <p><?php print render($user_profile['ed_field_study_group']); ?></p>
                     </div>
                     <div id="email" class="tab-pane fade">
@@ -50,7 +50,7 @@
                                 <h4><?php print t('Institution'); ?></h4>
                                 <p><?php print render($user_profile['field_institution']); ?></p>
                           <?php endif; ?>
-                        <h4><?php print t('Liikmeks oldud aeg'); ?></h4>
+                        <h4><?php print t('Member for'); ?></h4>
                         <p><?php print render($user_profile['summary']); ?></p>
                     </div>
 
