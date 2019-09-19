@@ -354,6 +354,13 @@ if(!empty($node->ed_field_featured_image)){
             </div>
             <?php endif; ?>
 
+						<?php if(!empty( $node->ed_field_course_code)): ?>
+            <div class="widget text-widget">
+                <h3 class="widget-title"><?php print t('Aine kood'); ?></h3>
+                <p><?php print strip_tags($node->ed_field_course_code['und'][0]['value']); ?></p>
+            </div>
+            <?php endif; ?>
+
 			<div class="widget tags-cloud">
 				<h3 class="widget-title"><?php print check_plain($node->title).' '.t('members') ?></h3>
 				<ul class="tags-cloud__list">
