@@ -33,7 +33,7 @@
                         <?php if (isset($user_profile['og_user_node_active'])): ?>
                           <p><?php print render($user_profile['og_user_node_active']); ?></p>
                         <?php endif; ?>
-                        <h3><?php print t('Inactive groups'); ?></h3>
+                        <h3><?php print t('My inactive groups'); ?></h3>
                         <?php if (isset($user_profile['og_user_node_inactive'])): ?>
                           <p><?php print render($user_profile['og_user_node_inactive']); ?></p>
                         <?php endif; ?>

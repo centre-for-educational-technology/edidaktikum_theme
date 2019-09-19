@@ -74,13 +74,13 @@
                         <h3 class="widget-title"><?php print t('Groups'); ?></h3>
                         <ul class="widget-list">
                             <li>
-                                <a href="<?php print url('clusters/mygroups'); ?>"><?php print t('My groups'); ?></a>
+                                <a href="<?php print url('clusters/mygroups'); ?>"><?php print t('My active groups'); ?></a>
                             </li>
                             <li>
                                 <a href="<?php print url('clusters'); ?>"><?php print t('All groups'); ?></a>
                             </li>
                             <li>
-                                <a href="<?php print url('clusters/inactivegroups'); ?>"><?php print t('Inactive groups'); ?></a>
+                                <a href="<?php print url('clusters/inactivegroups'); ?>"><?php print t('My inactive groups'); ?></a>
                             </li>
                             <li>
                                 <a href="<?php print url('clusters/searchgroup'); ?>"><?php print t('Search for a group'); ?></a>
