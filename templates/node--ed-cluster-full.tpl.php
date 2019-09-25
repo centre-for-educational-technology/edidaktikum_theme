@@ -92,11 +92,6 @@ if(!empty($node->ed_field_featured_image)){
 <!--							--><?php //print l($userfullname, '/user/'.$node->uid); ?>
 <!--						</p>-->
 <!--					</li>-->
-					<?php if(!empty( $node->ed_field_course_code)): ?>
-						<li>
-							<p class="blog-post__meta-category"><?php print check_plain($node->ed_field_course_code[LANGUAGE_NONE][0]['value']); ?></p>
-						</li>
-					<?php endif; ?>
 <!--					<li>-->
 <!--						<p class="blog-post__meta-comments">3 Kommentaari</p>-->
 <!--					</li>-->
@@ -351,6 +346,13 @@ if(!empty($node->ed_field_featured_image)){
             <div class="widget text-widget">
                 <h3 class="widget-title"><?php print t('Aine eesmärk'); ?></h3>
                 <p><?php print strip_tags($node->ed_field_course_aim['und'][0]['value']); ?></p>
+            </div>
+            <?php endif; ?>
+
+						<?php if(!empty( $node->ed_field_course_code)): ?>
+            <div class="widget text-widget">
+                <h3 class="widget-title"><?php print t('Aine kood'); ?></h3>
+                <p><?php print strip_tags($node->ed_field_course_code['und'][0]['value']); ?></p>
             </div>
             <?php endif; ?>
 

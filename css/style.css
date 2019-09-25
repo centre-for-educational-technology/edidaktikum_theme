@@ -21373,4 +21373,8 @@ table.scroll tbody tr td:nth-child(1) {
   transform: rotate(-45deg);
 }
 
+ul.term {
+  padding-left: 0px;
+}
+
 /*# sourceMappingURL=style.css.map */
