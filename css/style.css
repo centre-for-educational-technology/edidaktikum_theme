@@ -12975,10 +12975,16 @@ li > ol {
 .reply-form__name {
   width: 100%;
   border: 1px solid #d4d8da;
-  height: 48px;
   padding: 5px 29px;
-  -webkit-border-radius: 24px;
-  border-radius: 24px;
+  border-top-left-radius: 16px !important;
+  border-bottom-left-radius: 16px !important;
+}
+
+#search_button {
+  border: 1px solid #1abc9c;
+  background-color: #1abc9c;
+  border-top-right-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
 }
 
 .reply-form__name::-webkit-input-placeholder {
@@ -19180,7 +19186,7 @@ a.sort-item:hover {
 }
 
 .reply-form__name {
-  height: 42px;
+  height: 46px;
   padding: 5px 23px;
   font-size: 17px;
   -webkit-border-radius: 11px;
@@ -21375,6 +21381,10 @@ table.scroll tbody tr td:nth-child(1) {
 
 ul.term {
   padding-left: 0px;
+}
+
+select[multiple], select[size] {
+  height: 15vh;
 }
 
 /*# sourceMappingURL=style.css.map */
