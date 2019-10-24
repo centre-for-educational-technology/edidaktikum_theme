@@ -1457,3 +1457,8 @@ table.scroll tbody tr td:nth-child(1) {
 ul.term{
   padding-left: 0px;
 }
+
+
+select[multiple], select[size] {
+  height: 15vh;
+}
