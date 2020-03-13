@@ -17484,4 +17484,17 @@ ul.term {
 select[multiple], select[size] {
   height: 15vh; }
 
+#edit-ed-field-difficulty-feedb label,
+#edit-ed-field-satisf-feedb label {
+  display: block; }
+
+#edit-ed-field-difficulty-feedb .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+  background-color: #123858; }
+
+#edit-ed-field-satisf-feedb .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+  background-color: #123858; }
+
+#edit-ed-field-answer-emotions .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+  background-color: #123858; }
+
 /*# sourceMappingURL=style.css.map */
