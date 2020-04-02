@@ -16824,6 +16824,9 @@ Dashboard circles
 #animated-chart-satisfaction circle {
   fill: #3c9ee5; }
 
+#animated-chart-difficulty circle {
+  fill: #ffa04c; }
+
 .percentage {
   fill: #666;
   font-family: sans-serif;
@@ -17496,5 +17499,9 @@ select[multiple], select[size] {
 
 #edit-ed-field-answer-emotions .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   background-color: #123858; }
+
+#animated-chart-emotions {
+  width: 500px;
+  height: 300px; }
 
 /*# sourceMappingURL=style.css.map */
