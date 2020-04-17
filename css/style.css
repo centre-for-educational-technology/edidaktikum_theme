@@ -17053,7 +17053,7 @@ iframe.video_frame.embed-responsive-item {
 .ed-node-statistics {
   margin-bottom: 20px; }
 
-.pane-node-ed-task-due-date {
+.pane-node-ed-task-due-date, .pane-node-ed-task-field-strict-sub, .pane-node-ed-task-field-max-points {
   padding: 8px 15px;
   margin-bottom: 20px;
   list-style: none;
@@ -17503,5 +17503,8 @@ select[multiple], select[size] {
 #animated-chart-emotions {
   width: 500px;
   height: 300px; }
+
+.panel-pane h2 {
+  font-size: 24px; }
 
 /*# sourceMappingURL=style.css.map */

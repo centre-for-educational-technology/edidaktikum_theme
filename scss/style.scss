@@ -842,14 +842,14 @@ iframe.video_frame.embed-responsive-item {
   margin-bottom: 20px;
 }
 
-.pane-node-ed-task-due-date {
+
+.pane-node-ed-task-due-date, .pane-node-ed-task-field-strict-sub, .pane-node-ed-task-field-max-points {
   padding: 8px 15px;
   margin-bottom: 20px;
   list-style: none;
   background-color: $alert-warning-bg;
   border-radius: 4px;
 }
-
 #-ed-get-sorting-by-group {
   margin-bottom: 10px;
 }
@@ -1438,3 +1438,6 @@ select[multiple], select[size] {
   height: 300px;
 }
 
+.panel-pane h2{
+  font-size: 24px;
+}
