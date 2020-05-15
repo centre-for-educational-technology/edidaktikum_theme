@@ -74,6 +74,7 @@
             <?php print render($form['field_institution']); ?>
             <?php print render($form['field_pref_lang']); ?>
             <?php print render($form['ed_notification_content_types']); ?>
+            <?php print render($form['ed_notification_groups']); ?>
 
             <?php print render($form['account']['status']); ?>
             <?php print render($form['account']['roles']); ?>
