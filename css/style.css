@@ -17514,9 +17514,9 @@ select[multiple], select[size] {
 
 .ed_answer_author_text {
   display: inline-block;
+  margin-left: 20px;
 }
 
 .ed_answer_author_image {
   display: inline-block;
-  margin-left: 20px;
 }
