@@ -17053,7 +17053,7 @@ iframe.video_frame.embed-responsive-item {
 .ed-node-statistics {
   margin-bottom: 20px; }
 
-.pane-node-ed-task-due-date, .pane-node-ed-task-field-strict-sub, .pane-node-ed-task-field-max-points {
+.pane-node-ed-task-due-date, .pane-node-ed-task-field-strict-sub, .pane-node-ed-task-field-max-points, .pane-node-ed-task-field-auto-accept {
   padding: 8px 15px;
   margin-bottom: 20px;
   list-style: none;
