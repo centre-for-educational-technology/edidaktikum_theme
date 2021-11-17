@@ -228,6 +228,12 @@ if(!empty($node->ed_field_featured_image)){
 <!--					</div>-->
 <!--				</form>-->
 <!--			</div>-->
+            <div class="ed-node-statistics">
+              <div class="ed-node-statistics-views">
+                <?php print t('@totalcount views (@daycount today)', ed_get_views_total_and_days_counts_t_args($node->nid)); ?>
+              </div>
+            </div>
+
             <?php if(!empty( $node->og_group_ref  )): ?>
               <div class="widget tags-cloud">
                   <h3 class="widget-title"><?php print t('Group'); ?></h3>
