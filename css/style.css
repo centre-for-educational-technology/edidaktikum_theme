@@ -17510,4 +17510,7 @@ select[multiple], select[size] {
 .user-feedback p {
   color: #f0ad4e !important; }
 
+.jumbotron-portfolio p {
+  font-size: 14px; }
+
 /*# sourceMappingURL=style.css.map */
