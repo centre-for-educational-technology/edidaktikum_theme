@@ -47,7 +47,6 @@
              <h4><?php print t('E-mail'); ?></h4>
              <?php if (!empty($user_profile['og_user_node']['#object']->mail)) : ?>
                <a href="mailto:<?php print $user_profile['og_user_node']['#object']->mail ?>"><?php print $user_profile['og_user_node']['#object']->mail ?></a>
-               <p><?php error_log(print_r($user_profile, true)); ?></p>
              <?php endif; ?>
 
              <?php if (!empty($user_profile['og_user_node']['#object']->field_institution[LANGUAGE_NONE])) : ?>
