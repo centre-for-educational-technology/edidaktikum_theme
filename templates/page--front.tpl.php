@@ -61,8 +61,7 @@ global $user;
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                             <?php
                                                 foreach ($other_languages as $other_language){
-                                                    print "<li><a href='".base_path().$other_language['name']."/".language_url_split_prefix(current_path(), array($language->language))[1]."'>".$other_language['value']."</a></li>";
-
+                                                  print "<li><a href='".check_plain(base_path().$other_language['name'])."/".check_plain(language_url_split_prefix(current_path(), array($language->language))[1])."'>".check_plain($other_language['value'])."</a></li>";
                                                 }
                                             ?>
 
